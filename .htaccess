@@ -1,0 +1,19 @@
+Options All -Indexes
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+ErrorDocument 503 /503.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Deshabilitar la redirección a HTTPS en local
+<IfModule !mod_ssl.c>
+    # Esto evita la redirección automática a HTTPS en entornos sin SSL
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+</IfModule>

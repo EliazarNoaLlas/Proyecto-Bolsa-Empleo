@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Dashboard/Candidato" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/Dashboard/Empresa" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/Dashboard/Soporte" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/plugin/dompdf/lib/php-css-parser/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/plugin/dompdf/lib/php-css-parser/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/plugin/dompdf/lib/php-font-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/plugin/dompdf/lib/php-svg-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/plugin/dompdf/src" isTestSource="false" packagePrefix="Dompdf" />
+      <sourceFolder url="file://$MODULE_DIR$/main/ModelosUsuarioCuentas" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/main/UsuarioCuentas" isTestSource="false" packagePrefix="PHPMailer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
