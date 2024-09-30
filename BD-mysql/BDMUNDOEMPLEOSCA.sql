@@ -27,12 +27,13 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `carrera`
 --
 
+/*
 CREATE TABLE `carrera` (
   `Id_Carrera` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `ID_Facultades` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+*/
 --
 -- Volcado de datos para la tabla `carrera`
 --
