@@ -207,164 +207,186 @@
   });
 });
 
-		// Funcion para validar el correo
-		$(document).ready(function() {
+// Funcion para validar el correo
+$(document).ready(function() {
 
-			$('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
+    $('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
 
-			var Email = $('#correo').val();
-			buscar_datos(Email);
+    var Email = $('#correo').val();
+    buscar_datos(Email);
 
-			$('#correo').on('change', function() {
+    $('#correo').on('change', function() {
 
-				var Email = $('#correo').val();
-				buscar_datos(Email);
+        var Email = $('#correo').val();
+        buscar_datos(Email);
 
-			});
-			
-    //keydown, keyup
-    $('#crear-cuenta').on('click', function() {
+});
 
-    	if ($('#validarContrato').is(':checked')) {
-    		
-    		var regcampos = /^[A-Za-z _ñÑáéíóúÁÉÍÓÚ]*[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-z _ñÑáéíóúÁÉÍÓÚ]*$/; //Validar campos
-    		var regemail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/; // Expresion Regular email
+// Evento click en el botón de crear cuenta
+$('#crear-cuenta').on('click', function() {
 
-    		var nombres = $('#Nombres').val();	
-    		var apellidos = $('#Apellidos').val();	
-    		var Email = $('#correo').val();
-    		var password1 = $('#password').val();
-    		var password2 = $('#confirmarPass').val();
-    		var validarEmail = $('#validez').val();
-    		
+    // Verifica si se ha aceptado el checkbox de términos y condiciones
+    if ($('#validarContrato').is(':checked')) {
 
-    		if (nombres != "" && apellidos != "" && Email != "" && password1 !="" && password2 !="" ){
+        // Expresión regular para validar que solo se ingresen letras en nombres y apellidos
+        var regcampos = /^[A-Za-z _ñÑáéíóúÁÉÍÓÚ]*[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-z _ñÑáéíóúÁÉÍÓÚ]*$/;
 
-    			if (!regcampos.test(nombres)){
-    				swal({title:'Error',text:'No se permite carácteres especiales',type:'warning'});
-    				return false;
-    			}
-    			else if(!regcampos.test(apellidos)){
-    				swal({title:'Error',text:'No se permite carácteres especiales',type:'warning'});
-    				return false;
-    			}else{
+        // Expresión regular para validar el formato del correo electrónico
+        var regemail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-    				if(nombres.length<=3 ){
-    					swal({title:'Advertenicia',text:'El campo nombre debe tener minimo 4 palabras',type:'warning'  });
-    					return false;
-    				}else if(apellidos.length<=3){
-    					swal({title:'Advertenicia',text:'El campo apellidos debe tener minimo 4 palabras',type:'warning'  });
-    					return false;
-    				}else if(!regemail.test(Email)){
-    					swal({title:'Advertenicia',text:'El correo electrónico no es valido',type:'warning'  });
-    					return false;
-    				}else if(validarEmail == 1){
-    					swal({title:'Advertenicia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
-    					return false;
-    				}
-    				else if(password1.length<=7){
-    					swal({title:'Advertenicia',text:'La contraseña debe tener entre 8 caracteres',type:'warning'  });
-    					return false;
-    				}
-    				else if(password1 != password2 ){
-    					swal({title:'Advertenicia',text:'La contraseña no coinciden',type:'warning'  });
-    					return false;
-    				}else{
-    					
-    					$.ajax({
-    						url: 'main/UsuarioCuentas/cuenta-empresa.php' ,
-    						type: 'POST' ,
-    						dataType: 'html',
-    						data: {correo:Email,Cargo:'Empresa',Nombre:nombres,Apellidos:apellidos,password:password1},
+        // Obtener los valores de los campos del formulario
+        var nombres = $('#Nombres').val();
+        var apellidos = $('#Apellidos').val();
+        var Email = $('#correo').val();
+        var password1 = $('#password').val();
+        var password2 = $('#confirmarPass').val();
+        var validarEmail = $('#validez').val();
 
-    						beforeSend: function() {
-    							swal({
-    								title: "Cargando...",
-    								text: "Por favor  espere",
-    								imageUrl: "assets/img/icono/loader.gif",
-    								button: false,
-    								closeOnClickOutside: false,
-    								closeOnEsc: false,
-    								imageWidth: 100,
-    								imageHeight: 100,
-    								showCancelButton: false,
-    								showConfirmButton: false
-    							});
-    						}
+        // Verifica que todos los campos estén completos
+        if (nombres != "" && apellidos != "" && Email != "" && password1 != "" && password2 != "") {
 
-    					})
-    					.done(function(response){
-    						var result = response;
-    						
-    						if(result==1){
-    							swal({title:'Advertenicia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
-    						}else if(result == 2)
-    						{	
+            // Verifica que los nombres no contengan caracteres especiales
+            if (!regcampos.test(nombres)) {
+                swal({ title: 'Error', text: 'No se permite caracteres especiales', type: 'warning' });
+                return false;
 
-    							var nombres = $('#Nombres').val("");	
-    							var apellidos = $('#Apellidos').val("");	
-    							var Email = $('#correo').val("");
-    							var password1 = $('#password').val("");
-    							var password2 = $('#confirmarPass').val("");
-    							var validarEmail = $('#validez').val("");
+                // Verifica que los apellidos no contengan caracteres especiales
+            } else if (!regcampos.test(apellidos)) {
+                swal({ title: 'Error', text: 'No se permite caracteres especiales', type: 'warning' });
+                return false;
 
-    							$('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
+            } else {
+                // Verifica que el nombre tenga al menos 4 caracteres
+                if (nombres.length <= 3) {
+                    swal({ title: 'Advertencia', text: 'El campo nombre debe tener mínimo 4 caracteres', type: 'warning' });
+                    return false;
 
-    							swal({
-    								title: "Se ha creado la cuenta",
-    								text: "Verifica tu correo electrónico para validar el usuario. Algunas veces puede caer en spam o correo no deseado",
-    								type: "success",
-    								buttons: true,
-    								dangerMode: true,
-    							})
-    							.then((willDelete) => {
-    								if (willDelete) {
-    									setTimeout("location.href='login-empresa?success=1'");
-    								} 
+                    // Verifica que los apellidos tengan al menos 4 caracteres
+                } else if (apellidos.length <= 3) {
+                    swal({ title: 'Advertencia', text: 'El campo apellidos debe tener mínimo 4 caracteres', type: 'warning' });
+                    return false;
 
-    							});
+                    // Verifica el formato del correo electrónico
+                } else if (!regemail.test(Email)) {
+                    swal({ title: 'Advertencia', text: 'El correo electrónico no es válido', type: 'warning' });
+                    return false;
 
-    						}else if(result == 3)
-    						{
-    							swal({title:'Advertenicia',text:'Intente de nuevo',type:'warning'  });
-    						}
-    						else{
-    							
-    							alert(result);
-    						}
-    						
+                    // Verifica si el correo electrónico ya está en uso
+                } else if (validarEmail == 1) {
+                    swal({ title: 'Advertencia', text: 'El correo electrónico ya está en uso', type: 'warning' });
+                    return false;
 
-    					})
-    					.fail(function(request, errorType, errorMessage){
-					      //timeout, error, abort, parseerror
-					      swal({title:'alerta',text:'Intente de nuevo para procesar el envio',type:'error'});
-					      console.log(errorType);
-					      alert(errorMessage);
-					  })
-    					.always(function(){
-    						$('#myModal').modal('hide')
+                    // Verifica que la contraseña tenga al menos 8 caracteres
+                } else if (password1.length <= 7) {
+                    swal({ title: 'Advertencia', text: 'La contraseña debe tener al menos 8 caracteres', type: 'warning' });
+                    return false;
 
+                    // Verifica que ambas contraseñas coincidan
+                } else if (password1 != password2) {
+                    swal({ title: 'Advertencia', text: 'Las contraseñas no coinciden', type: 'warning' });
+                    return false;
 
-    					})
+                } else {
+                    // Si todas las validaciones son correctas, se envía el formulario mediante AJAX
+                    $.ajax({
+                        url: 'main/UsuarioCuentas/cuenta-empresa.php',
+                        type: 'POST',
+                        dataType: 'html',
+                        data: {
+                            correo: Email,
+                            Cargo: 'Empresa',
+                            Nombre: nombres,
+                            Apellidos: apellidos,
+                            password: password1
+                        },
 
-    				}
+                        // Muestra un mensaje de "Cargando" mientras se realiza la petición
+                        beforeSend: function() {
+                            swal({
+                                title: "Cargando...",
+                                text: "Por favor espere",
+                                imageUrl: "assets/img/icono/loader.gif",
+                                button: false,
+                                closeOnClickOutside: false,
+                                closeOnEsc: false,
+                                imageWidth: 100,
+                                imageHeight: 100,
+                                showCancelButton: false,
+                                showConfirmButton: false
+                            });
+                        }
+                    })
 
-    			}
-    			
+                        // Se ejecuta cuando la petición AJAX finaliza correctamente
+                        .done(function(response) {
+                            var result = response;
 
+                            // Si el correo ya está en uso, muestra una advertencia
+                            if (result == 1) {
+                                swal({ title: 'Advertencia', text: 'El correo electrónico ya está en uso', type: 'warning' });
 
-    		}else{
-    			swal({title:'Advertenicia',text:'Complete todos los campos',type:'warning'  });
-    			return false;
-    		}
+                                // Si la cuenta se creó correctamente
+                            } else if (result == 2) {
 
+                                // Limpia los campos del formulario
+                                $('#Nombres').val("");
+                                $('#Apellidos').val("");
+                                $('#correo').val("");
+                                $('#password').val("");
+                                $('#confirmarPass').val("");
+                                $('#validez').val("");
 
+                                // Reinicia la barra de progreso de fuerza de la contraseña
+                                $('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
 
-    	} else {swal({title:'Advertenicia',text:'No ha seleccionado Términos & condiciones',type:'warning'  }); }
+                                // Muestra un mensaje de éxito
+                                swal({
+                                    title: "Se ha creado la cuenta como Empresa",
+                                    text: "Tu cuenta ha sido creada exitosamente. Puedes iniciar sesión con tus credenciales ahora mismo."
+                                    type: "success",
+                                    buttons: true,
+                                    dangerMode: true,
+                                })
+                                    // Redirige al usuario al login después de cerrar el mensaje
+                                    .then((willDelete) => {
+                                        if (willDelete) {
+                                            setTimeout("location.href='login-empresa?success=1'");
+                                        }
+                                    });
 
+                                // Si hubo un error en el servidor, muestra un mensaje
+                            } else if (result == 3) {
+                                swal({ title: 'Advertencia', text: 'Intente de nuevo', type: 'warning' });
+                            } else {
+                                alert(result);
+                            }
+                        })
 
-    });
+                        // Se ejecuta si hubo un error en la petición AJAX
+                        .fail(function(request, errorType, errorMessage) {
+                            swal({ title: 'Alerta', text: 'Intente de nuevo para procesar el envío', type: 'error' });
+                            console.log(errorType);
+                            alert(errorMessage);
+                        })
 
+                        // Se ejecuta siempre que la petición AJAX finaliza
+                        .always(function() {
+                            $('#myModal').modal('hide');
+                        });
+                }
+            }
+
+            // Si faltan campos por completar, muestra una advertencia
+        } else {
+            swal({ title: 'Advertencia', text: 'Complete todos los campos', type: 'warning' });
+            return false;
+        }
+
+        // Si no se aceptaron los términos y condiciones, muestra una advertencia
+    } else {
+        swal({ title: 'Advertencia', text: 'No ha seleccionado Términos & condiciones', type: 'warning' });
+    }
+});
 
 $('#password').keyup(function(e) {
 

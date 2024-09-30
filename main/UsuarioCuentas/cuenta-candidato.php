@@ -34,9 +34,7 @@ try {
       	$stmt->bindParam(':Cargo', $Cargo , PDO::PARAM_STR);
 
       	if ($stmt->execute()){
-      		echo "2";
-      		EnviarCorreos::EnviarVerfificacion($Nombre, $email , $Token);
-
+            echo "2";
       	}else
       	{
       		echo "3";

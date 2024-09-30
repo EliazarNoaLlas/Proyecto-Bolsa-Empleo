@@ -49,7 +49,7 @@
 									} 
 									else{
 										echo '<a href="login-candidato" class="bizwheel-btn">Inicio Candidatos</a>';
-										echo '<a href="login-empresa" class="bizwheel-btn">Acceso Empresas</a>';	
+										echo '<a href="login-empresa" class="bizwheel-btn">Acceso Empresas</a>';
 									}
 									?>
 									

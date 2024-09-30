@@ -321,8 +321,8 @@
 
 
     							swal({
-    								title: "Se ha creado la cuenta",
-    								text: "Verifica tu correo electrónico para validar el usuario. Algunas veces puede caer en spam o correo no deseado",
+    								title: "Se ha creado la cuenta como Cndidato",
+                                    text: "Tu cuenta ha sido creada exitosamente. Puedes iniciar sesión con tus credenciales ahora mismo."
     								type: "success",
     								buttons: true,
     								dangerMode: true,

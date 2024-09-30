@@ -13,8 +13,8 @@ if (isset($_POST['validar'])) {
     $password = $FuncionesApp->test_input($_POST['login-password']);
     $emailFormato = strtolower($email);
 
-    $dirrecionar = $_POST['direccionar'];
-    $Codigo = $_POST['codigo'];
+    $dirrecionar = $_POST['direccionar'] ?? '';
+    $Codigo = $_POST['codigo'] ?? '';
 
     $sql = "SELECT `IDUsuario`, `Nombre`, `Apellidos`, `Correo`, `Password`, `Foto`, `Cargo`, `Estado` FROM usuarios_cuentas WHERE `Correo` = ?";
     $stmt = $Conexion->ejecutar_consulta_simple_Where($sql, $emailFormato);

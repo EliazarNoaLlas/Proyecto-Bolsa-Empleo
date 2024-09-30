@@ -1,14 +1,13 @@
 <?php session_start();  
 
 if (isset($_SESSION['iduser'])) {
-
     if($_SESSION['cargo'] == "Empresa"){
-
         header('Location: Dashboard/Empresa/');        
     }
-} 
+}
 
 ?>
+
 <!doctype html>
 <html lang="en" class="no-focus">
 <head>
@@ -131,12 +130,9 @@ if (isset($_SESSION['iduser'])) {
                                             <span class="input-group-text">
 
                                                 <span id="MostrarPossword" class="fa fa-eye-slash icon"></span>
-                                                
                                             </span>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
 
