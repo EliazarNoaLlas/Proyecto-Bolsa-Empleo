@@ -13,8 +13,8 @@ Para instalar el sistema, es necesario contar con PHP 8, y se puede utilizar XAM
 ## Instalación / Primeros pasos
 1 - Abrir la terminal de Git Bash y clonar el repositorio con el siguiente comando:
 ```shell
-git clone git clone https://github.com/dmarquezsv/Sistema-de-bolsa-de-empleo.git
-cd Sistema-de-bolsa-de-empleo/
+git clone git clone https://github.com/EliazarNoaLlas/Proyecto-Bolsa-Empleo.git
+cd bolsaEmpleo/
 code .
 ```
 2 - Crear una base de datos llamada bdmundo, con codificación utf8mb4_general_ci.
