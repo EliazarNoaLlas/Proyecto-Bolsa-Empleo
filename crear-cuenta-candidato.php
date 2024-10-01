@@ -35,7 +35,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 
 
@@ -50,10 +50,10 @@
 					<p>Los campos con asterisco (*) son obligatorios y deben ser completados para continuar con el proceso de registro.</p>
 					<br>
 					<p> La contraseña debe tener entre 8 carácteres y de preferencia utilice  dígitos, minúscula o al menos una mayúscula. Puede tener otros símbolos (@,$,!,%,*,#,?,&).</p>
-					
+
 					<div class="row">
 
-						
+
 
 						<div class="col-lg-6 col-md-6 col-12">
 							<div class="form-group">
@@ -67,7 +67,7 @@
 								<input class="form-control valid" id="Apellidos"   name="Apellidos" type="text"  placeholder="Apellidos*"  >
 							</div>
 						</div>
-						
+
 						<div class="col-lg-12 col-md-6 col-12">
 							<div class="form-group">
 								<div class="icon"><i class="fa fa-envelope"></i></div>
@@ -111,7 +111,7 @@
 
 								<br><br>
 								<a href="terminos-condiciones" target="_blank"  >Leer terminos y servicios</a>
-								
+
 							</div>
 						</div>
 
@@ -123,7 +123,7 @@
 						</div>
 
 					</div>
-					
+
 				</div>
 				<!--/ End contact Form -->
 			</div>
@@ -138,7 +138,7 @@
 
 
 					<div class="contact-title">
-						<h2>Ventajas de Mundo Empleo:</h2>						
+						<h2>Ventajas de Mundo Empleo:</h2>
 					</div>
 					<!-- Single Contact -->
 					<div class="single-contact-box">
@@ -166,7 +166,7 @@
 						<div class="c-text">
 							<h4>Más de 15 sectores de mercado distintos </h4>
 							<P>¡Marque la diferencia con su currículum en línea!</P>
-							
+
 						</div>
 					</div>
 					<!--/ End Single Contact -->
@@ -213,37 +213,37 @@
 
 
 
-		// Funcion para validar el correo
-		$(document).ready(function() {
+// Funcion para validar el correo
+$(document).ready(function() {
 
-			
-			var Email = $('#correo').val();
-			buscar_datos(Email);
 
-			$('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
+var Email = $('#correo').val();
+buscar_datos(Email);
 
-			$('#correo').on('change', function() {
+$('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
 
-				var Email = $('#correo').val();
-				buscar_datos(Email);
+$('#correo').on('change', function() {
 
-			});
-			
+    var Email = $('#correo').val();
+    buscar_datos(Email);
+
+});
+
     //keydown, keyup
     $('#crear-cuenta').on('click', function() {
 
     	if ($('#validarContrato').is(':checked')) {
-    		
+
     		var regcampos = /^[A-Za-z _ñÑáéíóúÁÉÍÓÚ]*[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-z _ñÑáéíóúÁÉÍÓÚ]*$/; //Validar campos
     		var regemail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/; // Expresion Regular email
 
-    		var nombres = $('#Nombres').val();	
-    		var apellidos = $('#Apellidos').val();	
+    		var nombres = $('#Nombres').val();
+    		var apellidos = $('#Apellidos').val();
     		var Email = $('#correo').val();
     		var password1 = $('#password').val();
     		var password2 = $('#confirmarPass').val();
     		var validarEmail = $('#validez').val();
-    		
+
 
 
     		if (nombres != "" && apellidos != "" && Email != "" && password1 !="" && password2 !="" ){
@@ -278,7 +278,7 @@
     					swal({title:'Advertenicia',text:'La contraseña no coinciden',type:'warning'  });
     					return false;
     				}else{
-    					
+
     					$.ajax({
     						url: 'main/UsuarioCuentas/cuenta-candidato.php' ,
     						type: 'POST' ,
@@ -305,13 +305,13 @@
     					})
     					.done(function(response){
     						var result = response;
-    						
+
     						if(result==1){
     							swal({title:'Advertenicia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
     						}else if(result == 2)
     						{
-    							var nombres = $('#Nombres').val("");	
-    							var apellidos = $('#Apellidos').val("");	
+    							var nombres = $('#Nombres').val("");
+    							var apellidos = $('#Apellidos').val("");
     							var Email = $('#correo').val("");
     							var password1 = $('#password').val("");
     							var password2 = $('#confirmarPass').val("");
@@ -321,8 +321,8 @@
 
 
     							swal({
-    								title: "Se ha creado la cuenta como Cndidato",
-                                    text: "Tu cuenta ha sido creada exitosamente. Puedes iniciar sesión con tus credenciales ahora mismo."
+    								title: "Se ha creado la cuenta como Candidato",
+                                    text: "Se ha creado la cuenta correctamente",
     								type: "success",
     								buttons: true,
     								dangerMode: true,
@@ -330,14 +330,14 @@
     							.then((willDelete) => {
     								if (willDelete) {
     									setTimeout("location.href='login-candidato?success=1'");
-    								} 
+    								}
 
     							});
 
 
-    						
 
-    						
+
+
 
 
 
@@ -346,10 +346,10 @@
     							swal({title:'Advertenicia',text:'Intente de nuevo',type:'warning'  });
     						}
     						else{
-    							
+
     							alert(result);
     						}
-    						
+
 
     					})
     					.fail(function(request, errorType, errorMessage){
@@ -367,7 +367,7 @@
     				}
 
     			}
-    			
+
 
 
     		}else{
@@ -424,7 +424,7 @@ $('#confirmarPass').keyup(function(e) {
 	var passwordConfir =$("#confirmarPass").val();
 	var Password =$("#password").val();
 
-	if (Password == passwordConfir) 
+	if (Password == passwordConfir)
 	{
 		$('#verificaPassword').html('');
 		VerificarPassword = 0;

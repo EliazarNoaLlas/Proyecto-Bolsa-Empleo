@@ -32,7 +32,6 @@ if (isset($_POST['validar'])) {
     }
 
     if($emailFormato == $Correo && password_verify($password, $ObtnerContra)) {
-        // Eliminamos la verificación del estado "Token", "Denegado" y "Seguridad"
         $_SESSION['iduser'] = $Iduser;
         $_SESSION['nombre'] = $Nombre;
         $_SESSION['apellido'] = $Apellidos;
