@@ -35,7 +35,7 @@ include_once 'templates/header.php';
       <div class="content content-top text-center overflow-hidden">
         <div class="pt-40 pb-20">
           <center> <img src="../../assets/img/logo/logo2_footer.png" data-toggle="appear" data-class="animated bounceInDown"> </center>
-          <h1 class="font-w700 text-white mb-10 invisible" data-toggle="appear" data-class="animated fadeInUp">Mundo Empleo</h1>
+          <h1 class="font-w700 text-white mb-10 invisible" data-toggle="appear" data-class="animated fadeInUp">BOLSA LABORAL</h1>
           <h2 class="h4 font-w400 text-white-op invisible" data-toggle="appear" data-class="animated fadeInUp">Solicitar Servicio</h2>
         </div>
       </div>
@@ -114,7 +114,7 @@ include_once 'templates/header.php';
               <tr>
                 <td class="text-center">1</td>
                 <td>
-                  <p class="font-w600 mb-5">Acceso a la plataforma de Mundo Empleo.</p>
+                  <p class="font-w600 mb-5">Acceso a la plataforma de BOLSA LABORAL.</p>
                   <div class="text-muted">Servicio Solicitado por <?php echo $MesSolicitado ?> mes.</div>
                 </td>
                 <td class="text-center">
@@ -191,7 +191,7 @@ include_once '../../templates/alertas.php';
       
       if (result == 1){
 
-        swal({title:'solicitado',text:'Se ha notificado al encargado de mundo empleo. En breve minutos te enviaremos la aprobación por medio de la plataforma o via E-mal.Por favor espere sera dirigido cpanel-visitante mientras tanto',type:'success'});
+        swal({title:'solicitado',text:'Se ha notificado al encargado de BOLSA LABORAL. En breve minutos te enviaremos la aprobación por medio de la plataforma o via E-mal.Por favor espere sera dirigido cpanel-visitante mientras tanto',type:'success'});
 
         setTimeout("location.href='cpanel-visitante.php'", 8000);
       }else{

@@ -31,7 +31,7 @@ try {
 
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com','soporte de mundo empleo ca');
+			    $mail->setFrom('danielm@mundoempleosca.com','soporte de BOLSA LABORAL ca');
 			    $mail->addAddress('marquez.daniel.sv@gmail.com');     // Add a recipient
 			     $mail->addAddress('rseoane@mundoempleosca.com');     // Add a recipient
                  $mail->addAddress('jandrade@mundoempleosca.com');     // Add a recipient
@@ -52,7 +52,7 @@ try {
 
 			    </head>
 			    <body style="margin: 0; padding: 0;">
-			    <p style="display: none;">Mensaje desde Mundo Empleo.</p>
+			    <p style="display: none;">Mensaje desde BOLSA LABORAL.</p>
 			    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			    <tr>
 			    <td style="padding: 20px 0 30px 0;">
@@ -61,7 +61,7 @@ try {
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
 
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 
 			    </td>
 			    </tr>
@@ -94,7 +94,7 @@ try {
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p>
 			    Copyright © Todos los derechos reservados
 			    </p>

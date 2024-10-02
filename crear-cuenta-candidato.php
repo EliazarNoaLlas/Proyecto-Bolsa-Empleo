@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -47,9 +47,9 @@
 				<!-- Contact Form -->
 				<div class="contact-form-area m-top-30">
 					<h4 id="titulos">Regístrate Gratis</h4> <hr>
-					<p>Los campos con asterisco (*) son obligatorios y deben ser completados para continuar con el proceso de registro.</p>
+<!--					<p>Los campos con asterisco (*) son obligatorios y deben ser completados para continuar con el proceso de registro.</p>-->
 					<br>
-					<p> La contraseña debe tener entre 8 carácteres y de preferencia utilice  dígitos, minúscula o al menos una mayúscula. Puede tener otros símbolos (@,$,!,%,*,#,?,&).</p>
+<!--					<p> La contraseña debe tener entre 8 carácteres y de preferencia utilice  dígitos, minúscula o al menos una mayúscula. Puede tener otros símbolos (@,$,!,%,*,#,?,&).</p>-->
 
 					<div class="row">
 
@@ -127,56 +127,56 @@
 				</div>
 				<!--/ End contact Form -->
 			</div>
-			<div class="col-lg-5 col-md-5 col-12">
-				<div class="contact-box-main m-top-30">
-
-					<div class="contact-title">
-						<p style="text-align: center;">
-							<img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">
-						</p>
-					</div>
-
-
-					<div class="contact-title">
-						<h2>Ventajas de Mundo Empleo:</h2>
-					</div>
+<!--			<div class="col-lg-5 col-md-5 col-12">-->
+<!--				<div class="contact-box-main m-top-30">-->
+<!---->
+<!--					<div class="contact-title">-->
+<!--						<p style="text-align: center;">-->
+<!--							<img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
+<!--						</p>-->
+<!--					</div>-->
+<!---->
+<!---->
+<!--					<div class="contact-title">-->
+<!--						<h2>Ventajas de BOLSA LABORAL:</h2>-->
+<!--					</div>-->
 					<!-- Single Contact -->
-					<div class="single-contact-box">
-						<div class="c-icon"><i class="fa fa-check "></i></div>
-						<div class="c-text">
-							<h4>Regístrate Facilmente</h4>
-							<p>Facil y sencillo<br></p>
-						</div>
-					</div>
+<!--					<div class="single-contact-box">-->
+<!--						<div class="c-icon"><i class="fa fa-check "></i></div>-->
+<!--						<div class="c-text">-->
+<!--							<h4>Regístrate Facilmente</h4>-->
+<!--							<p>Facil y sencillo<br></p>-->
+<!--						</div>-->
+<!--					</div>-->
 					<!--/ End Single Contact -->
-					<br>
+<!--					<br>-->
 					<!-- Single Contact -->
-					<div class="single-contact-box">
-						<div class="c-icon"><i class="fa fa-briefcase"></i></div>
-						<div class="c-text">
-							<h4>¡Busca oportunidades!</h4>
-							<p>Postúlate a las mejores ofertas <br> personalizas tus alertas trabajos.</p>
-						</div>
-					</div>
+<!--					<div class="single-contact-box">-->
+<!--						<div class="c-icon"><i class="fa fa-briefcase"></i></div>-->
+<!--						<div class="c-text">-->
+<!--							<h4>¡Busca oportunidades!</h4>-->
+<!--							<p>Postúlate a las mejores ofertas <br> personalizas tus alertas trabajos.</p>-->
+<!--						</div>-->
+<!--					</div>-->
 					<!--/ End Single Contact -->
 					<!-- Single Contact -->
-					<br>
-					<div class="single-contact-box">
-						<div class="c-icon"><i class="fa fa-building-o"></i></div>
-						<div class="c-text">
-							<h4>Más de 15 sectores de mercado distintos </h4>
-							<P>¡Marque la diferencia con su currículum en línea!</P>
-
-						</div>
-					</div>
+<!--					<br>-->
+<!--					<div class="single-contact-box">-->
+<!--						<div class="c-icon"><i class="fa fa-building-o"></i></div>-->
+<!--						<div class="c-text">-->
+<!--							<h4>Más de 15 sectores de mercado distintos </h4>-->
+<!--							<P>¡Marque la diferencia con su currículum en línea!</P>-->
+<!---->
+<!--						</div>-->
+<!--					</div>-->
 					<!--/ End Single Contact -->
-					<div class="button text-center">
-						<br>
-						¿Ya tienes una cuenta?<br>
-						<a href="login-candidato" class="bizwheel-btn theme-1">Iniciar Sesión<i class="fa fa-angle-right"></i></a>
-					</div>
-				</div>
-			</div>
+<!--					<div class="button text-center">-->
+<!--						<br>-->
+<!--						¿Ya tienes una cuenta?<br>-->
+<!--						<a href="login-candidato" class="bizwheel-btn theme-1">Iniciar Sesión<i class="fa fa-angle-right"></i></a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
 		</div>
 	</div>
 </section>
@@ -333,13 +333,6 @@ $('#correo').on('change', function() {
     								}
 
     							});
-
-
-
-
-
-
-
 
     						}else if(result == 3)
     						{

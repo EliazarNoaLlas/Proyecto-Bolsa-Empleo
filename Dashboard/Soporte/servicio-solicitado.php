@@ -58,7 +58,7 @@ include_once 'templates/header.php';
 
       <br><br>
 
-      <p>A continuación se muestran el historial de los servicios solicitado para utilizar la plataforma de mundo empleo a las cuales has solicitado, desde la más reciente a la más antigua. 
+      <p>A continuación se muestran el historial de los servicios solicitado para utilizar la plataforma de BOLSA LABORAL a las cuales has solicitado, desde la más reciente a la más antigua. 
        
       </p>
 

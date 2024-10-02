@@ -74,20 +74,20 @@ while ($item=$stmt->fetch()){
 
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com','Notificiones de Mundo Empleos CA');
+			    $mail->setFrom('danielm@mundoempleosca.com','Notificiones de BOLSA LABORALs CA');
 			    $mail->addAddress($Correo);     // Add a recipient
 
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'OFERTAS DE EMPLEOS MUNDO EMPLEOS CA';
+			    $mail->Subject = 'OFERTAS DE EMPLEOS BOLSA LABORALS CA';
 			    $mail->Body    = '<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			    <tr>
 			    <td style="padding: 20px 0 30px 0;">
 			    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; border: 1px solid #cccccc;">
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
-			    <img src="https://www.mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://www.mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			    <br>
 			    <h1 style="font-size: 24px; margin: 0; text-align: center;">OFERTAS DE TRABAJOS</h1>
 			    </td>

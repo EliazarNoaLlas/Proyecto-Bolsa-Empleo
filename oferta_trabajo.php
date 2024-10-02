@@ -180,7 +180,7 @@ while ($item=$stmt3->fetch())
 $fechaActual =date("Y-m-d");
 
  ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>

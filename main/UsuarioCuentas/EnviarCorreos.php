@@ -29,18 +29,18 @@ class EnviarCorreos
 
 
 			    //Recipients
-			    $mail->setFrom('daniel.marquez@webmakersv.com', 'Equipo de Mundo Empleo CA');
+			    $mail->setFrom('daniel.marquez@webmakersv.com', 'Equipo de BOLSA LABORAL CA');
 			    $mail->addAddress($emial);     // Add a recipient
 
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'Activa tu cuenta '.$Nombre.' | Mundo Empleo Centro América';
+			    $mail->Subject = 'Activa tu cuenta '.$Nombre.' | BOLSA LABORAL Centro América';
 			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
 			    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			    <title>Bienvenido a Mundo Empleo</title>
+			    <title>Bienvenido a BOLSA LABORAL</title>
 			    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 			    <style type="text/css">
@@ -49,7 +49,7 @@ class EnviarCorreos
 
 			    </head>
 			    <body style="margin: 0; padding: 0;">
-			    <p style="display: none;">Bienvenido a Mundo Empleo.</p>
+			    <p style="display: none;">Bienvenido a BOLSA LABORAL.</p>
 			    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			    <tr>
 			    <td style="padding: 20px 0 30px 0;">
@@ -57,7 +57,7 @@ class EnviarCorreos
 			    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; border: 1px solid #cccccc;">
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			    </td>
 			    </tr>
 			    <tr>
@@ -65,12 +65,12 @@ class EnviarCorreos
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif;">
-			    <h1 style="font-size: 24px; margin: 0; text-align: center;">Bienvenido a Mundo Empleo!</h1>
+			    <h1 style="font-size: 24px; margin: 0; text-align: center;">Bienvenido a BOLSA LABORAL!</h1>
 			    </td>
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola '.$Nombre.' has finalizado tu registro con éxito. <br> <br> Gracias por registrarte en Mundo Empleo Centro América. Estamos felices de que nos acompañes en nuestra plataforma la cual tendrás acceso completo a todas las herramientas que necesitas para que tu búsqueda de empleo sea exitosa. <br><br> Pero primero necesitamos verificar la cuenta por favor, haz click en el botón de abajo para verificar tu e-mail y confirmar tu cuenta. </p>
+			    <p style="margin: 0; text-align: justify;">Hola '.$Nombre.' has finalizado tu registro con éxito. <br> <br> Gracias por registrarte en BOLSA LABORAL Centro América. Estamos felices de que nos acompañes en nuestra plataforma la cual tendrás acceso completo a todas las herramientas que necesitas para que tu búsqueda de empleo sea exitosa. <br><br> Pero primero necesitamos verificar la cuenta por favor, haz click en el botón de abajo para verificar tu e-mail y confirmar tu cuenta. </p>
 
 			    <br><br>
 
@@ -95,7 +95,7 @@ class EnviarCorreos
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p> Copyright © Todos los derechos reservados </p>
 			    </td>
 			    <td align="right">
@@ -174,19 +174,19 @@ class EnviarCorreos
 			    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de Mundo Empleo CA');
+			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
 			    //Recipients
 			    $mail->addAddress($emial);     // Add a recipient
 
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'Activa tu cuenta '.$Nombre.' | Mundo Empleo Centro América';
+			    $mail->Subject = 'Activa tu cuenta '.$Nombre.' | BOLSA LABORAL Centro América';
 			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
 			    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			    <title>Bienvenido a Mundo Empleo</title>
+			    <title>Bienvenido a BOLSA LABORAL</title>
 			    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 			    <style type="text/css">
@@ -195,7 +195,7 @@ class EnviarCorreos
 
 			    </head>
 			    <body style="margin: 0; padding: 0;">
-			    <p style="display: none;">Bienvenido a Mundo Empleo.</p>
+			    <p style="display: none;">Bienvenido a BOLSA LABORAL.</p>
 			    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			    <tr>
 			    <td style="padding: 20px 0 30px 0;">
@@ -203,7 +203,7 @@ class EnviarCorreos
 			    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; border: 1px solid #cccccc;">
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			    </td>
 			    </tr>
 			    <tr>
@@ -211,12 +211,12 @@ class EnviarCorreos
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif;">
-			    <h1 style="font-size: 24px; margin: 0; text-align: center;">Bienvenido a Mundo Empleo!</h1>
+			    <h1 style="font-size: 24px; margin: 0; text-align: center;">Bienvenido a BOLSA LABORAL!</h1>
 			    </td>
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola '.$Nombre.' has finalizado tu registro con éxito. <br> <br> Gracias por registrarte en Mundo Empleo Centro América. Estamos felices de que nos acompañes en nuestra plataforma la cual tendrás las herramientas que necesitas para que tu búsqueda de candidatos en tu país sea exitosa. <br><br> Pero primero necesitamos verificar la cuenta por favor, haz click en el botón de abajo para verificar tu e-mail y confirmar tu cuenta. </p>
+			    <p style="margin: 0; text-align: justify;">Hola '.$Nombre.' has finalizado tu registro con éxito. <br> <br> Gracias por registrarte en BOLSA LABORAL Centro América. Estamos felices de que nos acompañes en nuestra plataforma la cual tendrás las herramientas que necesitas para que tu búsqueda de candidatos en tu país sea exitosa. <br><br> Pero primero necesitamos verificar la cuenta por favor, haz click en el botón de abajo para verificar tu e-mail y confirmar tu cuenta. </p>
 
 			    <br><br>
 
@@ -239,7 +239,7 @@ class EnviarCorreos
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p> Copyright © Todos los derechos reservados </p>
 			    </td>
 			    <td align="right">

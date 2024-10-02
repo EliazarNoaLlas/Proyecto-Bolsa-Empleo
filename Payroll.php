@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | Outsourcing-Procesos</title>
+<title>BOLSA LABORAL | Outsourcing-Procesos</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -121,7 +121,7 @@
 							<div class="blog-detail">
 
 								<h2 class="blog-title">Liquidación de Haberes</h2>
-								<p style="text-align: justify;">Mundo Empleo  Payroll es la división especializada que le permitirá tercerizar la liquidación de su nómina, obteniendo beneficios tales como atención personalizada a cargo de especialistas constantemente actualizados sobre los cambios de la legislación laboral e impositiva y confidencialidad en el manejo de la información.</p>
+								<p style="text-align: justify;">BOLSA LABORAL  Payroll es la división especializada que le permitirá tercerizar la liquidación de su nómina, obteniendo beneficios tales como atención personalizada a cargo de especialistas constantemente actualizados sobre los cambios de la legislación laboral e impositiva y confidencialidad en el manejo de la información.</p>
 								<br>
 
 								<h2 class="blog-title">Procesos que abarcamos</h2>
@@ -180,7 +180,7 @@
 					<div class="single-feature">
 						<div class="icon-head"><img src="img/iconos/payroll/general.jpg" class="img-fluid" style="width: 75px; height: 75px;"></div>
 						<h4><a href="#">General</a></h4>
-						<p>Basándose en la “Encuesta General de Salarios y Beneficios” de Mundo Empleo Centroamérica, extraemos información de la Mínima, Máxima, Media, Promedio, Rango Intercuartil y Modo de la remuneración bruta actual de las posiciones a sondear, utilizando como referencia empresas multinacionales y nacionales con similar rango de facturación al de la empresa Cliente.</p><br>
+						<p>Basándose en la “Encuesta General de Salarios y Beneficios” de BOLSA LABORAL Centroamérica, extraemos información de la Mínima, Máxima, Media, Promedio, Rango Intercuartil y Modo de la remuneración bruta actual de las posiciones a sondear, utilizando como referencia empresas multinacionales y nacionales con similar rango de facturación al de la empresa Cliente.</p><br>
 
 					</div>
 					<!--/ End Single Feature -->

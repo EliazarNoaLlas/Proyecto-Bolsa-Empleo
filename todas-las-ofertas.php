@@ -17,7 +17,7 @@ $stmt4 = $Conexion->ejecutar_consulta_simple($sql4);
 
 ?>
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -113,7 +113,7 @@ $stmt4 = $Conexion->ejecutar_consulta_simple($sql4);
 				<div class="col-lg-7 col-md-8 col-12">
 					<div class="welcome-text"> 
 						<div class="hero-text"> 
-							<h4 style="color: white;">Encuentra tu trabajo ideal con Mundo Empleo</h4>
+							<h4 style="color: white;">Encuentra tu trabajo ideal con BOLSA LABORAL</h4>
 							<h1 id="titulos">Encontrá tu próximo empleo.</h1>
 
 

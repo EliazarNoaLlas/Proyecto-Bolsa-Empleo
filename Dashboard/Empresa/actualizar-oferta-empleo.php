@@ -55,7 +55,7 @@ while ($item=$stm4->fetch())
 
 
 ?>
-<title>Oferta de empleo | Mundo Empleo CA </title>
+<title>Oferta de empleo | BOLSA LABORAL CA </title>
 <?php 
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';

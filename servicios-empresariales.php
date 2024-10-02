@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -123,7 +123,7 @@
 					</div>
 					<div class="service-content">
 						<h4><a href="Payroll" id="titulos2">Payroll</a></h4>
-						<p>Mundo Empleo Payroll es la división especializada que le permitirá tercerizar la liquidación de su nómina, obteniendo importantes beneficios </p><br>
+						<p>BOLSA LABORAL Payroll es la división especializada que le permitirá tercerizar la liquidación de su nómina, obteniendo importantes beneficios </p><br>
 						<a class="btn" href="Payroll"><i class="fa fa-arrow-circle-o-right"></i>Ver servicio</a>
 						<br><br>
 					</div>

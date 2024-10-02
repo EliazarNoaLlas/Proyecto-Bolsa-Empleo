@@ -55,7 +55,7 @@ include_once 'templates/header.php';
       <i class="si si-action-undo fa-2x5"> </i> Retroceder
     </a></h2>
 
-    <p>A continuación se muestran los servicios de pago que realizado en la plataforma de mundo empleo a las cuales has solicitado desde la más reciente a la más antigua. <br><br><b>NOTA:</b> En la Columna <b>ESTADO</b> tiene varias opciones el primero es: <b>En espera</b>  la cual significa aun no has realizado el pago.<br>
+    <p>A continuación se muestran los servicios de pago que realizado en la plataforma de BOLSA LABORAL a las cuales has solicitado desde la más reciente a la más antigua. <br><br><b>NOTA:</b> En la Columna <b>ESTADO</b> tiene varias opciones el primero es: <b>En espera</b>  la cual significa aun no has realizado el pago.<br>
       <ul>
         <li>Si el estado se encuentra <b>RECHAZADO:</b> Significa que no puedes utilizar plataforma. Por lo tanto la empresa se pondra contacto ya sea por teléfono o via chat. Para Solucionar problema.</li>
         <li>Si el estado se encuentra <b>Finalizado:</b> Significa que la empresas ya realizo el proceso de pago y esta listo para utilizar plataforma.</li>

@@ -14,16 +14,16 @@ if (isset($_SESSION['iduser'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title> Mundo Empleo | Login</title>
+    <title> BOLSA LABORAL | Login</title>
 
-    <meta name="description" content="Login - candidato Mundo Empleo">
-    <meta name="author" content="Mundo Empleo Centro América">
+    <meta name="description" content="Login - candidato BOLSA LABORAL">
+    <meta name="author" content="BOLSA LABORAL Centro América">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Login - candidato Mundo Empleo">
-    <meta property="og:site_name" content="Mundo Empleo">
-    <meta property="og:description" content="Login - candidato Mundo Empleo">
+    <meta property="og:title" content="Login - candidato BOLSA LABORAL">
+    <meta property="og:site_name" content="BOLSA LABORAL">
+    <meta property="og:description" content="Login - candidato BOLSA LABORAL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mundoempleosca.com/">
     <meta property="og:image" content="">
@@ -97,7 +97,7 @@ if (isset($_SESSION['iduser'])) {
                         <!-- Header -->
                         <div class="px-30 py-10">
                             <center>
-                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">
+<!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
                             </center>
                             <h1 class="h3 font-w700 mt-30 mb-10" >Bienvenida a tu Panel</h1>
                             <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>

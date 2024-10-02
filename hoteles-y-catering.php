@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -58,7 +58,7 @@
 								<!-- News meta -->
 
 								<h2 class="blog-title">Hotel y Clubs</h2>
-								<p style="text-align: justify;">Para lograr un nivel de calidad y la eficiencia operativa en este mercado se requiere de un equipo altamente capacitado para responder a las exigentes necesidades del mismo, con sólidos conocimientos específicos del rubro de la hospitalidad. Éstos deben contemplar el cumplimiento de estándares en cuanto a tiempos, calidad de atención y actitud personal. Por ello con el fin de dar respuesta a este nuevo y cambiante escenario, Mundo Empleo Centroamérica ha creado su división especializada Hoteles y Catering. De esta manera, Mundo Empleo Centroamérica brinda a sus empresas clientes la posibilidad de incorporar especialistas en las tareas propias del mercado.</p>
+								<p style="text-align: justify;">Para lograr un nivel de calidad y la eficiencia operativa en este mercado se requiere de un equipo altamente capacitado para responder a las exigentes necesidades del mismo, con sólidos conocimientos específicos del rubro de la hospitalidad. Éstos deben contemplar el cumplimiento de estándares en cuanto a tiempos, calidad de atención y actitud personal. Por ello con el fin de dar respuesta a este nuevo y cambiante escenario, BOLSA LABORAL Centroamérica ha creado su división especializada Hoteles y Catering. De esta manera, BOLSA LABORAL Centroamérica brinda a sus empresas clientes la posibilidad de incorporar especialistas en las tareas propias del mercado.</p>
 
 								<h4>Los perfiles más solicitados</h4>
 
@@ -116,12 +116,12 @@
 										
 										<h2 class="blog-title">Con la supervisión y confianza de los mejores</h2>
 										
-										<p>A través de la División de Productivity Outsourcing, Mundo Empleo brinda soluciones y recursos que suman valor a la contratación de servicios de tercerización. Deje los pequeños pero significativos detalles en manos de los mejores, conozca Housekeeping Outsourcing:</p>
+										<p>A través de la División de Productivity Outsourcing, BOLSA LABORAL brinda soluciones y recursos que suman valor a la contratación de servicios de tercerización. Deje los pequeños pero significativos detalles en manos de los mejores, conozca Housekeeping Outsourcing:</p>
 									
 
 										<ul>
 											<li>Limpieza de habitaciones y áreas comunes de pisos</li>
-											<li>Supervisión por cuenta de personal de Mundo Empleo capacitado en el sector hotelero</li>
+											<li>Supervisión por cuenta de personal de BOLSA LABORAL capacitado en el sector hotelero</li>
 											<li>Baby-Sitters</li>
 											<li>Soporte especializado en la gestión administrativa y reclutamiento específico de la división de Hoteles &amp; Catering</li>
 										</ul>

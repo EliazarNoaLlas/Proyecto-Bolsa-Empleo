@@ -25,7 +25,7 @@ $stmt->execute(array($IDEmpresa));
 
 
 ?>
-<title>Seguimiento Candidato | MUNDO EMPLEO CA</title>
+<title>Seguimiento Candidato | BOLSA LABORAL CA</title>
 <?php 
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';

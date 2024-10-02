@@ -345,7 +345,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de Mundo Empleo CA');
+			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
 			    $mail->addAddress($CorreoUser);     // Add a recipient
 			    //$mail->addAddress('ellen@example.com');               // Name is optional
 			    //$mail->addReplyTo('info@example.com', 'Information');
@@ -362,7 +362,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 			}
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'curriculum vitae | Mundo Empleo CA';
+			    $mail->Subject = 'curriculum vitae | BOLSA LABORAL CA';
 			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
@@ -385,7 +385,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
 			   
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			     
 			    </td>
 			    </tr>
@@ -399,7 +399,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola '.$NombresUser.' te saluda el equipo de Mundo Empleo:  <br><br>Hemos recibido un pedido para enviarte curriculum vitae en pdf. Si no has iniciado este pedido, puedes simplemente ignorar este mensaje y ninguna acción será tomada. <br> </p>
+			    <p style="margin: 0; text-align: justify;">Hola '.$NombresUser.' te saluda el equipo de BOLSA LABORAL:  <br><br>Hemos recibido un pedido para enviarte curriculum vitae en pdf. Si no has iniciado este pedido, puedes simplemente ignorar este mensaje y ninguna acción será tomada. <br> </p>
 
 			    <br>
 			    <p style="margin: 0; text-align: justify;"><b>Nota:</b>Debes iniciar sesión para visualizar el perfil.</p>
@@ -424,7 +424,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p>
 			    Copyright © Todos los derechos reservados
 			    </p>

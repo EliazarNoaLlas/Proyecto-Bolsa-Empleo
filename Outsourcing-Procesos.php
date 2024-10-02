@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | Outsourcing-Procesos</title>
+<title>BOLSA LABORAL | Outsourcing-Procesos</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -126,7 +126,7 @@
 								<h2 class="blog-title">Mejoramos la productividad de tu empresa a través de las personas</h2>
 								<p>Dedícate a tu negocio, nosotros nos encargamos de trabajar, rediseñar y mejorar aquellos procesos auxiliares a tu actividad central.</p> 
 								<h2 class="blog-title">¿Cuánto tiempo invertís en procesos que no se centran en tu actividad principal?</h2>
-								<p>En Mundo Empleo sabemos lo importante que es la eficiencia para garantizar la productividad en tu negocio. por eso. te ofrecemos la oportunidad de externalizar todos aquellos procesos no críticos que no son parte de tu actividad principal. Solo así, podrás dedicarte 100% al Core Business de tu compañía.
+								<p>En BOLSA LABORAL sabemos lo importante que es la eficiencia para garantizar la productividad en tu negocio. por eso. te ofrecemos la oportunidad de externalizar todos aquellos procesos no críticos que no son parte de tu actividad principal. Solo así, podrás dedicarte 100% al Core Business de tu compañía.
 									Estos son los principales motivos que te impulsarán a externalizar un proceso con nosotros.</p>
 
 
@@ -174,7 +174,7 @@
 
 
 								<div class="single-feature active">
-									<h2 class="blog-title" id="titulos">MUNDO EMPLEO OUTSOURCING.</h2>
+									<h2 class="blog-title" id="titulos">BOLSA LABORAL OUTSOURCING.</h2>
 									<p>Nuestra finalidad es ofrecerte el mejor servicio, para ayudarte a encontrar la mejor solución para vos y tu empresa.</p>
 								</div>
 

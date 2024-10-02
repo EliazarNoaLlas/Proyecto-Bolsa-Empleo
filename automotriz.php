@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -62,11 +62,11 @@
 								<!-- News meta -->
 
 								<h2 class="blog-title">Automotriz</h2>
-								<p>Mundo Empleo aporta soluciones a las empresas en la selección de puestos permanentes y temporales.</p>
+								<p>BOLSA LABORAL aporta soluciones a las empresas en la selección de puestos permanentes y temporales.</p>
 
 								<p style="text-align: justify;">El dominio de las diferentes técnicas de evaluación y valoración de candidatos, y la utilización de una metodología adaptada al sector y a cada cliente, garantizan el éxito en los procesos de selección. El trabajo temporal es una herramienta útil, ya que permite que las empresas puedan adaptar su plantilla a las necesidades de cada momento. La respuesta ágil y personalizada de Adecco Automotriz, facilita el aumento de la productividad y la rentabilidad de sus empresas cliente. Además, ofrece una solución de control y reducción del ausentismo y de su impacto en el negocio.</p>
 
-								<p style="text-align: justify;"><b>Mundo Empleo Automotriz</b> está presente en las principales zonas de influencia de las terminales y su cadena de valor. En empresas con un alto volumen de contratación, <b>Mundo Empleo Automotriz</b> pone a su disposición sus recursos humanos y técnicos, creando así estructuras On Site en las instalaciones de sus clientes. Adecco Automotriz se compromete a una Garantía Legal en el cumplimiento de la normativa laboral y en la reglamentación de la seguridad y la calidad que afectan específicamente a la actividad automotriz.</p>
+								<p style="text-align: justify;"><b>BOLSA LABORAL Automotriz</b> está presente en las principales zonas de influencia de las terminales y su cadena de valor. En empresas con un alto volumen de contratación, <b>BOLSA LABORAL Automotriz</b> pone a su disposición sus recursos humanos y técnicos, creando así estructuras On Site en las instalaciones de sus clientes. Adecco Automotriz se compromete a una Garantía Legal en el cumplimiento de la normativa laboral y en la reglamentación de la seguridad y la calidad que afectan específicamente a la actividad automotriz.</p>
 
 								<div class="row blog-space">
 									<div class="col-lg-6">

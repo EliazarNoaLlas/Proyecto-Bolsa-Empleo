@@ -28,15 +28,15 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Mundo Empleo | Login</title>
-    <meta name="description" content="Login - soporte Mundo Empleo">
-    <meta name="author" content="Mundo Empleo Centro América">
+    <title>BOLSA LABORAL | Login</title>
+    <meta name="description" content="Login - soporte BOLSA LABORAL">
+    <meta name="author" content="BOLSA LABORAL Centro América">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Metadatos para redes sociales (Open Graph) -->
-    <meta property="og:title" content="Login - Soporte de Mundo Empleo CA">
-    <meta property="og:site_name" content="Mundo Empleo">
-    <meta property="og:description" content="Login - soporte Mundo Empleo">
+    <meta property="og:title" content="Login - Soporte de BOLSA LABORAL CA">
+    <meta property="og:site_name" content="BOLSA LABORAL">
+    <meta property="og:description" content="Login - soporte BOLSA LABORAL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mundoempleosca.com/">
     <meta property="og:image" content="">
@@ -94,7 +94,7 @@ session_start();
                         <!-- Cabecera del formulario -->
                         <div class="px-30 py-10">
                             <center>
-                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">
+<!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
                             </center>
                             <h1 class="h3 font-w700 mt-30 mb-10">Soporte técnico</h1>
                             <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>

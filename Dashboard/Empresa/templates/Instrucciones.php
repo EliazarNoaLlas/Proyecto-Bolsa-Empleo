@@ -21,10 +21,10 @@ if (isset($_GET['success'])) {?>
             <div class="row justify-content-center text-center">
               <div class="col-md-10 col-lg-8">
                 <img src="../../assets/recusosMundoEmpleo/logo.png" class="img-fluid" style="height: 100px; width: 250px;"  data-toggle="appear" data-class="animated flipInY">
-                <h3 class="font-size-h2 font-w300 mt-20" data-toggle="appear" data-class="animated flipInY"  id="titulos" style="color: #0B3486;">Bienvenido a Mundo Empleo C.A.! </h3>
+                <h3 class="font-size-h2 font-w300 mt-20" data-toggle="appear" data-class="animated flipInY"  id="titulos" style="color: #0B3486;">Bienvenido a BOLSA LABORAL C.A.! </h3>
 
                 <p class="text-muted" style="text-align: justify;" data-toggle="appear" data-class="animated fadeInUp">
-  <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: Hemos terminado de configurar tu perfil de empresa. Recuerda al finalizar la fecha <?php $date = date_create($FechaVencimiento);  echo date_format($date,"d/m/Y"); ?>. Ya no podrá utilizar la plataforma por que deberás solicitar el servicio de Mundo Empleo Centroamérica.
+  <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: Hemos terminado de configurar tu perfil de empresa. Recuerda al finalizar la fecha <?php $date = date_create($FechaVencimiento);  echo date_format($date,"d/m/Y"); ?>. Ya no podrá utilizar la plataforma por que deberás solicitar el servicio de BOLSA LABORAL Centroamérica.
                </p>
 
 

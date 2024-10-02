@@ -42,7 +42,7 @@ $stmt12 = $Conexion->ejecutar_consulta_simple($sql12);
 
 include_once 'templates/seguridadCpanel.php';
 ?>
-<title>Búsqueda Candidatos | MUNDO EMPLEO CA</title>
+<title>Búsqueda Candidatos | BOLSA LABORAL CA</title>
 <style type="text/css">
 
 

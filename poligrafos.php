@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | Outsourcing-Procesos</title>
+<title>BOLSA LABORAL | Outsourcing-Procesos</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -57,14 +57,14 @@
 
 								<h2 class="blog-title">POLIGRAFOS</h2>
 
-								   <p style="text-align: justify;">Nos complace en presentar nuestro servicio de Poligrafía con la garantía profesional, capacidad, solidez y experiencia empresaria de Mundo Empleo Centroamérica, compañía líder en su ramo a nivel nacional e internacional. 
+								   <p style="text-align: justify;">Nos complace en presentar nuestro servicio de Poligrafía con la garantía profesional, capacidad, solidez y experiencia empresaria de BOLSA LABORAL Centroamérica, compañía líder en su ramo a nivel nacional e internacional. 
 									<br><br>
-									Nuestra división Mundo Empleo Centroamérica SEGURIDAD cuenta con  un staff de poligrafistas graduados en THE NATIONAL TRAINING OF POLYGRAPH CENTER SCIENCE, y quienes realizan las pruebas poligráficas en todo Centroamérica para nuestra compañía.
+									Nuestra división BOLSA LABORAL Centroamérica SEGURIDAD cuenta con  un staff de poligrafistas graduados en THE NATIONAL TRAINING OF POLYGRAPH CENTER SCIENCE, y quienes realizan las pruebas poligráficas en todo Centroamérica para nuestra compañía.
 									<br><br>
 
 									Detallado encontrará los diferentes tipos de exámenes y mediante todas nuestras distintas pruebas  nos acomodamos a tus necesidades para proteger tus intereses con eficiencia.
 									<br><br>
-									<!--Mundo Empleo Centroamérica les ofrece una solución a esas situaciones mediante el servicio aquí propuesto acorde a sus necesidades para proteger sus intereses con eficiencia.-->
+									<!--BOLSA LABORAL Centroamérica les ofrece una solución a esas situaciones mediante el servicio aquí propuesto acorde a sus necesidades para proteger sus intereses con eficiencia.-->
 									
 								</p>
 

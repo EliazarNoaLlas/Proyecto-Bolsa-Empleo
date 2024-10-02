@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -65,7 +65,7 @@
 
 								<h2 class="blog-title">Office</h2>
 
-								<p>Somos la división de Mundo Empleo, especializada en soluciones integrales en materia de Recursos Humanos. Las empresas requieren de personal idóneo con diferentes perfiles de administración con el fin de lograr mayor rentabilidad y capitalizar al máximo las oportunidades de negocios.</p>
+								<p>Somos la división de BOLSA LABORAL, especializada en soluciones integrales en materia de Recursos Humanos. Las empresas requieren de personal idóneo con diferentes perfiles de administración con el fin de lograr mayor rentabilidad y capitalizar al máximo las oportunidades de negocios.</p>
 
 								<p>Dentro de este nuevo escenario, con un incremento exponencial de las actividades ejecutivas y de primera línea, las empresas requieren de personal idóneo con diferentes perfiles de administración con el fin de lograr mayor rentabilidad y capitalizar al máximo las oportunidades de negocios.
 								Para ello, le ofrecemos soluciones integrales en materia de Recursos Humanos. Contamos con el expertise exigido por el sector para cubrir todas las necesidades planteadas por nuestros clientes.</p>

@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | Personal temporal</title>
+<title>BOLSA LABORAL | Personal temporal</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -116,10 +116,10 @@
 							<div class="blog-detail">
 
 								<h2 class="blog-title">Personal Temporario</h2>
-								<p style="text-align: justify;">Mundo Empleo brinda los perfiles que su empresa necesita, ya sea para una asignación corta, como para un proyecto de mayor duración; desde un único recurso hasta una importante dotación de personal. Nuestro servicio de Personal Temporal brinda una de las soluciones más flexibles del mercado, vinculando el más exigente servicio de búsqueda y selección, con la más amplia estructura de servicio a nivel local, nacional e internacional.</p>
+								<p style="text-align: justify;">BOLSA LABORAL brinda los perfiles que su empresa necesita, ya sea para una asignación corta, como para un proyecto de mayor duración; desde un único recurso hasta una importante dotación de personal. Nuestro servicio de Personal Temporal brinda una de las soluciones más flexibles del mercado, vinculando el más exigente servicio de búsqueda y selección, con la más amplia estructura de servicio a nivel local, nacional e internacional.</p>
 								<br>
 
-								<h3 class="blog-title">Porque el servicio de personal temporal de mundo empleo es uno de los mejores de la región. </h3>
+								<h3 class="blog-title">Porque el servicio de personal temporal de BOLSA LABORAL es uno de los mejores de la región. </h3>
 								<br>
 								<div class="row outsourcing-valores">
 									<div class="col-md-6">
@@ -167,7 +167,7 @@
 									<div class="single-feature">
 										<div class="icon-head"><img src="img/iconos/Divisiones_Especializadas/Convenio.png" class="img-fluid" style="width: 75px; height: 75px;"></div>
 										<h4 ><a href="service-single.html">Convenios</a></h4>
-										<p style="text-align: justify;">Mundo Empleo Centroamérica posee diversos convenios con Universidades, Escuelas Técnicas, Alcaldías, Centros Educativos y Organizaciones no-gubernamentales de manera de poseer siempre la más actualizada base de datos para cubrir el proceso de reclutamiento y selección en el más corto plazo.</p><br>
+										<p style="text-align: justify;">BOLSA LABORAL Centroamérica posee diversos convenios con Universidades, Escuelas Técnicas, Alcaldías, Centros Educativos y Organizaciones no-gubernamentales de manera de poseer siempre la más actualizada base de datos para cubrir el proceso de reclutamiento y selección en el más corto plazo.</p><br>
 
 									</div>
 									<!--/ End Single Feature -->
@@ -177,7 +177,7 @@
 									<div class="single-feature active">
 										<div class="icon-head"><img src="img/iconos/Divisiones_Especializadas/Contratacion_Temporal.png" class="img-fluid" style="width: 75px; height: 75px;"></div>
 										<h4><a href="service-single.html">Contratación Temporal</a></h4>
-										<p style="text-align: justify;">En Mundo Empelo realizamos un estricto cumplimiento de lo establecido en las leyes y decretos que rigen a la actividad. Todo el personal derivado a las empresas suscribe un contrato de trabajo con Mundo Empleo Centroamérica con las condiciones laborales y salariales previamente pactadas con nuestro cliente, donde nos comprometemos al cumplimiento de todas nuestras obligaciones como empleadores. A la vez, capacitamos a todo nuestro personal derivado respecto a políticas de Seguridad e Higiene laboral, de manera de minimizar los riesgos inherentes a las diversas actividades de las empresas clientes.</p>
+										<p style="text-align: justify;">En Mundo Empelo realizamos un estricto cumplimiento de lo establecido en las leyes y decretos que rigen a la actividad. Todo el personal derivado a las empresas suscribe un contrato de trabajo con BOLSA LABORAL Centroamérica con las condiciones laborales y salariales previamente pactadas con nuestro cliente, donde nos comprometemos al cumplimiento de todas nuestras obligaciones como empleadores. A la vez, capacitamos a todo nuestro personal derivado respecto a políticas de Seguridad e Higiene laboral, de manera de minimizar los riesgos inherentes a las diversas actividades de las empresas clientes.</p>
 										<br>
 									</div>
 									<!--/ End Single Feature -->

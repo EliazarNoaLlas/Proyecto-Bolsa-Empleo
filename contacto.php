@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -67,7 +67,7 @@
 											<option value="" selected disabled>Seleccione una opción</option>
 											<option value="Empresa / Emprendimiento">Empresa / Emprendimiento</option>
 											<option value="Candidato (en búsqueda laboral)">Candidato (en búsqueda laboral)</option>
-											<option value="Empleado Mundo Empleo">Empleado Mundo Empleo</option>
+											<option value="Empleado BOLSA LABORAL">Empleado BOLSA LABORAL</option>
 										</select>
 									</div>
 								</div>

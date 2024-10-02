@@ -52,7 +52,7 @@
 													<option value="" selected disabled>Seleccione una opción</option>
 													<option value="Empresa / Emprendimiento">Empresa / Emprendimiento</option>
 													<option value="Candidato (en búsqueda laboral)">Candidato (en búsqueda laboral)</option>
-													<option value="Empleado Mundo Empleo">Empleado Mundo Empleo</option>
+													<option value="Empleado BOLSA LABORAL">Empleado BOLSA LABORAL</option>
 												</select>
 											</div>
 										</div>

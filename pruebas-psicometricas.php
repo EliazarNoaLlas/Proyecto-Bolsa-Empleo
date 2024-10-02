@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | pruebas psicométricas</title>
+<title>BOLSA LABORAL | pruebas psicométricas</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->

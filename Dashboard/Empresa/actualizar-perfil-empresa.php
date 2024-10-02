@@ -46,7 +46,7 @@ while ($item=$stmt3->fetch())
  
 
  ?>
- <title>Perfil de empresa | MUNDO EMPLEO CA</title>
+ <title>Perfil de empresa | BOLSA LABORAL CA</title>
  <?php 
  include_once 'templates/styles.php';
  include_once 'templates/MenuRight.php';

@@ -7,7 +7,7 @@ $Conexion = new Consultas();
 $FuncionesApp = new funcionesApp();
 include_once 'templates/seguridadCpanel.php';
 ?>
-<title>Candidos postulados | Mundo empleo</title>
+<title>Candidos postulados | BOLSA LABORAL</title>
 <style type="text/css">
 
 

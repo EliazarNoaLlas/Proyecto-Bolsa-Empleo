@@ -1,12 +1,12 @@
 <body id="bg">
 
-	<a href="https://api.whatsapp.com/send?phone=503########&amp;text=Hola Mundo Empleo necesito más información a cerca de sus servicios." class="float" target="_blank">
-		<i class="fa fa-whatsapp my-float"></i>
-	</a>
-
-	<a href="https://www.instagram.com/" class="float2" target="_blank">
-		<i class="fa fa-instagram my-float2"></i>
-	</a>
+<!--	<a href="https://api.whatsapp.com/send?phone=503########&amp;text=Hola BOLSA LABORAL necesito más información a cerca de sus servicios." class="float" target="_blank">-->
+<!--		<i class="fa fa-whatsapp my-float"></i>-->
+<!--	</a>-->
+<!---->
+<!--	<a href="https://www.instagram.com/" class="float2" target="_blank">-->
+<!--		<i class="fa fa-instagram my-float2"></i>-->
+<!--	</a>-->
 
 	<!-- Boxed Layout -->
 	<div id="page" class="site boxed-layout"> 
@@ -26,9 +26,7 @@
 						<div class="col-lg-8 col-12">
 							<!-- Top Contact -->
 							<div class="top-contact">
-								<div class="single-contact"><i class="fa fa-phone" id="iconosAmarrillo"></i><b>Tel: +(503) 2222 - 22222</b></div> 
-								<div class="single-contact"><i class="fa fa-envelope-open" id="iconosAmarrillo" ></i><b>Email: info@yoursite.com</b></div>	
-								<div class="single-contact"><i class="fa fa-clock-o"  id="iconosAmarrillo"></i><b>Apertura: 08AM - 09PM</b></div> 
+
 							</div>
 							<!-- End Top Contact -->
 						</div>	
@@ -73,7 +71,7 @@
 											<!-- Image Logo -->
 											<div class="img-logo">
 												<a href="./">
-													<img src="assets/recusosMundoEmpleo/logomundoempleo.png" alt="bolsa de empleo" style="height: 55px; ">
+													<img src="assets/recusosMundoEmpleo/logo_nuevo.png" alt="bolsa de empleo" style="height: 55px; ">
 												</a>
 											</div>
 										</div>								
@@ -89,7 +87,7 @@
 															<!-- Naviagiton -->
 															<ul id="nav" class="nav main-menu menu navbar-nav">
 
-																<li><a href="./">Institucional</a></li>
+<!--																<li><a href="./">Institucional</a></li>-->
 
 																<li class="icon-active"><a href="empresa">Empresa</a>
 																	<ul class="sub-menu">
@@ -101,16 +99,16 @@
 																	</ul>
 																</li>
 
-																<li class="icon-active"><a href="candidato">Candidatos</a>
+																<li class="icon-active"><a href="candidato">Postulantes</a>
 																	<ul class="sub-menu">
-																		<li><a href="login-candidato">Panel Candidato</a></li>
+																		<li><a href="login-candidato">Panel Postulante</a></li>
 																		<li><a href="crear-cuenta-candidato">Crear Cuenta</a></li>
 																		<li class="top-search"><a href="todas-las-ofertas">Buscar Empleos</a></li>
 																		<li><a href="preguntas-frecuentes-candidato">Preguntas frecuentes </a></li>
 																	</ul>
 																</li>
-															
-																<li><a href="contacto">Contacto</a></li>
+
+<!--																<li><a href="contacto">Contacto</a></li>-->
 
 															</ul>
 															<!--/ End Naviagiton -->

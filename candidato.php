@@ -23,7 +23,7 @@ $stmt2 = $Conexion->ejecutar_consulta_simple($sql2);
 
 ?>
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <?php include_once 'templates/leftmunu.php'; ?>
@@ -187,7 +187,7 @@ $stmt2 = $Conexion->ejecutar_consulta_simple($sql2);
 									<div class="col-lg-5 offset-lg-1 col-md-6 col-12">
 										<!-- About Video -->
 										<div class="modern-img-feature">
-											<img src="img/crea_tu_cuenta_2.jpg" alt="crea tu cuenta mundo empleo" >
+											<img src="img/crea_tu_cuenta_2.jpg" alt="crea tu cuenta BOLSA LABORAL" >
 
 										</div>
 										<!--/End About Video  -->

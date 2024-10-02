@@ -369,7 +369,7 @@ include_once 'templates/header.php';
                 <h3 class="font-size-h2 font-w300 mt-20"  data-toggle="appear" data-class="animated flipInY" id="titulos" style="color: #0B3486;">Periodo Finalizado </h3>
 
                 <p class="text-muted" style="text-align: justify;" data-toggle="appear" data-class="animated fadeInUp">
-                 <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: hemos desactivado tu usuario debido que ha terminado periodo. Recuerda Al finalizar fecha <?php $date = date_create($FechaVencimiento);  echo date_format($date,"d/m/Y"); ?>. Ya no podra utilizar la plataforma por que deberas solicitar el servicio de nuevo con Mundo Empleo.
+                 <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: hemos desactivado tu usuario debido que ha terminado periodo. Recuerda Al finalizar fecha <?php $date = date_create($FechaVencimiento);  echo date_format($date,"d/m/Y"); ?>. Ya no podra utilizar la plataforma por que deberas solicitar el servicio de nuevo con BOLSA LABORAL.
                </p>
 
 

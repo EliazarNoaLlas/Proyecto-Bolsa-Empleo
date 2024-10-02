@@ -15,16 +15,16 @@ if (isset($_SESSION['iduser'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title> Mundo Empleo | Login</title>
+    <title> BOLSA LABORAL | Login</title>
 
-    <meta name="description" content="Login - candidato Mundo Empleo">
-    <meta name="author" content="Mundo Empleo Centro América">
+    <meta name="description" content="Login - candidato BOLSA LABORAL">
+    <meta name="author" content="BOLSA LABORAL Centro América">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Login - candidato Mundo Empleo">
-    <meta property="og:site_name" content="Mundo Empleo">
-    <meta property="og:description" content="Login - candidato Mundo Empleo">
+    <meta property="og:title" content="Login - candidato BOLSA LABORAL">
+    <meta property="og:site_name" content="BOLSA LABORAL">
+    <meta property="og:description" content="Login - candidato BOLSA LABORAL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mundoempleosca.com/">
     <meta property="og:image" content="">
@@ -97,7 +97,7 @@ if (isset($_SESSION['iduser'])) {
                         <!-- Header -->
                         <div class="px-30 py-10">
                             <center>
-                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">
+<!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
                             </center>
                             <h1 class="h3 font-w700 mt-30 mb-10" >Bienvenida a tu Panel</h1>
                             <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>
@@ -204,7 +204,7 @@ if (isset($_SESSION['iduser'])) {
             <div class="row justify-content-center text-center">
               <div class="col-md-10 col-lg-8">
                 <img src="../../assets/recusosMundoEmpleo/logo.png" class="img-fluid" style="height: 100px; width: 250px;"  data-toggle="appear" data-class="animated flipInY">
-                <h3 class="font-size-h2 font-w300 mt-20" data-toggle="appear" data-class="animated flipInY"  id="titulos" style="color: #0B3486;">Bienvenido a Mundo Empleo C.A! </h3>
+                <h3 class="font-size-h2 font-w300 mt-20" data-toggle="appear" data-class="animated flipInY"  id="titulos" style="color: #0B3486;">Bienvenido a BOLSA LABORAL C.A! </h3>
 
                 <h1 data-toggle="appear"  style="color: #0B3486;" data-class="animated fadeInUp">Indicaciones:</h1>
 

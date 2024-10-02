@@ -46,13 +46,13 @@ session_start();
 
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de Mundo Empleo CA');
+			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
 			    $mail->addAddress($email);     // Add a recipient
 			    
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'Recuperación de cuenta | Mundo Empleo CA';
+			    $mail->Subject = 'Recuperación de cuenta | BOLSA LABORAL CA';
 			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
@@ -74,7 +74,7 @@ session_start();
 			    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; border: 1px solid #cccccc;">
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			    </td>
 			    </tr>
 			    <tr>
@@ -87,7 +87,7 @@ session_start();
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de Mundo Empleo:  <br><br> Hemos recibido un pedido de un recuperación de cuenta. Tu cuenta se restablecio ahora disfruta de los beneficio de la plataforma <br><br> Solo como recordatorio: <br><br> 
+			    <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de BOLSA LABORAL:  <br><br> Hemos recibido un pedido de un recuperación de cuenta. Tu cuenta se restablecio ahora disfruta de los beneficio de la plataforma <br><br> Solo como recordatorio: <br><br> 
 
 			    No comparta nunca su contraseña o preguntas de seguridad con otra persona. <br>
 			    Cree contraseñas difíciles de adivinar y nunca utilice información personal. Asegúrese de incluir letras mayúsculas y minúsculas, números y símbolos. <br><br>
@@ -114,7 +114,7 @@ session_start();
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p>
 			    Copyright © Todos los derechos reservados
 			    </p>

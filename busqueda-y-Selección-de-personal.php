@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO CA| BUSQUEDA Y SELECCIÓN DE PERSONAL</title>
+<title>BOLSA LABORAL CA| BUSQUEDA Y SELECCIÓN DE PERSONAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->

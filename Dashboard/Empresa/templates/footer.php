@@ -1,121 +1,121 @@
  <br>
  <!-- Footer -->
- <footer id="page-footer" class="opacity-0" style="background: black;" >
-    <div class="content py-20 font-size-xs clearfix"  style="background:black;">
-
-
-     <div class="row text-center">
-        <div class="col-md-3">
-            <div class="block-content">
-
-                <div class="float-left">
-                    <h5 class="text-white">Conoce más</h5>
-                    <ul style="text-align: left;">
-                        
-                        <li><a href="../../" class="text-white"> <b>Quienes Somos</b> </a></li>
-                        <br>
-                        <li><a href="#" class="text-white"> <b>Terminos y Condiciones</b> </a></li>
-                        <br>
-                        <li><a href="#" class="text-white"> <b>Preguntas Candidatos</b> </a></li>
-                        <br>
-                        <li><a href="#" class="text-white"> <b>Contáctanos</b> </a></li>
-                        <br>
-                        <li><a href="#" class="text-white"> <b>Centro de ayuda</b> </a></li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="col-md-3 ml-auto">
-            <div class="block-content">
-
-             <div class="float-left">
-                <h5 class="text-white">Candidatos</h5>
-                <ul style="text-align: left;">
-                    <li><a href="../../crear-cuenta-candidato" class="text-white"> <b>Registros Cuentas</b> </a></li>
-                    <br>
-                    <li><a href="../../login-candidato" class="text-white"> <b>Ingresos Candidatos</b> </a></li>
-                    <br>
-                    <li><a href="../../todas-las-ofertas" class="text-white"> <b>Búsqueda de Empleos</b> </a></li>
-                    <br>
-                    <li><a href="../../candidato" class="text-white"> <b>Landing page Candidatos</b> </a></li>
-                    <br>
-                    <li><a href="../../terminos-condiciones" class="text-white"> <b>Terminos y Condiciones</b> </a></li>
-                    <br>
-                    <li><a href="../../preguntas-frecuentes-candidato" class="text-white"> <b>Preguntas frecuentes</b> </a></li>
-                    
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="col-md-3 ml-auto">
-
-        <div class="block-content">
-            <div class="float-left">
-                <h5 class="text-white">Reclutadores</h5>
-                <ul style="text-align: left;">
-                    <li><a href="../../crear-cuenta-empresarial" class="text-white"> <b>Registros Cuentas</b> </a></li>
-                    <br>
-                    <li><a href="../../login-empresa" class="text-white"> <b>Ingresos empresa</b> </a></li>
-                    <br>
-                    <li><a href="../../empresa" class="text-white"> <b>Landing page empresa</b> </a></li>
-                    <br>
-                    <li><a href="../../servicios-empresariales" class="text-white"> <b>Servicios empresariales</b> </a></li>
-                    <br>
-                    <li><a href="../../divisiones-especializadas" class="text-white"> <b>Divisiones especializadas</b> </a></li>
-                    <br>
-                    <li><a href="../../terminos-condiciones" class="text-white"> <b>Terminos y Condiciones</b> </a></li>
-                    <br>
-                    <li><a href="../../preguntas-frecuentes-empresa" class="text-white"> <b>Preguntas frecuentes</b> </a></li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="col-md-3 ml-auto">
-        <div class="block-content">
-         <div class="float-left">
-            <center>
-                <img src="../../assets/img/logo/logoMundoEmpleo.png" class="img-fluid">
-                
-                <br><br>
-                <a href="#"><i class="fa fa-facebook-square fa-2x" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-instagram fa-2x" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-twitter-square fa-2x" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square fa-2x" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-youtube-play fa-2x" style="color: white;"></i></a>
-            </center>
-        </div>
-
-    </div>
-</div>
-
-</div>
-
-
-
-
-<div class="row justify-content-center text-center">
-    <div class="col-md-12">
-
-        <div class="block-content">
-            <hr>
-            <p class="text-white">© <?php echo date("Y"); ?> Web Maker El Salvador. Todos los Derechos Reservados </p>
-
-        </div>
-
-    </div>
-</div>
-
-
-</div>
-</footer>
+<!-- <footer id="page-footer" class="opacity-0" style="background: black;" >-->
+<!--    <div class="content py-20 font-size-xs clearfix"  style="background:black;">-->
+<!---->
+<!---->
+<!--     <div class="row text-center">-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="block-content">-->
+<!---->
+<!--                <div class="float-left">-->
+<!--                    <h5 class="text-white">Conoce más</h5>-->
+<!--                    <ul style="text-align: left;">-->
+<!--                        -->
+<!--                        <li><a href="../../" class="text-white"> <b>Quienes Somos</b> </a></li>-->
+<!--                        <br>-->
+<!--                        <li><a href="#" class="text-white"> <b>Terminos y Condiciones</b> </a></li>-->
+<!--                        <br>-->
+<!--                        <li><a href="#" class="text-white"> <b>Preguntas Candidatos</b> </a></li>-->
+<!--                        <br>-->
+<!--                        <li><a href="#" class="text-white"> <b>Contáctanos</b> </a></li>-->
+<!--                        <br>-->
+<!--                        <li><a href="#" class="text-white"> <b>Centro de ayuda</b> </a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!---->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-3 ml-auto">-->
+<!--            <div class="block-content">-->
+<!---->
+<!--             <div class="float-left">-->
+<!--                <h5 class="text-white">Candidatos</h5>-->
+<!--                <ul style="text-align: left;">-->
+<!--                    <li><a href="../../crear-cuenta-candidato" class="text-white"> <b>Registros Cuentas</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../login-candidato" class="text-white"> <b>Ingresos Candidatos</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../todas-las-ofertas" class="text-white"> <b>Búsqueda de Empleos</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../candidato" class="text-white"> <b>Landing page Candidatos</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../terminos-condiciones" class="text-white"> <b>Terminos y Condiciones</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../preguntas-frecuentes-candidato" class="text-white"> <b>Preguntas frecuentes</b> </a></li>-->
+<!--                    -->
+<!--                </ul>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="col-md-3 ml-auto">-->
+<!---->
+<!--        <div class="block-content">-->
+<!--            <div class="float-left">-->
+<!--                <h5 class="text-white">Reclutadores</h5>-->
+<!--                <ul style="text-align: left;">-->
+<!--                    <li><a href="../../crear-cuenta-empresarial" class="text-white"> <b>Registros Cuentas</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../login-empresa" class="text-white"> <b>Ingresos empresa</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../empresa" class="text-white"> <b>Landing page empresa</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../servicios-empresariales" class="text-white"> <b>Servicios empresariales</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../divisiones-especializadas" class="text-white"> <b>Divisiones especializadas</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../terminos-condiciones" class="text-white"> <b>Terminos y Condiciones</b> </a></li>-->
+<!--                    <br>-->
+<!--                    <li><a href="../../preguntas-frecuentes-empresa" class="text-white"> <b>Preguntas frecuentes</b> </a></li>-->
+<!--                    -->
+<!--                    -->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        -->
+<!--    </div>-->
+<!---->
+<!--    <div class="col-md-3 ml-auto">-->
+<!--        <div class="block-content">-->
+<!--         <div class="float-left">-->
+<!--            <center>-->
+<!--                <img src="../../assets/img/logo/logoMundoEmpleo.png" class="img-fluid">-->
+<!--                -->
+<!--                <br><br>-->
+<!--                <a href="#"><i class="fa fa-facebook-square fa-2x" style="color: white;"></i></a>-->
+<!--                <a href="#"><i class="fa fa-instagram fa-2x" style="color: white;"></i></a>-->
+<!--                <a href="#"><i class="fa fa-twitter-square fa-2x" style="color: white;"></i></a>-->
+<!--                <a href="#"><i class="fa fa-linkedin-square fa-2x" style="color: white;"></i></a>-->
+<!--                <a href="#"><i class="fa fa-youtube-play fa-2x" style="color: white;"></i></a>-->
+<!--            </center>-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!--</div>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--<div class="row justify-content-center text-center">-->
+<!--    <div class="col-md-12">-->
+<!---->
+<!--        <div class="block-content">-->
+<!--            <hr>-->
+<!--            <p class="text-white">© --><?php //echo date("Y"); ?><!-- Web Maker El Salvador. Todos los Derechos Reservados </p>-->
+<!---->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!---->
+<!--</div>-->
+<!--</footer>-->
 <!-- END Footer -->
 </div>
 <!-- END Page Container -->

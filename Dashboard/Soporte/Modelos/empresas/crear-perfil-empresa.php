@@ -87,7 +87,7 @@ if (isset($_POST['usuario'])) {
 
 
                    //Recipients
-                   $mail->setFrom('danielm@mundoempleosca.com', 'soporte de mundo empleo');
+                   $mail->setFrom('danielm@mundoempleosca.com', 'soporte de BOLSA LABORAL');
                 $mail->addAddress($emailUser);     // Add a recipient
                 
 
@@ -117,7 +117,7 @@ if (isset($_POST['usuario'])) {
           <tr>
           <td align="center"  style="padding: 40px 0 30px 0;">
 
-          <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+          <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 
           </td>
           </tr>
@@ -131,7 +131,7 @@ if (isset($_POST['usuario'])) {
           </tr>
           <tr>
           <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-          <p style="margin: 0; text-align: justify;">Hola te saluda '.$nombre.' '.$apellido.' del equipo de Mundo Empleo:  <br><br>Hemos creado el perfil de empresa: '.$nombreEmpresa.' en la plataforma verifica el  perfil. <br></p>
+          <p style="margin: 0; text-align: justify;">Hola te saluda '.$nombre.' '.$apellido.' del equipo de BOLSA LABORAL:  <br><br>Hemos creado el perfil de empresa: '.$nombreEmpresa.' en la plataforma verifica el  perfil. <br></p>
 
           <br>
           <p style="margin: 0; text-align: justify;"><b>Nota:</b>Debes iniciar sesión para visualizar el perfil.</p>
@@ -154,7 +154,7 @@ if (isset($_POST['usuario'])) {
           <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
           <tr>
           <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-          <p style="margin: 0;">&reg; Mundo Empleo<br/>
+          <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
           <p>
           Copyright © Todos los derechos reservados
           </p>

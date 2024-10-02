@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | Outsourcing-Procesos</title>
+<title>BOLSA LABORAL | Outsourcing-Procesos</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -84,10 +84,10 @@
 							<div class="blog-detail">
 
 								<h2 class="blog-title">División Technology</h2>
-								<p>En Mundo Empleo División Technology nos preocupamos por brindar soluciones integrales en RRHH para proyectos y perfiles de IT & Telecomunicaciones, con foco en eficiencia y velocidad de cobertura gracias a nuestra amplia base de datos de candidatos del ambiente tecnológico. <br><br>
-									Mundo Empleo División Technology ofrece una cobertura nacional para cumplir con cada necesidad, gracias a nuestro equipo dedicado y especializado, con lo que buscamos garantizar niveles de comunicación personalizados y eficaces.
+								<p>En BOLSA LABORAL División Technology nos preocupamos por brindar soluciones integrales en RRHH para proyectos y perfiles de IT & Telecomunicaciones, con foco en eficiencia y velocidad de cobertura gracias a nuestra amplia base de datos de candidatos del ambiente tecnológico. <br><br>
+									BOLSA LABORAL División Technology ofrece una cobertura nacional para cumplir con cada necesidad, gracias a nuestro equipo dedicado y especializado, con lo que buscamos garantizar niveles de comunicación personalizados y eficaces.
 									<br><br>
-									Buenas prácticas y nuestra experiencia en el sector, nos hace capaces de encontrar y contratar a los más talentosos profesionales de IT, con el respaldo del Grupo Mundo Empleo.
+									Buenas prácticas y nuestra experiencia en el sector, nos hace capaces de encontrar y contratar a los más talentosos profesionales de IT, con el respaldo del Grupo BOLSA LABORAL.
 
 								</p>
 								<h2 class="blog-title">Division Technology</h2>

@@ -1,5 +1,5 @@
 <?php include_once 'templates/head.php'; ?>
-<title>MUNDO EMPLEO | CENTRO AMERICA</title>
+<title>BOLSA LABORAL</title>
 <?php include_once 'templates/style.php'; ?>
 <?php include_once 'templates/header.php'; ?>
 <!--/ End Topbar -->
@@ -16,7 +16,7 @@
 								<!-- Image Logo -->
 								<div class="img-logo">
 									<a href="index.html">
-										<img src="assets/recusosMundoEmpleo/logomundoempleo.png" alt="bolsa de empleo" style="height: 60px;">
+										<img src="assets/recusosMundoEmpleo/logo.png" alt="bolsa de empleo" style="height: 60px;">
 									</a>
 								</div>
 							</div>								

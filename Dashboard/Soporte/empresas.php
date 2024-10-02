@@ -7,7 +7,7 @@ $Conexion = new Consultas();
 $FuncionesApp = new funcionesApp();
 
 ?>
-<title>Soporte técnico | Mundo Empleos CA</title>
+<title>Soporte técnico | BOLSA LABORALs CA</title>
 <?php 
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';

@@ -58,7 +58,7 @@ if ($resultPerfilEmpresa == 0) {
 
 
                    //Recipients
-                   $mail->setFrom('danielm@mundoempleosca.com', 'soporte de mundo empleo');
+                   $mail->setFrom('danielm@mundoempleosca.com', 'soporte de BOLSA LABORAL');
                    $mail->addAddress('marquez.daniel.sv@gmail.com');     // Add a recipient
                    $mail->addAddress('rseoane@mundoempleosca.com');     // Add a recipient
                    $mail->addAddress('jandrade@mundoempleosca.com');     // Add a recipient
@@ -66,7 +66,7 @@ if ($resultPerfilEmpresa == 0) {
 
           // Content
           $mail->isHTML(true);                                  // Set email format to HTML
-          $mail->Subject = 'La empresa  | '.$nombreEmpresa.' ha terminado el servicio mundo empleo';
+          $mail->Subject = 'La empresa  | '.$nombreEmpresa.' ha terminado el servicio BOLSA LABORAL';
           $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
           <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
           <head>
@@ -89,7 +89,7 @@ if ($resultPerfilEmpresa == 0) {
           <tr>
           <td align="center"  style="padding: 40px 0 30px 0;">
 
-          <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+          <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 
           </td>
           </tr>
@@ -103,7 +103,7 @@ if ($resultPerfilEmpresa == 0) {
           </tr>
           <tr>
           <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-          <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de Mundo Empleo:  <br>Hemos recibido solicitud de '.$Empresa.'  que ha  terminado  el servicio de mundo empleo debido a la fecha establecida. '.$Expira.' . Para contactar a '.$PrimerNombre[0].' '.$PrimerApellido[0].'. Buscar el codigo de usuario: '.$IDUser.'<br></p>
+          <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de BOLSA LABORAL:  <br>Hemos recibido solicitud de '.$Empresa.'  que ha  terminado  el servicio de BOLSA LABORAL debido a la fecha establecida. '.$Expira.' . Para contactar a '.$PrimerNombre[0].' '.$PrimerApellido[0].'. Buscar el codigo de usuario: '.$IDUser.'<br></p>
 
           <br>
           <p style="margin: 0; text-align: justify;"><b>Nota:</b>Debes iniciar sesión para  visualizar el perfil.</p>
@@ -126,7 +126,7 @@ if ($resultPerfilEmpresa == 0) {
           <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
           <tr>
           <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-          <p style="margin: 0;">&reg; Mundo Empleo<br/>
+          <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
           <p>
           Copyright © Todos los derechos reservados
           </p>

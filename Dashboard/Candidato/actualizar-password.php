@@ -43,13 +43,13 @@ session_start();
 			    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de Mundo Empleo CA');
+			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
 			    $mail->addAddress($_SESSION['email']);     // Add a recipient
 			    
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'Acaba de cambiar la contraseña | Mundo Empleo CA';
+			    $mail->Subject = 'Acaba de cambiar la contraseña | BOLSA LABORAL CA';
 			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
@@ -71,7 +71,7 @@ session_start();
 			    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; border: 1px solid #cccccc;">
 			    <tr>
 			    <td align="center"  style="padding: 40px 0 30px 0;">
-			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del Mundo Empleo" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
+			    <img src="https://mundoempleosca.com/recursosMundoEmpleo/logo.JPG" alt="Logo del BOLSA LABORAL" width="250" height="80" style="display: block;" /> <hr style="margin-left: 25px;margin-right: 25px;">
 			    </td>
 			    </tr>
 			    <tr>
@@ -84,7 +84,7 @@ session_start();
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola '.$_SESSION['nombre'].' te saluda el equipo de Mundo Empleo:  <br><br> Hemos recibido un pedido de un cambio de contraseña. Si no has iniciado este pedido, no debe confirmar este correo por lo tanto debera ir a recuperación de cuenta <a href="https://mundoempleosca.com/restablecer-password?id='.base64_encode($IDUsuario).'&email='.base64_encode($_SESSION['email']).'">haz clic aqui</a> <br><br> luego te enviaremos una contraseña generado y una vez dentro en la plataforma podras cambiarlo.</p>
+			    <p style="margin: 0; text-align: justify;">Hola '.$_SESSION['nombre'].' te saluda el equipo de BOLSA LABORAL:  <br><br> Hemos recibido un pedido de un cambio de contraseña. Si no has iniciado este pedido, no debe confirmar este correo por lo tanto debera ir a recuperación de cuenta <a href="https://mundoempleosca.com/restablecer-password?id='.base64_encode($IDUsuario).'&email='.base64_encode($_SESSION['email']).'">haz clic aqui</a> <br><br> luego te enviaremos una contraseña generado y una vez dentro en la plataforma podras cambiarlo.</p>
 
 			    <br>
 			    
@@ -108,7 +108,7 @@ session_start();
 			    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			    <tr>
 			    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
-			    <p style="margin: 0;">&reg; Mundo Empleo<br/>
+			    <p style="margin: 0;">&reg; BOLSA LABORAL<br/>
 			    <p>
 			    Copyright © Todos los derechos reservados
 			    </p>

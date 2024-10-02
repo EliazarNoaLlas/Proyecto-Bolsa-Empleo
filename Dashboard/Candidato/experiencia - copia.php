@@ -68,7 +68,7 @@ include_once 'templates/header.php';
       <div class="content content-top text-center overflow-hidden">
         <div class="pt-40 pb-20">
           <center> <img src="../../assets/img/logo/logo2_footer.png" data-toggle="appear" data-class="animated bounceInDown"> </center>
-          <h1 class="font-w700 text-white mb-10 invisible" data-toggle="appear" data-class="animated fadeInUp">Mundo Empleo</h1>
+          <h1 class="font-w700 text-white mb-10 invisible" data-toggle="appear" data-class="animated fadeInUp">BOLSA LABORAL</h1>
           <h2 class="h4 font-w400 text-white-op invisible" data-toggle="appear" data-class="animated fadeInUp">Experiencia Laboral</h2>
         </div>
       </div>

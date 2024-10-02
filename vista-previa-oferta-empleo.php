@@ -60,7 +60,7 @@ while ($item=$stmt->fetch())
 
 
  ?>
- <title>MUNDO EMPLEO | CENTRO AMERICA</title>
+ <title>BOLSA LABORAL</title>
  <?php include_once 'templates/style.php'; ?>
  <?php include_once 'templates/header.php'; ?>
  <?php include_once 'templates/leftmunu.php'; ?>

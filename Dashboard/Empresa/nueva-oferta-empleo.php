@@ -20,7 +20,7 @@ $sql3 = "SELECT * FROM `soporte_tipo_experiencia`";
 $stmt3 = $Conexion->ejecutar_consulta_simple($sql3);
 
 ?>
-<title>Oferta de empleo | Mundo Empleo CA </title>
+<title>Oferta de empleo | BOLSA LABORAL CA </title>
 <?php 
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';

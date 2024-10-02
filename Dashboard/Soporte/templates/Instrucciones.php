@@ -21,14 +21,14 @@ if (isset($_GET['success'])) {?>
                         <div class="row justify-content-center text-center">
                             <div class="col-md-10 col-lg-8">
                                 <img src="../../assets/recusosMundoEmpleo/logo.png" class="img-fluid" style="height: 100px; width: 250px;">
-                                <h3 class="font-size-h2 font-w300 mt-20">Bienvenido a Mundo Empleo C.A! </h3>
+                                <h3 class="font-size-h2 font-w300 mt-20">Bienvenido a BOLSA LABORAL C.A! </h3>
                                 <p class="text-muted" style="text-align: justify;">
-                                   <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: Cualquier tipo de información que esté relacionada con tus datos personales no será compartida ni publicada en esta plataforma. Tus datos personales solo seran mostradas con los administradores de Mundo Empleo.
+                                   <?php echo $PrimerNombre[0] ." ". $PrimerApellido[0]; ?>: Cualquier tipo de información que esté relacionada con tus datos personales no será compartida ni publicada en esta plataforma. Tus datos personales solo seran mostradas con los administradores de BOLSA LABORAL.
                                    <br><br>
                                    Si desea leer más información puedes leer Póliticas de la plataforma.
                                </p>
 
-                               <p style="text-align: justify;">Al finalizar fecha <?php echo $FechaVencimiento ?> Ya no podra utilizar la plataforma por que deberas solicitar el servicio de Mundo Empleo.<br> </p>
+                               <p style="text-align: justify;">Al finalizar fecha <?php echo $FechaVencimiento ?> Ya no podra utilizar la plataforma por que deberas solicitar el servicio de BOLSA LABORAL.<br> </p>
 
 
                                <a href="#" class="btn btn-sm btn-hero btn-noborder  mb-10 mx-5" style="background:#FCC201; color:#0B3486; font-weight: bold;"> Ir <i class="fa fa-arrow-right ml-5"></i> </a>

@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <!-- Título que aparecerá en la pestaña del navegador -->
-    <title>Mundo Empleo | Login</title>
+    <title>BOLSA LABORAL | Login</title>
 
     <!-- Meta descripción para los motores de búsqueda y para información en redes sociales -->
-    <meta name="description" content="Login - soporte Mundo Empleo">
-    <meta name="author" content="Mundo Empleo Centro América">
+    <meta name="description" content="Login - soporte BOLSA LABORAL">
+    <meta name="author" content="BOLSA LABORAL Centro América">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Meta etiquetas para la integración con Open Graph, mejorando la visualización cuando se comparte el sitio en redes sociales -->
-    <meta property="og:title" content="Login - Soporte de Mundo Empleo CA">
-    <meta property="og:site_name" content="Mundo Empleo">
-    <meta property="og:description" content="Login - soporte Mundo Empleo">
+    <meta property="og:title" content="Login - Soporte de BOLSA LABORAL CA">
+    <meta property="og:site_name" content="BOLSA LABORAL">
+    <meta property="og:description" content="Login - soporte BOLSA LABORAL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mundoempleosca.com/">
     <meta property="og:image" content="">

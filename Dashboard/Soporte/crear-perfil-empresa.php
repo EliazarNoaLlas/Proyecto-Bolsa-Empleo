@@ -16,7 +16,7 @@ $stmt2 = $Conexion->ejecutar_consulta_simple($sql2);
 
 
 ?>
-<title>Perfil de empresa | MUNDO EMPLEO CA</title>
+<title>Perfil de empresa | BOLSA LABORAL CA</title>
 <?php 
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';
@@ -334,7 +334,7 @@ include_once 'templates/header.php';
                  <li>1 – Llena los datos de tu empresa <b style="color: red;">(Obligatorio)</b>.</li><br>
                  <li>2 - Una vez completado los datos tu empresa se le notificará a soporte técnico para contactarte y darte una orientación.</li><br>
                  <li>3 – Solo tendrá 10 días hábiles para usar la plataforma.</li><br>
-                 <li>4 – Una vez terminado su periodo de prueba. Deberá solicitar el servicio de Mundo Empleo Centroamérica</li><br>
+                 <li>4 – Una vez terminado su periodo de prueba. Deberá solicitar el servicio de BOLSA LABORAL Centroamérica</li><br>
                </ul>
 
 
