@@ -123,7 +123,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8 , $IDUser);
 
 		<div class="row">
 			<div class="col-sm">
-				<img src="../../assets/recusosMundoEmpleo/logo.png" style="width: 150px; height:60px;">
+<!--				<img src="../../assets/recusosMundoEmpleo/logo.png" style="width: 150px; height:60px;">-->
 				<h6 style="font-size: 10px;">ACERCA DE MI</h6>
 				<hr style="margin-right:525px; margin-top: -5px;">
 				<P style="color: black; font-size: 8px;">

@@ -189,7 +189,7 @@ $stmt8 = $Conexion->ejecutar_consulta_simple_Where($sql8, $IDUser);
 			<p class="cabecera-p" style="margin-top: -10px;">Edad <br> <b>
 					<?php echo $edad ?> años
 				</b></p>
-			<img src="../../assets/logo/logoMundoEmpleo.png"
+			<img src="../../assets/logo/logo_nuevo.png"
 				style="width: 120px; height:50px; margin-top: -25px; margin-left: 115px;">
 		</div>
 

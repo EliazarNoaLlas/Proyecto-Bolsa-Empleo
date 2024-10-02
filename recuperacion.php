@@ -164,7 +164,7 @@
               }
 
               if (result==1) {
-                  swal({title:'Se ha enviado un correo electrónico',text:'Se ha creado contraseña nuevo ,verifica tu correo para validar el usuario,  algunas veces puede caer en spam o correo deseado ',type:'success'});
+                  // swal({title:'Se ha enviado un correo electrónico',text:'Se ha creado contraseña nuevo ,verifica tu correo para validar el usuario,  algunas veces puede caer en spam o correo deseado ',type:'success'});
                    $("#email").val("");
               }
 

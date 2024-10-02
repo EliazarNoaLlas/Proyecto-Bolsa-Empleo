@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 include_once '../../../../BD/Conexion.php';
 include_once '../../../../BD/Consultas.php';
@@ -14,86 +14,84 @@ require '../../phpmailer/SMTP.php';
 $FuncionesApp = new funcionesApp();
 
 if (isset($_POST['usuario'])) {
-	
-	$IDUser = $FuncionesApp->test_input($_POST['usuario']);
-	$AreaEmpresa = $FuncionesApp->test_input($_POST['areaEmpresa']);
-	$Pais = $FuncionesApp->test_input($_POST['Pais']);
-	$departamento = $FuncionesApp->test_input($_POST['Departamento']);
-	$nombreEmpresa = $FuncionesApp->test_input($_POST['NombreEmpresa']);
-	$ubicacionEmpresa = $FuncionesApp->test_input($_POST['ubicacionEmpresa']);
-	
-	$descripcionEmpresa =  $FuncionesApp->test_input2($_POST['descripcion']);
-	$email =  $FuncionesApp->test_input($_POST['Email']);
-	
-	$telefono  = $FuncionesApp->test_input2($_POST['telefono']);
-	$celular = $FuncionesApp->test_input2($_POST['celular']);
-	$facebook = $FuncionesApp->test_input2($_POST['facebook']);
-	$instagram = $FuncionesApp->test_input2($_POST['instagram']);
-	$whatsapp = $FuncionesApp->test_input2($_POST['whatsapp']);
-	$yotube = $FuncionesApp->test_input2($_POST['youtube']);
-	$paginaweb = $FuncionesApp->test_input2($_POST['paginaweb']);
-	$confidencial = $FuncionesApp->test_input2($_POST['confidencial']);
-  $razonSocial = $FuncionesApp->test_input2($_POST['razonsocial']);
 
-  $nombre = $FuncionesApp->test_input($_POST['nombre']);
-  $apellido = $FuncionesApp->test_input($_POST['apellido']);
+    $IDUser = $FuncionesApp->test_input($_POST['usuario']);
+    $AreaEmpresa = $FuncionesApp->test_input($_POST['areaEmpresa']);
+    $Pais = $FuncionesApp->test_input($_POST['Pais']);
+    $departamento = $FuncionesApp->test_input($_POST['Departamento']);
+    $nombreEmpresa = $FuncionesApp->test_input($_POST['NombreEmpresa']);
+    $ubicacionEmpresa = $FuncionesApp->test_input($_POST['ubicacionEmpresa']);
 
-  $fechaActual =date("d-m-Y");
+    $descripcionEmpresa = $FuncionesApp->test_input2($_POST['descripcion']);
+    $email = $FuncionesApp->test_input($_POST['Email']);
 
-  $sql = "INSERT INTO `empresa_perfil` (`IDUsuario`, `IDTipoEmpresa`, `IDPais`, `IDDepartamento`, `Nombre`, `lugar`, `Descripcion`, `Email`, `Telefono`, `Celular`, `facebook`, `instagram`, `whatsapp`, `youtube`,  `paginaweb`, `Confidencial`,fecha_registro,Expira,razonSocial) VALUES(:IDUsuario,:IDTipoEmpresa,:IDPais,:IDDepartamento,:Nombre,:lugar,:Descripcion,:Email,:Telefono,:Celular,:facebook,:instagram,:whatsapp,:youtube,:paginaweb,:Confidencial,:fecha_registro,DATE_ADD(NOW(),INTERVAL 10 DAY),:razonSocial)";
-  
-  $stmt =  Conexion::conectar()->prepare($sql);
-  $stmt->bindParam('IDUsuario', $IDUser , PDO::PARAM_STR);
-  $stmt->bindParam('IDTipoEmpresa', $AreaEmpresa , PDO::PARAM_STR);
-  $stmt->bindParam('IDPais', $Pais , PDO::PARAM_STR);
-  $stmt->bindParam('IDDepartamento', $departamento , PDO::PARAM_STR);
-  $stmt->bindParam('Nombre', $nombreEmpresa , PDO::PARAM_STR);
-  $stmt->bindParam('lugar', $ubicacionEmpresa , PDO::PARAM_STR);
-  $stmt->bindParam('Descripcion', $descripcionEmpresa , PDO::PARAM_STR);
-  $stmt->bindParam('Email', $email , PDO::PARAM_STR);
-  $stmt->bindParam('Telefono', $telefono , PDO::PARAM_STR);
-  $stmt->bindParam('Celular', $celular , PDO::PARAM_STR);
-  $stmt->bindParam('facebook', $facebook , PDO::PARAM_STR);
-  $stmt->bindParam('instagram', $instagram , PDO::PARAM_STR);
-  $stmt->bindParam('whatsapp', $whatsapp , PDO::PARAM_STR);
-  $stmt->bindParam('youtube', $yotube , PDO::PARAM_STR);
-  $stmt->bindParam('paginaweb', $paginaweb , PDO::PARAM_STR);
-  $stmt->bindParam('fecha_registro', $fechaActual , PDO::PARAM_STR);
-  $stmt->bindParam('Confidencial', $confidencial , PDO::PARAM_STR);
-  $stmt->bindParam('razonSocial', $razonSocial , PDO::PARAM_STR);
+    $telefono = $FuncionesApp->test_input2($_POST['telefono']);
+    $celular = $FuncionesApp->test_input2($_POST['celular']);
+    $facebook = $FuncionesApp->test_input2($_POST['facebook']);
+    $instagram = $FuncionesApp->test_input2($_POST['instagram']);
+    $whatsapp = $FuncionesApp->test_input2($_POST['whatsapp']);
+    $yotube = $FuncionesApp->test_input2($_POST['youtube']);
+    $paginaweb = $FuncionesApp->test_input2($_POST['paginaweb']);
+    $confidencial = $FuncionesApp->test_input2($_POST['confidencial']);
+    $razonSocial = $FuncionesApp->test_input2($_POST['razonsocial']);
 
-  if ($stmt->execute()){
+    $nombre = $FuncionesApp->test_input($_POST['nombre']);
+    $apellido = $FuncionesApp->test_input($_POST['apellido']);
 
-    $sql2="INSERT INTO `paises_habilitado_empresa` (`IDPaisesHabilitado`, `IDPais`, `IDUsuario`) VALUES (NULL, :IDPais , :IDUsuario ) ";
-    $stmt2 =  Conexion::conectar()->prepare($sql2);
-    $stmt2->bindParam('IDUsuario', $IDUser , PDO::PARAM_STR);
-    $stmt2->bindParam('IDPais', $Pais , PDO::PARAM_STR);
-    $stmt2->execute();  
+    $fechaActual = date("d-m-Y");
 
-  
+    $sql = "INSERT INTO `empresa_perfil` (`IDUsuario`, `IDTipoEmpresa`, `IDPais`, `IDDepartamento`, `Nombre`, `lugar`, `Descripcion`, `Email`, `Telefono`, `Celular`, `facebook`, `instagram`, `whatsapp`, `youtube`,  `paginaweb`, `Confidencial`,fecha_registro,Expira,razonSocial) VALUES(:IDUsuario,:IDTipoEmpresa,:IDPais,:IDDepartamento,:Nombre,:lugar,:Descripcion,:Email,:Telefono,:Celular,:facebook,:instagram,:whatsapp,:youtube,:paginaweb,:Confidencial,:fecha_registro,DATE_ADD(NOW(),INTERVAL 10 DAY),:razonSocial)";
 
-    try {
-           //Server settings
-			    $mail = new PHPMailer(true);
-			    $mail->SMTPDebug = 0;                      // Enable verbose debug output
-			    $mail->isSMTP();                                            // Send using SMTP
-			    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-			    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-			    $mail->Username   = 'kayal.autosinnovadores@gmail.com';                     // SMTP username
-			    $mail->Password   = 'khefzcriahqnbfxz';                               // SMTP password
-			    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-			    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $stmt = Conexion::conectar()->prepare($sql);
+    $stmt->bindParam('IDUsuario', $IDUser, PDO::PARAM_STR);
+    $stmt->bindParam('IDTipoEmpresa', $AreaEmpresa, PDO::PARAM_STR);
+    $stmt->bindParam('IDPais', $Pais, PDO::PARAM_STR);
+    $stmt->bindParam('IDDepartamento', $departamento, PDO::PARAM_STR);
+    $stmt->bindParam('Nombre', $nombreEmpresa, PDO::PARAM_STR);
+    $stmt->bindParam('lugar', $ubicacionEmpresa, PDO::PARAM_STR);
+    $stmt->bindParam('Descripcion', $descripcionEmpresa, PDO::PARAM_STR);
+    $stmt->bindParam('Email', $email, PDO::PARAM_STR);
+    $stmt->bindParam('Telefono', $telefono, PDO::PARAM_STR);
+    $stmt->bindParam('Celular', $celular, PDO::PARAM_STR);
+    $stmt->bindParam('facebook', $facebook, PDO::PARAM_STR);
+    $stmt->bindParam('instagram', $instagram, PDO::PARAM_STR);
+    $stmt->bindParam('whatsapp', $whatsapp, PDO::PARAM_STR);
+    $stmt->bindParam('youtube', $yotube, PDO::PARAM_STR);
+    $stmt->bindParam('paginaweb', $paginaweb, PDO::PARAM_STR);
+    $stmt->bindParam('fecha_registro', $fechaActual, PDO::PARAM_STR);
+    $stmt->bindParam('Confidencial', $confidencial, PDO::PARAM_STR);
+    $stmt->bindParam('razonSocial', $razonSocial, PDO::PARAM_STR);
 
-			             //Recipients
-                   $mail->setFrom('danielm@mundoempleosca.com', 'soporte de BOLSA LABORAL');
-                   $mail->addAddress('marquez.daniel.sv@gmail.com');     // Add a recipient
-                   
-          
+    if ($stmt->execute()) {
 
-          // Content
-          $mail->isHTML(true);                                  // Set email format to HTML
-          $mail->Subject = 'Una empresa se ha registrado | '.$nombreEmpresa.'';
-          $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        $sql2 = "INSERT INTO `paises_habilitado_empresa` (`IDPaisesHabilitado`, `IDPais`, `IDUsuario`) VALUES (NULL, :IDPais , :IDUsuario ) ";
+        $stmt2 = Conexion::conectar()->prepare($sql2);
+        $stmt2->bindParam('IDUsuario', $IDUser, PDO::PARAM_STR);
+        $stmt2->bindParam('IDPais', $Pais, PDO::PARAM_STR);
+        $stmt2->execute();
+
+
+        try {
+            //Server settings
+            $mail = new PHPMailer(true);
+            $mail->SMTPDebug = 0;                      // Enable verbose debug output
+            $mail->isSMTP();                                            // Send using SMTP
+            $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $mail->SMTPAuth = true;                                   // Enable SMTP authentication
+            $mail->Username = 'kayal.autosinnovadores@gmail.com';                     // SMTP username
+            $mail->Password = 'khefzcriahqnbfxz';                               // SMTP password
+            $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+            //Recipients
+            $mail->setFrom('danielm@mundoempleosca.com', 'soporte de BOLSA LABORAL');
+            $mail->addAddress('marquez.daniel.sv@gmail.com');     // Add a recipient
+
+
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Una empresa se ha registrado | ' . $nombreEmpresa . '';
+            $mail->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
           <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
           <head>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -129,7 +127,7 @@ if (isset($_POST['usuario'])) {
           </tr>
           <tr>
           <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-          <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de BOLSA LABORAL:  <br><br>Hemos recibido que una empresa se ha registrado '.$nombreEmpresa.' en la plataforma verifica el  perfil. para contactar a '.$nombre.' '.$apellido.' Codigo Usuario: '.$IDUser.'<br></p>
+          <p style="margin: 0; text-align: justify;">Hola te saluda el equipo de BOLSA LABORAL:  <br><br>Hemos recibido que una empresa se ha registrado ' . $nombreEmpresa . ' en la plataforma verifica el  perfil. para contactar a ' . $nombre . ' ' . $apellido . ' Codigo Usuario: ' . $IDUser . '<br></p>
 
           <br>
           <p style="margin: 0; text-align: justify;"><b>Nota:</b>Debes iniciar sesión para  visualizar el perfil.</p>
@@ -205,21 +203,20 @@ if (isset($_POST['usuario'])) {
           </body>
           </html>
           ';
-          //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-          $mail->CharSet = 'UTF-8'; // Con esto ya funcionan los acentos
-          $mail->send();
+            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->CharSet = 'UTF-8'; // Con esto ya funcionan los acentos
+            $mail->send();
         } catch (Exception $e) {
-         echo "Hubo un error para enivar correo: {$mail->ErrorInfo}";
-       }
+//            echo "Hubo un error para enivar correo: {$mail->ErrorInfo}";
+        }
 
 
-       echo "1";
-     }else{
-       echo "0";
-     }
+        echo "1";
+    } else {
+        echo "0";
+    }
 
 
+}
 
-   }
-
-   ?>
+?>

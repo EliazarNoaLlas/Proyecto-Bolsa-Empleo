@@ -78,7 +78,7 @@
 <!--        <div class="block-content">-->
 <!--         <div class="float-left">-->
 <!--            <center>-->
-<!--                <img src="../../assets/img/logo/logoMundoEmpleo.png" class="img-fluid">-->
+<!--                <img src="../../assets/img/logo/logo_nuevo.png" class="img-fluid">-->
 <!--                -->
 <!--                <br><br>-->
 <!--                <a href="#"><i class="fa fa-facebook-square fa-2x" style="color: white;"></i></a>-->

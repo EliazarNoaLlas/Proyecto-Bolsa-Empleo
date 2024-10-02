@@ -22,7 +22,7 @@ include_once 'templates/header.php';
     <div class="bg-primary-dark-op">
       <div class="content content-top text-center overflow-hidden">
         <div class="pt-40 pb-20">
-           <center><img src="../../assets/img/logo/logoMundoEmpleo.png" data-toggle="appear" data-class="animated bounceInDown" class="img-fluid" style="width: 250px; height: 100px;"></center>
+           <center><img src="../../assets/img/logo/logo_nuevo.png" data-toggle="appear" data-class="animated bounceInDown" class="img-fluid" style="width: 250px; height: 100px;"></center>
           <h2 class="h4 font-w400 text-white-op invisible" id="titulos"  data-toggle="appear" data-class="animated fadeInUp">Alertas Trabajos</h2>
         </div>
       </div>

@@ -26,7 +26,7 @@
                 <!-- Logo -->
                 <div class="content-header-item">
                     <a class="font-w700" href="../../">
-                        <img src="../../assets/logo/logoMundoEmpleo.png" class="img-fluid" style="width: 150px; height: 50px;">
+                        <img src="../../assets/logo/logo_nuevo.png" class="img-fluid" style="width: 150px; height: 50px;">
 
                     </a>
                 </div>

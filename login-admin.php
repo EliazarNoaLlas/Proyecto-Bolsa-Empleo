@@ -89,22 +89,27 @@ session_start();
                         <p id="titulos2" style="font-size: 25px;"><b>PANEL DEL ADMINISTRADOR</b></p>
                     </div>
                 </div>
-                <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
+                <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible"
+                     data-toggle="appear" data-class="animated fadeInRight">
                     <div class="content content-full">
                         <!-- Cabecera del formulario -->
                         <div class="px-30 py-10">
                             <center>
-<!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
+                                <!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
                             </center>
                             <h1 class="h3 font-w700 mt-30 mb-10">Soporte técnico</h1>
                             <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>
                         </div>
                         <!-- Formulario de inicio de sesión -->
-                        <form class="js-validation-signin px-30" action="main/ModelosUsuarioLogin/ValidarUsuarioAdmin.php" method="post">
+                        <form class="js-validation-signin px-30"
+                              action="main/ModelosUsuarioLogin/ValidarUsuarioAdmin.php" method="post">
                             <div class="form-group row">
                                 <div class="col-12">
                                     <div class="form-material floating">
-                                        <input type="text" class="form-control" id="login-username" name="login-username" value="<?php if (isset($_SESSION['email'])) { echo $_SESSION['email']; } ?>">
+                                        <input type="text" class="form-control" id="login-username"
+                                               name="login-username" value="<?php if (isset($_SESSION['email'])) {
+                                            echo $_SESSION['email'];
+                                        } ?>">
                                         <label for="login-username">correo electrónico</label>
                                     </div>
                                 </div>
@@ -112,7 +117,10 @@ session_start();
                             <div class="form-group row">
                                 <div class="col-12">
                                     <div class="form-material floating input-group">
-                                        <input type="password" class="form-control" id="login-password" name="login-password" value="<?php if (isset($_SESSION['password'])) { echo $_SESSION['password']; } ?>">
+                                        <input type="password" class="form-control" id="login-password"
+                                               name="login-password" value="<?php if (isset($_SESSION['password'])) {
+                                            echo $_SESSION['password'];
+                                        } ?>">
                                         <label for="material-addon-icon2">contraseña</label>
                                         <div class="input-group-append">
                                                 <span class="input-group-text">
@@ -124,9 +132,12 @@ session_start();
                             </div>
                             <div class="form-group">
                                 <p class="text-center">
-                                    <button type="submit" class="btn btn-sm btn-hero btn-warning btn-rounded" id="validar" name="validar">
+                                    <button type="submit" class="btn btn-sm btn-hero btn-warning btn-rounded"
+                                            id="validar" name="validar">
                                         <i class="si si-login mr-10"></i>Iniciar Sesión
-                                        <center><div id="respuesta"></div></center>
+                                        <center>
+                                            <div id="respuesta"></div>
+                                        </center>
                                     </button>
                                 </p>
                                 <div class="mt-30">
@@ -155,13 +166,19 @@ session_start();
 <script src="main/js/ValidacionesLogin.js"></script>
 
 <!-- Alertas de estado -->
-<?php if (isset($_GET['seguridad'])) { echo "<script>swal({title:'Advertencia',text:'Verifica tu E-mail para confirmar el usuario',type:'error'});</script>"; } ?>
-<?php if (isset($_GET['verificado'])) { echo "<script>swal({title:'Advertencia',text:'Usuario Verificado, Ahora puedes iniciar sesión',type:'success'});</script>"; } ?>
-<?php if (isset($_GET['success'])) { echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \"No es un correo spam\" para que puedas recibir las notificaciones.',type:'success'});</script>"; } ?>
+<?php if (isset($_GET['seguridad'])) {
+    echo "<script>swal({title:'Advertencia',text:'Verifica tu E-mail para confirmar el usuario',type:'error'});</script>";
+} ?>
+<?php if (isset($_GET['verificado'])) {
+    echo "<script>swal({title:'Advertencia',text:'Usuario Verificado, Ahora puedes iniciar sesión',type:'success'});</script>";
+} ?>
+<?php if (isset($_GET['success'])) {
+//    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \"No es un correo spam\" para que puedas recibir las notificaciones.',type:'success'});</script>";
+} ?>
 
 <!-- Mostrar y ocultar contraseña -->
 <script type="text/javascript">
-    $('#MostrarPossword').on('click', function() {
+    $('#MostrarPossword').on('click', function () {
         var cambio = document.getElementById("login-password");
         if (cambio.type == "password") {
             cambio.type = "text";
