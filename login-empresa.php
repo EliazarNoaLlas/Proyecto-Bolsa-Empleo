@@ -1,29 +1,30 @@
 <?php session_start();
 
 if (isset($_SESSION['iduser'])) {
+
     if ($_SESSION['cargo'] == "Empresa") {
+
         header('Location: Dashboard/Empresa/');
     }
 }
 
 ?>
-
 <!doctype html>
 <html lang="en" class="no-focus">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title> BOLSA LABORAL | Login</title>
+    <title> Mundo Empleo | Login</title>
 
-    <meta name="description" content="Login - candidato BOLSA LABORAL">
-    <meta name="author" content="BOLSA LABORAL Centro América">
+    <meta name="description" content="Login - candidato Mundo Empleo">
+    <meta name="author" content="Mundo Empleo Centro América">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Login - candidato BOLSA LABORAL">
-    <meta property="og:site_name" content="BOLSA LABORAL">
-    <meta property="og:description" content="Login - candidato BOLSA LABORAL">
+    <meta property="og:title" content="Login - candidato Mundo Empleo">
+    <meta property="og:site_name" content="Mundo Empleo">
+    <meta property="og:description" content="Login - candidato Mundo Empleo">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mundoempleosca.com/">
     <meta property="og:image" content="">
@@ -103,9 +104,6 @@ if (isset($_SESSION['iduser'])) {
                     <div class="content content-full">
                         <!-- Header -->
                         <div class="px-30 py-10">
-                            <center>
-                                <!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
-                            </center>
                             <h1 class="h3 font-w700 mt-30 mb-10">Bienvenida a tu Panel</h1>
                             <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>
                         </div>
@@ -144,9 +142,12 @@ if (isset($_SESSION['iduser'])) {
                                             <span class="input-group-text">
 
                                                 <span id="MostrarPossword" class="fa fa-eye-slash icon"></span>
+
                                             </span>
                                         </div>
                                     </div>
+
+
                                 </div>
                             </div>
 
@@ -221,7 +222,7 @@ if (isset($_SESSION['iduser'])) {
 <?php include_once 'templates/alertas.php'; ?>
 
 <?php if (isset($_GET['seguridad'])) {
-//    echo "<script>swal({title:'Advertenicia',text:'Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña',type:'error'  });</script>";
+    echo "<script>swal({title:'Advertenicia',text:'Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña',type:'error'  });</script>";
 } ?>
 
 <?php if (isset($_GET['verificado'])) {
@@ -229,7 +230,7 @@ if (isset($_SESSION['iduser'])) {
 } ?>
 
 <?php if (isset($_GET['success'])) {
-//    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en (No es un correo spam)  para que puedas recibir las notificaciones',type:'success'  });</script>";
+    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en (No es un correo spam)  para que puedas recibir las notificaciones',type:'success'  });</script>";
 } ?>
 
 <script type="text/javascript">
@@ -247,9 +248,6 @@ if (isset($_SESSION['iduser'])) {
 
     });
 
-
 </script>
-
-
 </body>
 </html>

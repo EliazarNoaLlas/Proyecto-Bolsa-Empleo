@@ -1,82 +1,109 @@
 <?php
-// Inicia la sesión para permitir el uso de variables de sesión
-session_start();
+/*
+ * Archivo: ValidarUsuarioCandidato.php
+ * Propósito: Validar las credenciales de un candidato al iniciar sesión y redirigirlo a su dashboard o mostrar errores si es necesario.
+ * Autor: [Tu Nombre]
+ * Fecha de modificación: [Fecha Actual]
+ */
 
-// Incluye las conexiones a la base de datos y las funciones necesarias
+session_start(); // Iniciar la sesión para gestionar variables de sesión
+
+// Incluir las conexiones a la base de datos y las funciones necesarias
 include_once '../../BD/Conexion.php';
 include_once '../../BD/Consultas.php';
 include_once '../../main/funcionesApp.php';
 
-// Instancia de las clases para manejar la conexión y funciones
+// Instanciar las clases necesarias para ejecutar consultas y manejar funciones de apoyo
 $Conexion = new Consultas();
 $FuncionesApp = new funcionesApp();
 
-// Verifica si se ha enviado el formulario de validación
+// Verificar si se ha enviado el formulario de inicio de sesión
 if (isset($_POST['validar'])) {
 
-    // Limpia y normaliza los datos recibidos (email y password) del formulario
+    // Limpiar y normalizar el correo electrónico y la contraseña recibidos del formulario
     $email = $FuncionesApp->test_input($_POST['login-username']);
     $password = $FuncionesApp->test_input($_POST['login-password']);
-    // Convierte el email a minúsculas para evitar problemas de case-sensitive
+    // Convertir el correo a minúsculas para evitar problemas de sensibilidad de mayúsculas
     $emailFormato = strtolower($email);
 
-    // Obtiene los valores opcionales 'direccionar' y 'codigo' del formulario
-    $dirrecionar = $_POST['direccionar'] ?? '';  // URL a redirigir si está definida
-    $Codigo = $_POST['codigo'] ?? '';            // Código adicional si es necesario
+    // Obtener datos adicionales del formulario, como la URL de redirección y el código (si existen)
+    $dirrecionar = $_POST['direccionar'];
+    $Codigo = $_POST['codigo'];
 
-    // Prepara la consulta para obtener los datos del usuario a partir del correo
-    $sql = "SELECT `IDUsuario`, `Nombre`, `Apellidos`, `Correo`, `Password`, `Foto`, `Cargo`, `Estado` 
+    // Preparar la consulta para obtener la información del usuario basado en el correo electrónico
+
+    $sql = "SELECT `IDUsuario` , `Nombre` , `Apellidos` , `Correo` ,`Password` ,`Foto` , Cargo , `Estado`
             FROM usuarios_cuentas WHERE `Correo` = ?";
-    // Ejecuta la consulta con el correo proporcionado
     $stmt = $Conexion->ejecutar_consulta_simple_Where($sql, $emailFormato);
 
-    // Inicializa variables para almacenar los datos del usuario
+    // Inicializar las variables donde se almacenarán los datos del usuario
     $Correo = "";
     while ($item = $stmt->fetch()) {
-        // Almacena los datos del usuario obtenidos de la base de datos
         $Iduser = $item['IDUsuario'];
         $Nombre = $item['Nombre'];
         $Apellidos = $item['Apellidos'];
-        $Correo = $item['Correo'];            // Correo registrado en la BD
-        $ObtnerContra = $item['Password'];    // Contraseña hasheada almacenada en la BD
-        $Foto = $item['Foto'];                // Foto de perfil del usuario
-        $Estado = $item['Estado'];            // Estado del usuario (Activo, Denegado, etc.)
-        $Cargo = $item['Cargo'];              // Cargo del usuario (Candidato, Empresa, etc.)
+        $Correo = $item['Correo'];
+        $ObtnerContra = $item['Password'];
+        $Foto = $item['Foto'];
+        $Estado = $item['Estado'];
+        $Cargo = $item['Cargo'];
+
     }
+    // Verificar si el correo ingresado coincide con el de la base de datos y si la contraseña es correcta
+    if ($emailFormato == $Correo && password_verify($password, $ObtnerContra)) {
+        // Validar el estado del usuario y manejar según el caso
 
-    // Verifica si el correo ingresado coincide con el correo en la BD y si la contraseña es correcta
-    if ($emailFormato == $Correo && password_verify($password, $ObtnerContra) && $Estado == "Activo") {
-
-        // Si la validación es correcta, se guardan los datos del usuario en la sesión
-        $_SESSION['iduser'] = $Iduser;
-        $_SESSION['nombre'] = $Nombre;
-        $_SESSION['apellido'] = $Apellidos;
-        $_SESSION['email'] = $Correo;
-        $_SESSION['cargo'] = $Cargo;
-        $_SESSION['foto'] = $Foto;
-
-        // Si se especificó una dirección para redirigir, se redirige a esa URL con el código
-        if ($dirrecionar != "") {
-            header("Location: ../../" . $dirrecionar . "?id=" . $Codigo);
+        if ($Estado == "Token") {
+            // Estado: Token (usuario pendiente de verificación por correo)
+            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['ms'] = "Tu cuenta está pendiente de verificación por parte del administrador. Por favor, contacta con el administrador para completar el proceso de activación.";
+            header("Location: ../../login-candidato");
+        } else if ($Estado == "Denegado") {
+            // Estado: Denegado (acceso denegado por algún motivo)
+            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['ms'] = "Usuario denegado verifica con Soporte técnico";
+            header("Location: ../../login-candidato");
+        } else if ($Estado == "Seguridad") {
+            // Estado: Seguridad (usuario debe verificar un cambio de contraseña)
+            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['ms'] = "Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña";
+            header("Location: ../../login-candidato?seguridad=1");
         } else {
-            // Si no hay redirección específica, se redirige según el cargo del usuario
-            switch ($Cargo) {
-                case 'Candidato':
-                    header("Location: ../../Dashboard/Candidato/");  // Redirige al dashboard de Candidato
-                    break;
-                default:
-                    header("Location: ../../login-candidato");      // Redirige a la página de login
-                    break;
+            // Usuario con estado activo o sin restricciones
+            $_SESSION['iduser'] = $Iduser;
+            $_SESSION['nombre'] = $Nombre;
+            $_SESSION['apellido'] = $Apellidos;
+            $_SESSION['email'] = $Correo;
+            $_SESSION['cargo'] = $Cargo;
+            $_SESSION['foto'] = $Foto;
+
+            if ($dirrecionar != "") {
+
+                header("Location: ../../" . $dirrecionar . "?id=" . $Codigo);
+
+            } else {
+                switch ($Cargo) {
+                    case 'Candidato':
+                        header("Location: ../../Dashboard/Candidato/");
+                        break;
+                    default:
+                        header("Location: ../../login-candidato");
+                        break;
+
+                }
+
             }
         }
+
     } else {
-        // Si el correo o contraseña no son correctos, se almacenan en sesión para mostrar un mensaje de error
+
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        $_SESSION['alertas'] = "Advertencia";
-        $_SESSION['ms'] = "El correo electrónico o contraseña incorrecto";
-        // Redirige de nuevo a la página de login con un mensaje de error
+        $_SESSION['alertas'] = "Advertenicia";
+        $_SESSION['ms'] = "El correo electrónico o contraseña incorrecto.";
         header("Location: ../../login-candidato?error=0");
     }
+
 }
+
 ?>
