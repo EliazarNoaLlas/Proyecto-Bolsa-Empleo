@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 include_once '../../BD/Conexion.php';
 include_once '../../BD/Consultas.php';
@@ -20,7 +20,7 @@ $result = Consultas::ejecutar_consulta_conteo("usuarios_cuentas" , "Correo" , $e
 
 if ($result == 1) {
 
-	
+
 	$str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz1234567890";
 	$password = "";
   	    //Reconstruimos la contraseña segun la longitud que se quiera
@@ -31,7 +31,7 @@ if ($result == 1) {
 
 	    $Clave= password_hash($password, PASSWORD_DEFAULT);//Incriptamos la contraseña del usuario generado automaticamente
 
-	    
+
 
 	    $sql="UPDATE `usuarios_cuentas` SET `Password` = :Password WHERE `Correo` =:Correo ";
 	    $stmt =  Conexion::conectar()->prepare($sql);
@@ -40,7 +40,7 @@ if ($result == 1) {
 
 	    if ($stmt->execute()){
 
-	    	
+
 
 	    	try {
 
@@ -65,7 +65,7 @@ if ($result == 1) {
 			    // Attachments
 			    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 			    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-			    
+
 
 			    // Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
@@ -108,7 +108,7 @@ if ($result == 1) {
 
 			    <br>
 			    <p style="margin: 0; text-align: justify;">En la plataforma podras cambiar la contraseña.</p>
-			    <br>
+			    <br>x
 
 			    <center>
 			    <a href="https://mundoempleosca.com/login"  target="_blank"  style="display:inline-block; min-width:250px; font-family:Tahoma,Arial,sans-serif; font-size:18px; font-weight:bold; color:#0B3486; line-height:50px; text-align:center; text-decoration:none; background-color:#FCC201; border-radius:50px; padding:16px 24px; line-height:1">Iniciar Sesión</a>

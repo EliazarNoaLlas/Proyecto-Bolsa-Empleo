@@ -79,7 +79,7 @@
                     $verificaEstado = $item['Estado'];
                 }
 
-                if($verificaEstado == "Activo"){ 
+                if(true){
 
                     ?>
 

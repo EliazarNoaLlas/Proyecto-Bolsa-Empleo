@@ -13,7 +13,4 @@ $VerificaUsuarioIdiomas= $Conexion->ejecutar_consulta_conteo("usuarios_idiomas" 
 
 $VerificaUsuarioReferncia= $Conexion->ejecutar_consulta_conteo("usuario_referencia" , "IDUsuario" , $IDUser);
 
-
-
-
 ?>

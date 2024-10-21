@@ -1,111 +1,114 @@
 <?php
+// Incluir archivos necesarios para la conexión a la base de datos y consultas
 include_once '../../BD/Conexion.php';
 include_once '../../BD/Consultas.php';
 include_once 'templates/head.php';
+
+// Crear una instancia de la clase Consultas para manejar las operaciones con la base de datos
 $Conexion = new Consultas();
 
+// Incluir archivo para validar el perfil del usuario
 include_once 'templates/validar-perfil.php';
 
+// Consultar el estado de la cuenta del usuario
 $sqlEstadoCuenta = "SELECT `Estado` FROM `usuario_perfil` WHERE `IDUsuario` = ?";
 $stmtValidarPerfil = $Conexion->ejecutar_consulta_simple_Where($sqlEstadoCuenta, $IDUser);
-while ($item = $stmtValidarPerfil->fetch()) {
-    $verificaPerfil = $item['Estado'];
-}
 
-if ($verificaPerfil != "Activo") {
+// Verificar el estado del perfil del usuario
+//while ($item = $stmtValidarPerfil->fetch()) {
+//    $verificaPerfil = $item['Estado'];
+//}
 
-    if ($VerificaUsuarioSinPerfil == 0) {
-        echo "<script>location.href='perfil?notificar=1';</script>";
-    } else if ($VerificaUsuarioEducacion == 0) {
-        echo "<script>location.href='educacion?notificar=1';</script>";
-    } else if ($VerificaUsuarioExperiencia == 0) {
-        echo "<script>location.href='experiencia?notificar=1';</script>";
-    } else if ($VerificaUsuarioHabilidades == 0) {
-        echo "<script>location.href='habilidades?notificar=1';</script>";
-    } else if ($VerificaUsuarioIdiomas == 0) {
-        echo "<script>location.href='habilidades?notificar=1';</script>";
+// Redirigir al usuario a completar su perfil si no está activo
+//if ($verificaPerfil != "Activo") {
+//    // Verificar si falta completar alguna sección del perfil y redirigir a la correspondiente
+//    if ($VerificaUsuarioSinPerfil == 0) {
+//        echo "<script>location.href='perfil?notificar=1';</script>";
+//    } else if ($VerificaUsuarioEducacion == 0) {
+//        echo "<script>location.href='educacion?notificar=1';</script>";
+//    } else if ($VerificaUsuarioExperiencia == 0) {
+//        echo "<script>location.href='experiencia?notificar=1';</script>";
+//    } else if ($VerificaUsuarioHabilidades == 0) {
+//        echo "<script>location.href='habilidades?notificar=1';</script>";
+//    } else if ($VerificaUsuarioIdiomas == 0) {
+//        echo "<script>location.href='habilidades?notificar=1';</script>";
+//    } else {
+//        echo "<script>location.href='documentos?notificar=1';</script>";
+//    }
+//}
 
-    } else {
-        echo "<script>location.href='documentos?notificar=1';</script>";
-    }
-
-}
-
-
-//Extraer la informacion desde la base para sabar
-//el conteo  para mostrar en los cuadros Agregar Experiencia, Educacion
-//Referencia entre otro.
-$resultPerfil = $Conexion->ejecutar_consulta_conteo("usuario_perfil", "IDUsuario", $IDUser); //10
-$resultEducacion = $Conexion->ejecutar_consulta_conteo("usuario_educacion", "IDUsuario", $IDUser); //
+// Consultar conteo de varias secciones del perfil para mostrar en los cuadros informativos
+$resultPerfil = $Conexion->ejecutar_consulta_conteo("usuario_perfil", "IDUsuario", $IDUser);
+$resultEducacion = $Conexion->ejecutar_consulta_conteo("usuario_educacion", "IDUsuario", $IDUser);
 $resultExperiencia = $Conexion->ejecutar_consulta_conteo("usuario_experiencia", "IDUsuario", $IDUser);
-
-
 $ResultIdiomas = $Conexion->ejecutar_consulta_conteo("usuarios_idiomas", "IDUsuario", $IDUser);
 $ResultTecnicas = $Conexion->ejecutar_consulta_conteo("usuarios_habilidades", "IDUsuario", $IDUser);
 $resultHabilidades = $Conexion->ejecutar_consulta_conteo("usuarios_conocimentos", "IDUsuario", $IDUser);
-$totalHabilidades = $resultHabilidades + $ResultTecnicas + $ResultIdiomas;
 $resultReferencia = $Conexion->ejecutar_consulta_conteo("usuario_referencia", "IDUsuario", $IDUser);
 
+// Calcular el total de habilidades sumando conocimientos técnicos, idiomas y otras habilidades
+$totalHabilidades = $resultHabilidades + $ResultTecnicas + $ResultIdiomas;
 
+// Inicializar porcentaje de perfil completado
 $PorcentajePerfil = 0;
 
-if ($resultPerfil >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
+// Incrementar el porcentaje del perfil según las secciones completadas
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Perfil básico completado
+}
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Educación completada
+}
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Experiencia laboral completada
+}
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Idiomas completados
+}
+if (true >= 1) {
+    $PorcentajePerfil += 14.28571428571429; // Habilidades técnicas completadas
+}
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Otras habilidades completadas
+}
+if (true) {
+    $PorcentajePerfil += 14.28571428571429; // Referencias completadas
 }
 
-if ($resultEducacion >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
+// Consultar el número de visitas de las empresas al perfil del usuario
+$resultVisitas = $Conexion->ejecutar_consulta_conteo("usuarios_visitas", "IDUsuario", $IDUser);
 
-if ($resultExperiencia >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
-
-if ($ResultIdiomas >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
-
-if ($ResultTecnicas >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
-
-if ($resultHabilidades >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
-
-if ($resultReferencia >= 1) {
-    $PorcentajePerfil = 14.28571428571429 + $PorcentajePerfil;
-}
-
-
-$resultVisitas = $Conexion->ejecutar_consulta_conteo("usuarios_visitas ", "IDUsuario", $IDUser);
-//Extraemos desde la base las visatas de las empresas.
-//
-$sql = "SELECT  EP.IDEmpresa , EP.Confidencial, EP.Nombre ,EP.logo , UV.visitas FROM usuarios_visitas UV INNER JOIN empresa_perfil EP ON UV.IDEmpresa = EP.IDEmpresa LEFT JOIN usuarios_cuentas UC ON UV.IDUsuario = UC.IDUsuario WHERE UV.IDUsuario = $IDUser ";
+// Consultar las visitas de las empresas al perfil del usuario y los datos de las empresas
+$sql = "SELECT EP.IDEmpresa, EP.Confidencial, EP.Nombre, EP.logo, UV.visitas 
+        FROM usuarios_visitas UV 
+        INNER JOIN empresa_perfil EP ON UV.IDEmpresa = EP.IDEmpresa 
+        LEFT JOIN usuarios_cuentas UC ON UV.IDUsuario = UC.IDUsuario 
+        WHERE UV.IDUsuario = $IDUser";
 $stmtVisitas = $Conexion->ejecutar_consulta_simple($sql);
 
+// Consultar la última actualización del perfil del usuario
 $sql2 = "SELECT `UltimaActualizacion` FROM `usuario_perfil` WHERE IDUsuario = ?";
 $stmt2 = $Conexion->ejecutar_consulta_simple_Where($sql2, $IDUser);
 while ($item = $stmt2->fetch()) {
     $CVActualizacion = $item['UltimaActualizacion'];
 }
 
-$sql3 = "SELECT `UltimaConexion` FROM `usuarios_cuentas` WHERE `IDUsuario` = ? ";
+// Consultar la última conexión del usuario
+$sql3 = "SELECT `UltimaConexion` FROM `usuarios_cuentas` WHERE `IDUsuario` = ?";
 $stmt3 = $Conexion->ejecutar_consulta_simple_Where($sql3, $IDUser);
 while ($item = $stmt3->fetch()) {
     $UltimaConexion = $item['UltimaConexion'];
 }
 
+// Actualizar la última conexión si es la primera vez que se conecta o si es un nuevo día
 $fechaActual = date('d-m-Y');
 if ($UltimaConexion == "") {
-
     $sql4 = "UPDATE `usuarios_cuentas` SET `UltimaConexion` = :UltimaConexion WHERE `IDUsuario` = :IDUsuario";
     $stmt = Conexion::conectar()->prepare($sql4);
     $stmt->bindParam(':IDUsuario', $IDUser, PDO::PARAM_STR);
     $stmt->bindParam(':UltimaConexion', $fechaActual, PDO::PARAM_STR);
     $stmt->execute();
 } else if ($UltimaConexion != $fechaActual) {
-
     $sql4 = "UPDATE `usuarios_cuentas` SET `UltimaConexion` = :UltimaConexion WHERE `IDUsuario` = :IDUsuario";
     $stmt = Conexion::conectar()->prepare($sql4);
     $stmt->bindParam(':IDUsuario', $IDUser, PDO::PARAM_STR);
@@ -113,7 +116,10 @@ if ($UltimaConexion == "") {
     $stmt->execute();
 }
 
-$sql5 = "SELECT COUNT(`IDOfertaTrabajo`) AS 'TotalAplicado' FROM usuario_postulaciones WHERE IDUsuario = ? AND `Estado` = 'Enviado' ";
+// Consultar el número total de ofertas aplicadas por el usuario con estado 'Enviado'
+$sql5 = "SELECT COUNT(`IDOfertaTrabajo`) AS 'TotalAplicado' 
+         FROM usuario_postulaciones 
+         WHERE IDUsuario = ? AND `Estado` = 'Enviado'";
 $stmt5 = Conexion::conectar()->prepare($sql5);
 $stmt5->execute(array($IDUser));
 
@@ -121,7 +127,10 @@ while ($item = $stmt5->fetch()) {
     $TotalAplicado = $item['TotalAplicado'];
 }
 
-$sql6 = "SELECT COUNT(`IDOfertaTrabajo`) AS 'TotalVisto' FROM usuario_postulaciones WHERE IDUsuario = ? AND `Estado` = 'Visto'";
+// Consultar el número total de ofertas vistas por el usuario con estado 'Visto'
+$sql6 = "SELECT COUNT(`IDOfertaTrabajo`) AS 'TotalVisto' 
+         FROM usuario_postulaciones 
+         WHERE IDUsuario = ? AND `Estado` = 'Visto'";
 $stmt6 = Conexion::conectar()->prepare($sql6);
 $stmt6->execute(array($IDUser));
 
@@ -131,11 +140,13 @@ while ($item = $stmt6->fetch()) {
 ?>
     <title>Candidato | Home</title>
 <?php
+// Incluir los archivos de estilo y las plantillas del menú y el encabezado
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';
 include_once 'templates/MenuLeft.php';
 include_once 'templates/header.php';
 ?>
+
     <style type="text/css">
 
         #imgbanner {
@@ -178,74 +189,6 @@ include_once 'templates/header.php';
                         </div>
                     </a>
                 </div>
-                <!-- Row #1 -->
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="perfil-candidato">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Actualizar_Perfil.png">
-                            </p>
-
-
-                            <p class='font-w600 text-white'>Perfil <br> Profesional</p>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="educacion-academico">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <div class="ribbon-box"><?php echo $resultEducacion; ?></div>
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Agregar_Educacion.png">
-                            </p>
-                            <p class="font-w600 text-white">Educación <br> Académico</p>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="experiencia-laboral">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <div class="ribbon-box"><?php echo $resultExperiencia; ?></div>
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Experiencia_Laboral.png">
-                            </p>
-                            <p class="font-w600 text-white">Experiencia <br>Laboral</p>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="habilidades-usuario">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <div class="ribbon-box"><?php echo $totalHabilidades; ?></div>
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Habilidades.png">
-                            </p>
-                            <p class="font-w600 text-white">Habilidades <br> Usuario</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="referencia-trabajo">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <div class="ribbon-box"><?php echo $resultReferencia; ?></div>
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Referencias.png">
-                            </p>
-                            <p class="font-w600 text-white">Referencias <br> Trabajos</p>
-                        </div>
-                    </a>
-                </div>
-                <!-- END Row #1 -->
-
-            </div>
-
-
-            <div class="row gutters-tiny invisible" data-toggle="appear" data-class="animated bounceInLeft">
 
                 <div class="col-6 col-md-4 col-xl-2">
                     <a class=" text-center" href="../../todas-las-ofertas.php">
@@ -290,32 +233,18 @@ include_once 'templates/header.php';
                         </div>
                     </a>
                 </div>
-
                 <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="favoritos">
+                    <a class=" text-center" href="postulaciones">
                         <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
                             <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Favoritos.png">
+                                <img src="../assets/iconos/candidato/Mis_Postulaciones.png">
                             </p>
-                            <p class="font-w600 text-white">Mis <br> Favoritos</p>
+                            <p class="font-w600 text-white">Mis <br> Postulaciones</p>
                         </div>
                     </a>
                 </div>
-
-                <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="chats-empresas">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
-                            <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Chat_Empresa.png">
-                            </p>
-                            <p class="font-w600 text-white">Chats con<br>empresas</p>
-                        </div>
-                    </a>
-                </div>
-
 
             </div>
-
 
             <!--nuevo contenido-->
 

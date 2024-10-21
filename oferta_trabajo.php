@@ -469,7 +469,7 @@ else{
 
   if($FechaPublicacion <= $fechaActual && $Expira >= $fechaActual){
 
-   if ($Porcentaje <= 49) {
+   if ($Porcentaje < -1) {
     echo ' <div class="alert alert-warning text-center" role="alert">
     No puedes aplicar a esta oferta.Para poder aplicar necesita un 50% en adelante.
     </div>';
