@@ -59,13 +59,13 @@
                                        placeholder="Nombres*">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="form-group">
-                                <div class="icon"><i class="fa fa-user"></i></div>
-                                <input class="form-control valid" id="Apellidos" name="Apellidos" type="text"
-                                       placeholder="Apellidos*">
-                            </div>
-                        </div>
+                        <!--                        <div class="col-lg-6 col-md-6 col-12">-->
+                        <!--                            <div class="form-group">-->
+                        <!--                                <div class="icon"><i class="fa fa-user"></i></div>-->
+                        <!--                                <input class="form-control valid" id="Apellidos" name="Apellidos" type="text"-->
+                        <!--                                       placeholder="Apellidos*">-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
                         <div class="col-lg-12 col-md-6 col-12">
                             <div class="form-group">
@@ -119,11 +119,12 @@
                         </div>
 
 
-                                                <div class="col-12">
-                                                    <div class="form-group button">
-                                                        <input type="button"class="bizwheel-btn theme-2" id="crear-cuenta"  value="Crear Cuenta">
-                                                    </div>
-                                                </div>
+                        <div class="col-12">
+                            <div class="form-group button">
+                                <input type="button" class="bizwheel-btn theme-2" id="crear-cuenta"
+                                       value="Crear Cuenta">
+                            </div>
+                        </div>
 
 
                     </div>
@@ -159,8 +160,8 @@
             <!--                            <p>Tel.: +503 2222 2222<br> Mob.: +503 654 3451</p>-->
             <!--                        </div>-->
             <!--                    </div>-->
-                                <!--/ End Single Contact -->
-                                <!-- Single Contact -->
+            <!--/ End Single Contact -->
+            <!-- Single Contact -->
             <!--                    <div class="single-contact-box">-->
             <!--                        <div class="c-icon"><i class="fa fa-envelope-o"></i></div>-->
             <!--                        <div class="c-text">-->
@@ -168,7 +169,7 @@
             <!--                            <p>contact@bizwheel.com<br>info@bizwheel.com</p>-->
             <!--                        </div>-->
             <!--                    </div>-->
-                                <!--/ End Single Contact -->
+            <!--/ End Single Contact -->
             <!--                    <div class="button">-->
             <!--                        ¿Ya tienes una cuenta?<br>-->
             <!--                        <a href="login-empresa" class="bizwheel-btn theme-1">Iniciar Sesión<i class="fa fa-angle-right"></i></a> <br>-->
@@ -225,166 +226,100 @@
 
             if ($('#validarContrato').is(':checked')) {
 
-                var regcampos = /^[A-Za-z _ñÑáéíóúÁÉÍÓÚ]*[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-z _ñÑáéíóúÁÉÍÓÚ]*$/; //Validar campos
+                var regcampos = /^[A-Za-z _ñÑáéíóúÁÉÍÓÚ]*[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-z _ñÑáéíóúÁÉÍÓÚ]*$/; // Validar campos
                 var regemail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/; // Expresion Regular email
 
                 var nombres = $('#Nombres').val();
-                var apellidos = $('#Apellidos').val();
+                var apellidos = $('#Apellidos').val(); // Ahora siempre es "N/A"
                 var Email = $('#correo').val();
                 var password1 = $('#password').val();
                 var password2 = $('#confirmarPass').val();
                 var validarEmail = $('#validez').val();
 
-
-                if (nombres != "" && apellidos != "" && Email != "" && password1 != "" && password2 != "") {
+                if (nombres != "" && Email != "" && password1 != "" && password2 != "") {
 
                     if (!regcampos.test(nombres)) {
-                        swal({title: 'Error', text: 'No se permite carácteres especiales', type: 'warning'});
+                        swal({
+                            title: 'Error',
+                            text: 'No se permite caracteres especiales en el nombre',
+                            type: 'warning'
+                        });
                         return false;
-                    } else if (!regcampos.test(apellidos)) {
-                        swal({title: 'Error', text: 'No se permite carácteres especiales', type: 'warning'});
+                    } else if (nombres.length <= 3) {
+                        swal({
+                            title: 'Advertencia',
+                            text: 'El campo nombre debe tener mínimo 4 caracteres',
+                            type: 'warning'
+                        });
+                        return false;
+                    } else if (!regemail.test(Email)) {
+                        swal({title: 'Advertencia', text: 'El correo electrónico no es válido', type: 'warning'});
+                        return false;
+                    } else if (validarEmail == 1) {
+                        swal({
+                            title: 'Advertencia',
+                            text: 'El correo electrónico ya está en uso',
+                            type: 'warning'
+                        });
+                        return false;
+                    } else if (password1.length <= 7) {
+                        swal({
+                            title: 'Advertencia',
+                            text: 'La contraseña debe tener mínimo 8 caracteres',
+                            type: 'warning'
+                        });
+                        return false;
+                    } else if (password1 != password2) {
+                        swal({title: 'Advertencia', text: 'Las contraseñas no coinciden', type: 'warning'});
                         return false;
                     } else {
 
-                        if (nombres.length <= 3) {
-                            swal({
-                                title: 'Advertenicia',
-                                text: 'El campo nombre debe tener minimo 4 palabras',
-                                type: 'warning'
-                            });
-                            return false;
-                        } else if (apellidos.length <= 3) {
-                            swal({
-                                title: 'Advertenicia',
-                                text: 'El campo apellidos debe tener minimo 4 palabras',
-                                type: 'warning'
-                            });
-                            return false;
-                        } else if (!regemail.test(Email)) {
-                            swal({title: 'Advertenicia', text: 'El correo electrónico no es valido', type: 'warning'});
-                            return false;
-                        } else if (validarEmail == 1) {
-                            swal({
-                                title: 'Advertenicia',
-                                text: 'El correo electrónico ya esta en uso ',
-                                type: 'warning'
-                            });
-                            return false;
-                        } else if (password1.length <= 7) {
-                            swal({
-                                title: 'Advertenicia',
-                                text: 'La contraseña debe tener entre 8 caracteres',
-                                type: 'warning'
-                            });
-                            return false;
-                        } else if (password1 != password2) {
-                            swal({title: 'Advertenicia', text: 'La contraseña no coinciden', type: 'warning'});
-                            return false;
-                        } else {
+                        $.ajax({
+                            url: 'main/UsuarioCuentas/cuenta-empresa.php',
+                            type: 'POST',
+                            dataType: 'html',
+                            data: {
+                                correo: Email,
+                                Cargo: 'Empresa',
+                                Nombre: nombres,
+                                Apellidos: 'N/A',  // Valor por defecto
+                                password: password1
+                            },
 
-                            $.ajax({
-                                url: 'main/UsuarioCuentas/cuenta-empresa.php',
-                                type: 'POST',
-                                dataType: 'html',
-                                data: {
-                                    correo: Email,
-                                    Cargo: 'Empresa',
-                                    Nombre: nombres,
-                                    Apellidos: apellidos,
-                                    password: password1
-                                },
+                            beforeSend: function () {
+                                swal({
+                                    title: "Cargando...",
+                                    text: "Por favor espere",
+                                    imageUrl: "assets/img/icono/loader.gif",
+                                    button: false,
+                                    closeOnClickOutside: false,
+                                    closeOnEsc: false,
+                                    imageWidth: 100,
+                                    imageHeight: 100,
+                                    showCancelButton: false,
+                                    showConfirmButton: false
+                                });
+                            }
 
-                                beforeSend: function () {
+                        })
+                            .done(function (response) {
+                                if (response == 1) {
                                     swal({
-                                        title: "Cargando...",
-                                        text: "Por favor  espere",
-                                        imageUrl: "assets/img/icono/loader.gif",
-                                        button: false,
-                                        closeOnClickOutside: false,
-                                        closeOnEsc: false,
-                                        imageWidth: 100,
-                                        imageHeight: 100,
-                                        showCancelButton: false,
-                                        showConfirmButton: false
+                                        title: 'Advertencia',
+                                        text: 'El correo electrónico ya está en uso',
+                                        type: 'warning'
                                     });
+                                } else if (response == 2) {
+                                    $('#Nombres').val("");
+                                    $('#Apellidos').val("N/A");
+                                    $('#correo').val("");
+                                    $('#password').val("");
+                                    $('#confirmarPass').val("");
                                 }
-
-                            })
-                                .done(function (response) {
-                                    var result = response;
-
-                                    if (result == 1) {
-                                        swal({
-                                            title: 'Advertenicia',
-                                            text: 'El correo electrónico ya esta en uso ',
-                                            type: 'warning'
-                                        });
-                                    } else if (result == 2) {
-
-                                        var nombres = $('#Nombres').val("");
-                                        var apellidos = $('#Apellidos').val("");
-                                        var Email = $('#correo').val("");
-                                        var password1 = $('#password').val("");
-                                        var password2 = $('#confirmarPass').val("");
-                                        var validarEmail = $('#validez').val("");
-
-                                        $('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
-
-                                        swal({
-                                            title: "Se ha creado la cuenta como Empresa",
-                                            text: "Se ha creado la cuenta correctamente",
-                                            type: "success",
-                                            buttons: true,
-                                            dangerMode: true,
-                                        })
-                                            .then((willDelete) => {
-                                                if (willDelete) {
-                                                    setTimeout("location.href='login-empresa?success=1'");
-                                                }
-
-                                            });
-
-                                    } else if (result == 3) {
-                                        swal({title: 'Advertenicia', text: 'Intente de nuevo', type: 'warning'});
-                                    } else {
-
-                                        alert(result);
-                                    }
-
-
-                                })
-                                .fail(function (request, errorType, errorMessage) {
-                                    //timeout, error, abort, parseerror
-                                    swal({
-                                        title: 'alerta',
-                                        text: 'Intente de nuevo para procesar el envio',
-                                        type: 'error'
-                                    });
-                                    console.log(errorType);
-                                    alert(errorMessage);
-                                })
-                                .always(function () {
-                                    $('#myModal').modal('hide')
-
-
-                                })
-
-                        }
-
+                            });
                     }
-
-
-                } else {
-                    swal({title: 'Advertenicia', text: 'Complete todos los campos', type: 'warning'});
-                    return false;
                 }
-
-
-            } else {
-                swal({title: 'Advertenicia', text: 'No ha seleccionado Términos & condiciones', type: 'warning'});
             }
-
-
         });
 
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/BD-mysql/BDMUNDOEMPLEOSCA.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/BD-mysql/OfertasTrabajo.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/BD-mysql/OfertasTrabajo.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/BD-mysql/SoportePeruDepartamentos.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/Dashboard/Empresa/Modelos/ModelosOfertasEmpleos/CrearOfertaEmpleo.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/main/ModelosUsuarioLogin/ValidarUsuarioAdmin.php" dialect="GenericSQL" />
