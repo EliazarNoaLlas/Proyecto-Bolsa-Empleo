@@ -258,24 +258,24 @@ $('#correo').on('change', function() {
     			}else{
 
     				if(nombres.length<=3 ){
-    					swal({title:'Advertenicia',text:'El campo nombre debe tener minimo 4 palabras',type:'warning'  });
+    					swal({title:'Advertencia',text:'El campo nombre debe tener minimo 4 palabras',type:'warning'  });
     					return false;
     				}else if(apellidos.length<=3){
-    					swal({title:'Advertenicia',text:'El campo apellidos debe tener minimo 4 palabras',type:'warning'  });
+    					swal({title:'Advertencia',text:'El campo apellidos debe tener minimo 4 palabras',type:'warning'  });
     					return false;
     				}else if(!regemail.test(Email)){
-    					swal({title:'Advertenicia',text:'El correo electrónico no es valido',type:'warning'  });
+    					swal({title:'Advertencia',text:'El correo electrónico no es valido',type:'warning'  });
     					return false;
     				}else if(validarEmail == 1){
-    					swal({title:'Advertenicia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
+    					swal({title:'Advertencia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
     					return false;
     				}
     				else if(password1.length<=7){
-    					swal({title:'Advertenicia',text:'La contraseña debe tener entre 8 caracteres',type:'warning'  });
+    					swal({title:'Advertencia',text:'La contraseña debe tener entre 8 caracteres',type:'warning'  });
     					return false;
     				}
     				else if(password1 != password2 ){
-    					swal({title:'Advertenicia',text:'La contraseña no coinciden',type:'warning'  });
+    					swal({title:'Advertencia',text:'La contraseña no coinciden',type:'warning'  });
     					return false;
     				}else{
 
@@ -307,7 +307,7 @@ $('#correo').on('change', function() {
     						var result = response;
 
     						if(result==1){
-    							swal({title:'Advertenicia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
+    							swal({title:'Advertencia',text:'El correo electrónico ya esta en uso ',type:'warning'  });
     						}else if(result == 2)
     						{
     							var nombres = $('#Nombres').val("");
@@ -336,7 +336,7 @@ $('#correo').on('change', function() {
 
     						}else if(result == 3)
     						{
-    							swal({title:'Advertenicia',text:'Intente de nuevo',type:'warning'  });
+    							swal({title:'Advertencia',text:'Intente de nuevo',type:'warning'  });
     						}
     						else{
 
@@ -364,13 +364,13 @@ $('#correo').on('change', function() {
 
 
     		}else{
-    			swal({title:'Advertenicia',text:'Complete todos los campos',type:'warning'  });
+    			swal({title:'Advertencia',text:'Complete todos los campos',type:'warning'  });
     			return false;
     		}
 
 
 
-    	} else {swal({title:'Advertenicia',text:'No ha seleccionado Términos & condiciones',type:'warning'  }); }
+    	} else {swal({title:'Advertencia',text:'No ha seleccionado Términos & condiciones',type:'warning'  }); }
 
 
     });

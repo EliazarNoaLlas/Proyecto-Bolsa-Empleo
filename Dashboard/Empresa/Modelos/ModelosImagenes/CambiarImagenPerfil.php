@@ -17,7 +17,7 @@ if (isset($_POST['Guardar'])) {
 	if($_FILES["imgusu"]["error"]>0){
 
 		header('Location: ../../index');
-		$_SESSION['alertas'] = "Advertenicia";
+		$_SESSION['alertas'] = "Advertencia";
 		$_SESSION['ms'] = "No has selecciona el archivo";
 	}else{
 
@@ -89,7 +89,7 @@ if (isset($_POST['Guardar'])) {
 
 			}else{
 				
-				$_SESSION['alertas'] = "Advertenicia";
+				$_SESSION['alertas'] = "Advertencia";
 				$_SESSION['ms'] = "Existe una imagen con el mismo nombre generado";
 				header('Location: ../../index');
 			}
@@ -97,7 +97,7 @@ if (isset($_POST['Guardar'])) {
 
 		}else{
 
-			$_SESSION['alertas'] = "Advertenicia";
+			$_SESSION['alertas'] = "Advertencia";
 			$_SESSION['ms'] = "No se pude cambiar la imagen ya que no esta con una extencion valida";
 			header('Location: ../../index');
             //Si entra a este else es porque la imagen no esta con una extencion valida

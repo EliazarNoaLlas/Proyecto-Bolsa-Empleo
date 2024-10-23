@@ -251,7 +251,7 @@ include_once '../../templates/alertas.php';
 
 
 
-<?php  if(isset($_GET['documentoError'])){ echo "<script>swal({title:'Advertenicia',text:'Debe anexar curriculum vitae. Recuerda poner el nombre del archivo curriculum vitae ".$PrimerNombre[0] ." ". $PrimerApellido[0]." ',type:'warning'  });</script>"; } ?>
+<?php  if(isset($_GET['documentoError'])){ echo "<script>swal({title:'Advertencia',text:'Debe anexar curriculum vitae. Recuerda poner el nombre del archivo curriculum vitae ".$PrimerNombre[0] ." ". $PrimerApellido[0]." ',type:'warning'  });</script>"; } ?>
 
 <script type="text/javascript">
 

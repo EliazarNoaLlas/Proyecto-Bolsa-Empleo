@@ -32,16 +32,16 @@ if (isset($_POST['validar'])) {
 
     if ($emailFormato == $Correo && password_verify($password, $ObtnerContra)) {
         if ($Estado == "Token") {
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Tu cuenta está pendiente de verificación por parte del administrador. Por favor, contacta con el administrador para completar el proceso de activación.";
             header("Location: ../../login-empresa");
         } else if ($Estado == "Denegado") {
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Usuario denegado verfica con Soporte técnico";
             header("Location: ../../login-empresa");
         } else if ($Estado == "Seguridad") {
 
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña";
             header("Location: ../../login-empresa?seguridad=1");
         } else {
@@ -59,7 +59,7 @@ if (isset($_POST['validar'])) {
                     break;
                 default:
                     $_SESSION['email'] = $email;
-                    $_SESSION['alertas'] = "Advertenicia";
+                    $_SESSION['alertas'] = "Advertencia";
                     $_SESSION['ms'] = "Tu cuenta no es de empresa";
                     header("Location: ../../login-empresa");
                     break;
@@ -69,7 +69,7 @@ if (isset($_POST['validar'])) {
 
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        $_SESSION['alertas'] = "Advertenicia";
+        $_SESSION['alertas'] = "Advertencia";
         $_SESSION['ms'] = "El correo electrónico o contraseña incorrecto";
         header("Location: ../../login-empresa?error=0");
     }

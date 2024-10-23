@@ -32,9 +32,9 @@
          echo "<script>swal({title:'éxito',text:'".$_SESSION['ms']."',type:'success'  });</script>";
       $_SESSION['alertas'] = 'Funciona';
     } 
-    elseif($_SESSION['alertas'] == 'Advertenicia'){
+    elseif($_SESSION['alertas'] == 'Advertencia'){
 
-         echo "<script>swal({title:'Advertenicia',text:'".$_SESSION['ms']."',type:'error'  });</script>";
+         echo "<script>swal({title:'Advertencia',text:'".$_SESSION['ms']."',type:'error'  });</script>";
       $_SESSION['alertas'] = 'Funciona';
     }
 

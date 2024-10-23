@@ -409,5 +409,5 @@ include_once 'templates/Instrucciones.php'
 ?>
 
 <?php if (isset($_GET['seguridad'])) {
-//    echo "<script>swal({title:'Advertenicia',text:' Verifica tu correo electrónico para confirmar el cambio de contraseña. Para poder volver iniciar sesión de nuevo',type:'warning'  });</script>";
+//    echo "<script>swal({title:'Advertencia',text:' Verifica tu correo electrónico para confirmar el cambio de contraseña. Para poder volver iniciar sesión de nuevo',type:'warning'  });</script>";
 } ?>

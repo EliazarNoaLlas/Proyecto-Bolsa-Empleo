@@ -55,17 +55,17 @@ if (isset($_POST['validar'])) {
 
         if ($Estado == "Token") {
             // Estado: Token (usuario pendiente de verificación por correo)
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Tu cuenta está pendiente de verificación por parte del administrador. Por favor, contacta con el administrador para completar el proceso de activación.";
             header("Location: ../../login-candidato");
         } else if ($Estado == "Denegado") {
             // Estado: Denegado (acceso denegado por algún motivo)
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Usuario denegado verifica con Soporte técnico";
             header("Location: ../../login-candidato");
         } else if ($Estado == "Seguridad") {
             // Estado: Seguridad (usuario debe verificar un cambio de contraseña)
-            $_SESSION['alertas'] = "Advertenicia";
+            $_SESSION['alertas'] = "Advertencia";
             $_SESSION['ms'] = "Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña";
             header("Location: ../../login-candidato?seguridad=1");
         } else {
@@ -99,7 +99,7 @@ if (isset($_POST['validar'])) {
 
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        $_SESSION['alertas'] = "Advertenicia";
+        $_SESSION['alertas'] = "Advertencia";
         $_SESSION['ms'] = "El correo electrónico o contraseña incorrecto.";
         header("Location: ../../login-candidato?error=0");
     }

@@ -275,11 +275,11 @@ if (isset($_SESSION['iduser'])) {
 <?php include_once 'templates/alertas.php'; ?>
 
 <?php if (isset($_GET['seguridad'])) {
-    echo "<script>swal({title:'Advertenicia',text:'Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña',type:'error'  });</script>";
+    echo "<script>swal({title:'Advertencia',text:'Usuario denegado verifica tu correo electrónico para confirmar el cambio de contraseña',type:'error'  });</script>";
 } ?>
 
 <?php if (isset($_GET['verificado'])) {
-    echo "<script>swal({title:'Advertenicia',text:'Usuario Verificado, Ahora puedes iniciar sesión',type:'success'  });</script>";
+    echo "<script>swal({title:'Advertencia',text:'Usuario Verificado, Ahora puedes iniciar sesión',type:'success'  });</script>";
 } ?>
 
 <?php if (isset($_GET['success'])) {

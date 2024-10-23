@@ -28,7 +28,7 @@ if(isset($_POST["Guardar"])){
 
 	if ($ResultDocumento == 1) {
 
-		$_SESSION['alertas'] = "Advertenicia";
+		$_SESSION['alertas'] = "Advertencia";
 		$_SESSION['ms'] = "Existe un archivo con ese mismo nombre " .$NombreArchivo." intente con otro";
 		header('Location: ../../documentos');
 	}else{
