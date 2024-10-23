@@ -19,26 +19,37 @@ if (isset($_POST['validar'])) {
     $password = $FuncionesApp->test_input($_POST['login-password']);
     $emailFormato = strtolower($email);  // Convertimos el correo a minúsculas para estandarizar el formato
 
+    // Verificamos que los campos no estén vacíos
+    if (empty($email) || empty($password)) {
+        $_SESSION['alertas'] = "Advertencia";
+        $_SESSION['ms'] = "Por favor, rellena todos los campos.";
+        header("Location: ../../login-admin?error=1");
+        exit();
+    }
+
     // Consulta SQL para buscar al usuario por correo electrónico
     $sql = "SELECT `IDUsuario`, `Nombre`, `Apellidos`, `Correo`, `Password`, `Foto`, `Cargo`, `Estado` 
-                FROM usuarios_cuentas WHERE `Correo` = ?";
+            FROM usuarios_cuentas WHERE `Correo` = ?";
 
     // Ejecutamos la consulta con el correo proporcionado
     $stmt = $Conexion->ejecutar_consulta_simple_Where($sql, $emailFormato);
 
     // Inicializamos variables para almacenar los datos obtenidos de la consulta
     $Correo = "";
+    $ObtnerContra = "";
 
     // Recorremos los resultados de la consulta para obtener los datos del usuario
-    while ($item = $stmt->fetch()) {
-        $Iduser = $item['IDUsuario'];
-        $Nombre = $item['Nombre'];
-        $Apellidos = $item['Apellidos'];
-        $Correo = $item['Correo'];
-        $ObtnerContra = $item['Password'];
-        $Foto = $item['Foto'];
-        $Estado = $item['Estado'];
-        $Cargo = $item['Cargo'];
+    if ($stmt && $stmt->rowCount() > 0) {
+        while ($item = $stmt->fetch()) {
+            $Iduser = $item['IDUsuario'];
+            $Nombre = $item['Nombre'];
+            $Apellidos = $item['Apellidos'];
+            $Correo = $item['Correo'];
+            $ObtnerContra = $item['Password'];
+            $Foto = $item['Foto'];
+            $Estado = $item['Estado'];
+            $Cargo = $item['Cargo'];
+        }
     }
 
     // Verificamos si el correo existe y si la contraseña es correcta utilizando password_verify()
@@ -57,6 +68,7 @@ if (isset($_POST['validar'])) {
             case 'Soporte':
                 // Si el cargo es "Soporte", redirigimos a su panel de administración
                 header("Location: ../../Dashboard/Soporte/");
+                exit();  // Detenemos la ejecución después de la redirección
                 break;
 
             default:
@@ -65,6 +77,7 @@ if (isset($_POST['validar'])) {
                 $_SESSION['alertas'] = "Advertencia";
                 $_SESSION['ms'] = "Tu cuenta no es de administración";
                 header("Location: ../../login-admin");
+                exit();  // Detenemos la ejecución después de la redirección
                 break;
         }
 
@@ -72,7 +85,8 @@ if (isset($_POST['validar'])) {
         // Si el correo o la contraseña no coinciden, mostramos un error
         $_SESSION['email'] = $email;
         $_SESSION['alertas'] = "Advertencia";
-        $_SESSION['ms'] = "Correo electrónico o contraseña incorrectos";
+        $_SESSION['ms'] = "El correo electrónico o la contraseña son incorrectos.";
         header("Location: ../../login-admin?error=0");
+        exit();  // Detenemos la ejecución después de la redirección
     }
 }

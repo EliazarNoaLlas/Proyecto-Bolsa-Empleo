@@ -59,13 +59,6 @@
                                        placeholder="Nombres*">
                             </div>
                         </div>
-                        <!--                        <div class="col-lg-6 col-md-6 col-12">-->
-                        <!--                            <div class="form-group">-->
-                        <!--                                <div class="icon"><i class="fa fa-user"></i></div>-->
-                        <!--                                <input class="form-control valid" id="Apellidos" name="Apellidos" type="text"-->
-                        <!--                                       placeholder="Apellidos*">-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
 
                         <div class="col-lg-12 col-md-6 col-12">
                             <div class="form-group">
@@ -131,52 +124,6 @@
                 </div>
                 <!--/ End contact Form -->
             </div>
-            <!--            <div class="col-lg-5 col-md-5 col-12">-->
-            <!--                <div class="contact-box-main m-top-30">-->
-            <!---->
-            <!--                    <div class="contact-title">-->
-            <!--                        <p style="text-align: center;">-->
-            <!--                            <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
-            <!--                        </p>-->
-            <!--                    </div>-->
-            <!---->
-            <!---->
-            <!--                    <div class="contact-title">-->
-            <!--                        <h2>CONTÁCTENOS:</h2>-->
-            <!--                    </div>-->
-            <!--                    <div class="single-contact-box">-->
-            <!--                        <div class="c-icon"><i class="fa fa-clock-o"></i></div>-->
-            <!--                        <div class="c-text">-->
-            <!--                            <h4>Hora de apertura</h4>-->
-            <!--                            <p>Lunes a Viernes<br>08AM - 10PM (Todas las dias)</p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                     End Single Contact -->
-            <!--                     Single Contact -->
-            <!--                    <div class="single-contact-box">-->
-            <!--                        <div class="c-icon"><i class="fa fa-phone"></i></div>-->
-            <!--                        <div class="c-text">-->
-            <!--                            <h4>Llámanos ahora</h4>-->
-            <!--                            <p>Tel.: +503 2222 2222<br> Mob.: +503 654 3451</p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--/ End Single Contact -->
-            <!-- Single Contact -->
-            <!--                    <div class="single-contact-box">-->
-            <!--                        <div class="c-icon"><i class="fa fa-envelope-o"></i></div>-->
-            <!--                        <div class="c-text">-->
-            <!--                            <h4>Envíanos un correo electrónico</h4>-->
-            <!--                            <p>contact@bizwheel.com<br>info@bizwheel.com</p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--/ End Single Contact -->
-            <!--                    <div class="button">-->
-            <!--                        ¿Ya tienes una cuenta?<br>-->
-            <!--                        <a href="login-empresa" class="bizwheel-btn theme-1">Iniciar Sesión<i class="fa fa-angle-right"></i></a> <br>-->
-            <!---->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
         </div>
     </div>
 </section>
@@ -315,6 +262,24 @@
                                     $('#correo').val("");
                                     $('#password').val("");
                                     $('#confirmarPass').val("");
+
+                                    $('#passstrength').html('<div class="progress"><div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>');
+                                    swal({
+                                        title: "Se ha creado la cuenta como Empresa",
+                                        text: "La cuenta se ha creado correctamente",
+                                        type: "success",
+                                        buttons: true,
+                                        dangerMode: true,
+                                    })
+                                        .then((willDelete) => {
+                                            if (willDelete) {
+                                                setTimeout("location.href='login-empresa?success=1'");
+                                            }
+                                        });
+                                } else if (result == 3) {
+                                    swal({title: 'Advertencia', text: 'Intente de nuevo', type: 'warning'});
+                                } else {
+                                    alert(result);
                                 }
                             });
                     }

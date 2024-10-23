@@ -1,24 +1,22 @@
 <?php
-// Verifica si no existe un parámetro 'error' en la URL, indicando que no hubo un error previo en el login
+// Verifica si no existe un parámetro 'error' en la URL, lo que indica que no hubo un error previo en el login
 if (!isset($_GET['error'])) {
 
-    // Obtiene el usuario ingresado desde el formulario
-    $user = $_POST['USER'];
+    // Captura los valores del formulario si están disponibles
+    $user = $_POST['USER'] ?? '';
+    $password = $_POST['PASSWORD'] ?? '';
 
-    // Obtiene la contraseña ingresada desde el formulario
-    $Passowrd = $_POST['PASSWORD'];
-
-    // Verifica si las credenciales coinciden con las de un usuario administrador
-    if ($user == "user-admin" && $Passowrd == 'P@as$$w0rd246') {
-        // Si las credenciales son correctas, se permite continuar
-        // (Aquí podrías agregar lógica adicional para manejar sesiones o redirecciones)
+    // Verifica si las credenciales coinciden con un administrador
+    if ($user === "user-admin" && $password === 'P@as$$w0rd246') {
+        // Redirigir o manejar la lógica cuando el usuario es administrador
     } else {
-        // Si las credenciales no son correctas, redirige a la página de login de soporte con un mensaje de error
+        // Redirige si las credenciales son incorrectas
         header("Location: seguridad-soporte");
+        exit();
     }
 }
 
-// Inicia la sesión PHP, necesaria para manejar datos de sesión como el usuario autenticado
+// Inicia la sesión para manejar la autenticación
 session_start();
 ?>
 
@@ -68,16 +66,14 @@ session_start();
             src: url("assets/recusosMundoEmpleo/Azonix.otf");
         }
 
-        #titulos {
+        #titulos, #titulos2 {
             font-family: "Azonix";
         }
 
         #titulos2 {
-            font-family: "Azonix";
             color: #0B3486;
         }
     </style>
-
 </head>
 <body>
 <div id="page-container" class="main-content-boxed">
@@ -92,65 +88,52 @@ session_start();
                 <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible"
                      data-toggle="appear" data-class="animated fadeInRight">
                     <div class="content content-full">
-                        <!-- Cabecera del formulario -->
-                        <div class="px-30 py-10">
-                            <center>
-                                <!--                                <img src="assets/recusosMundoEmpleo/logo.png" class="img-fluid">-->
-                            </center>
+                        <div class="px-30 py-10 text-center">
                             <h1 class="h3 font-w700 mt-30 mb-10">Soporte técnico</h1>
-                            <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identificate</h2>
+                            <h2 class="h5 font-w400 text-muted mb-0">Por favor, Identifícate</h2>
                         </div>
+
                         <!-- Formulario de inicio de sesión -->
                         <form class="js-validation-signin px-30"
                               action="main/ModelosUsuarioLogin/ValidarUsuarioAdmin.php" method="post">
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <div class="form-material floating">
-                                        <input type="text" class="form-control" id="login-username"
-                                               name="login-username" value="<?php if (isset($_SESSION['email'])) {
-                                            echo $_SESSION['email'];
-                                        } ?>">
-                                        <label for="login-username">correo electrónico</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <div class="form-material floating input-group">
-                                        <input type="password" class="form-control" id="login-password"
-                                               name="login-password" value="<?php if (isset($_SESSION['password'])) {
-                                            echo $_SESSION['password'];
-                                        } ?>">
-                                        <label for="material-addon-icon2">contraseña</label>
-                                        <div class="input-group-append">
-                                                <span class="input-group-text">
-                                                    <span id="MostrarPossword" class="fa fa-eye-slash icon"></span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <p class="text-center">
-                                    <button type="submit" class="btn btn-sm btn-hero btn-warning btn-rounded"
-                                            id="validar" name="validar">
-                                        <i class="si si-login mr-10"></i>Iniciar Sesión
-                                        <center>
-                                            <div id="respuesta"></div>
-                                        </center>
-                                    </button>
-                                </p>
-                                <div class="mt-30">
-                                    <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="recuperacion">
-                                        <i class="fa fa-warning mr-5"></i> ¿Olvidaste la contraseña?
-                                    </a>
-                                    <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="index">
-                                        <i class="si si-arrow-left mr-5"></i>Regresar
-                                    </a>
+                                <div class="form-material floating">
+                                    <input type="text" class="form-control" id="login-username" name="login-username"
+                                           value="<?= isset($_SESSION['email']) ? $_SESSION['email'] : '' ?>" required>
+                                    <label for="login-username">Correo electrónico</label>
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-material floating input-group">
+                                    <input type="password" class="form-control" id="login-password" name="login-password"
+                                           value="<?= isset($_SESSION['password']) ? $_SESSION['password'] : '' ?>" required>
+                                    <label for="login-password">Contraseña</label>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <span id="togglePassword" class="fa fa-eye-slash icon"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-sm btn-hero btn-warning btn-rounded" id="validar" name="validar">
+                                    <i class="si si-login mr-10"></i>Iniciar Sesión
+                                </button>
+                                <div id="respuesta"></div>
+                            </div>
+
+                            <div class="text-center mt-30">
+                                <a class="link-effect text-muted" href="recuperacion">
+                                    <i class="fa fa-warning mr-5"></i> ¿Olvidaste la contraseña?
+                                </a>
+                                <a class="link-effect text-muted" href="index">
+                                    <i class="si si-arrow-left mr-5"></i>Regresar
+                                </a>
                             </div>
                         </form>
-                        <!-- Fin del formulario de inicio de sesión -->
+                        <!-- Fin del formulario -->
                     </div>
                 </div>
             </div>
@@ -161,33 +144,38 @@ session_start();
 <!-- Scripts -->
 <script src="Dashboard/assets/js/codebase.core.min.js"></script>
 <script src="Dashboard/assets/js/codebase.app.min.js"></script>
-<script type="text/javascript" src="assets/plugin/sweetalert/sweetalert2.js"></script>
-<script src="Dashboard/assets/js/pages/op_auth_signin.min.js"></script>
-<script src="main/js/ValidacionesLogin.js"></script>
-
-<!-- Alertas de estado -->
-<?php if (isset($_GET['seguridad'])) {
-    echo "<script>swal({title:'Advertencia',text:'Verifica tu E-mail para confirmar el usuario',type:'error'});</script>";
-} ?>
-<?php if (isset($_GET['verificado'])) {
-    echo "<script>swal({title:'Advertencia',text:'Usuario Verificado, Ahora puedes iniciar sesión',type:'success'});</script>";
-} ?>
-<?php if (isset($_GET['success'])) {
-//    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \"No es un correo spam\" para que puedas recibir las notificaciones.',type:'success'});</script>";
-} ?>
+<script src="assets/plugin/sweetalert/sweetalert2.js"></script>
 
 <!-- Mostrar y ocultar contraseña -->
 <script type="text/javascript">
-    $('#MostrarPossword').on('click', function () {
-        var cambio = document.getElementById("login-password");
-        if (cambio.type == "password") {
-            cambio.type = "text";
-            $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById("login-password");
+        const icon = this;
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
         } else {
-            cambio.type = "password";
-            $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            passwordInput.type = "password";
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
         }
     });
 </script>
+
+<?php include_once 'templates/alertas.php'; ?>
+
+<?php if (isset($_GET['seguridad'])): ?>
+    <script>
+        swal({ title: 'Advertencia', text: 'Verifica tu E-mail para confirmar el usuario', type: 'error' });
+    </script>
+<?php endif; ?>
+
+<?php if (isset($_GET['verificado'])): ?>
+    <script>
+        swal({ title: 'Usuario Verificado', text: 'Ahora puedes iniciar sesión', type: 'success' });
+    </script>
+<?php endif; ?>
+
 </body>
 </html>
