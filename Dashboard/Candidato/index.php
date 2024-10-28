@@ -234,12 +234,12 @@ include_once 'templates/header.php';
                     </a>
                 </div>
                 <div class="col-6 col-md-4 col-xl-2">
-                    <a class=" text-center" href="postulaciones">
-                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left cuadros">
+                    <a class=" text-center" href="reportes">
+                        <div class="block-content ribbon ribbon-bookmark ribbon-crystal  cuadros">
                             <p class="mt-5">
-                                <img src="../assets/iconos/candidato/Mis_Postulaciones.png">
+                                <img src="../assets/iconos/empresa/Reportes.png">
                             </p>
-                            <p class="font-w600 text-white">Mis <br> Postulaciones</p>
+                            <p class="font-w600 text-white">Reportes <br><br></p>
                         </div>
                     </a>
                 </div>

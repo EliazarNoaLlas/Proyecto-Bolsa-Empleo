@@ -118,7 +118,7 @@ if (isset($_GET['verificado'])) {
 
 // Si el parámetro 'success' está presente, se indica al usuario verificar su correo
 if (isset($_GET['success'])) {
-    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \'(No es un correo spam)\' para que puedas recibir las notificaciones.',type:'success' });</script>";
+/*    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \'(No es un correo spam)\' para que puedas recibir las notificaciones.',type:'success' });</script>";*/
 }
 ?>
 

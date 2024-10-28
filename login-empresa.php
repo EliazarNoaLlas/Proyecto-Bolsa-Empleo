@@ -230,7 +230,6 @@ if (isset($_SESSION['iduser'])) {
 } ?>
 
 <?php if (isset($_GET['success'])) {
-    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en (No es un correo spam)  para que puedas recibir las notificaciones',type:'success'  });</script>";
 } ?>
 
 <script type="text/javascript">

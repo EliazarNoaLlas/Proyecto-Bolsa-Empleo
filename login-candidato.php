@@ -233,9 +233,9 @@ if (isset($_SESSION['iduser'])) {
                                     <h1 data-toggle="appear" style="color: #0B3486;" data-class="animated fadeInUp">
                                         Indicaciones:</h1>
 
-                                    <P style="text-align: left;" data-toggle="appear" data-class="animated fadeInUp">
-                                        Verifica tu correo electrónico para validar el usuario. Algunas veces puede caer
-                                        en spam o correo deseado</P>
+<!--                                    <P style="text-align: left;" data-toggle="appear" data-class="animated fadeInUp">-->
+<!--                                        Verifica tu correo electrónico para validar el usuario. Algunas veces puede caer-->
+<!--                                        en spam o correo deseado</P>-->
 
 
                                     <P style="text-align: left;" data-toggle="appear" data-class="animated fadeInUp">
@@ -283,7 +283,7 @@ if (isset($_SESSION['iduser'])) {
 } ?>
 
 <?php if (isset($_GET['success'])) {
-    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en (No es un correo spam)  para que puedas recibir las notificaciones',type:'success'  });</script>";
+/*    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en (No es un correo spam)  para que puedas recibir las notificaciones',type:'success'  });</script>";*/
 } ?>
 
 

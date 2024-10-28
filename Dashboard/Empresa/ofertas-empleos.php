@@ -38,8 +38,6 @@ include_once 'templates/header.php';
 ?>
 
 <style type="text/css">
-
-
     th {
         font-size: 10px;
         font-family: sans-serif;
@@ -61,7 +59,6 @@ include_once 'templates/header.php';
         background-size: cover;
         height: auto;
     }
-
 </style>
 
 <main id="main-container">
@@ -80,7 +77,7 @@ include_once 'templates/header.php';
 
     <!-- Terms Modal -->
     <div class="modal fade" id="modal-terms3" tabindex="-1" role="dialog" aria-labelledby="modal-terms2"
-         aria-hidden="true">
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-slidedown" role="document">
             <div class="modal-content">
                 <div class="block block-themed block-transparent mb-0">
@@ -96,9 +93,9 @@ include_once 'templates/header.php';
                         <div class="block">
                             <div class="block-content block-content-full text-center">
 
-<!--                                <img src="../../assets/recusosMundoEmpleo/logo.png" class="img-fluid"-->
-<!--                                     style="height: 100px; width: 250px;" data-toggle="appear"-->
-<!--                                     data-class="animated flipInY">-->
+                                <!--                                <img src="../../assets/recusosMundoEmpleo/logo.png" class="img-fluid"-->
+                                <!--                                     style="height: 100px; width: 250px;" data-toggle="appear"-->
+                                <!--                                     data-class="animated flipInY">-->
                                 <h3 class="font-size-h2 font-w300 mt-20" data-toggle="appear"
                                     data-class="animated flipInY" id="titulos" style="color: #0B3486;">Preguntas
                                     frecuentes </h3>
@@ -106,8 +103,8 @@ include_once 'templates/header.php';
 
                                 <p class="text-center">
                                     <button type="button" class="btn btn-sm btn-hero btn-noborder mb-10 mx-5"
-                                            data-dismiss="modal"
-                                            style="background:#FCC201; color:#0B3486; font-weight: bold;">Cerrar
+                                        data-dismiss="modal"
+                                        style="background:#FCC201; color:#0B3486; font-weight: bold;">Cerrar
                                     </button>
                                 </p>
 
@@ -132,10 +129,10 @@ include_once 'templates/header.php';
             <h1 class="content-heading">LISTADO DE OFERTAS PUBLICADAS <br>
                 <br>
                 <a href="./" class="btn  btn-rounded btn-noborder btn-alt-primary mr-5 mb-5"> <i
-                            class="si si-action-undo fa-2x5"> </i> Retroceder</a>
+                        class="si si-action-undo fa-2x5"> </i> Retroceder</a>
 
                 <a href="nueva-oferta-empleo" class="btn  btn-rounded btn-noborder btn-alt-primary  btn-lg mr-5 mb-5"><i
-                            class="fa fa-briefcase fa-2x5"> </i> Añadir oferta empleo</a>
+                        class="fa fa-briefcase fa-2x5"> </i> Añadir oferta empleo</a>
 
         </div>
 
@@ -151,7 +148,7 @@ include_once 'templates/header.php';
                         <div class="block-content block-content-full clearfix">
                             <div class="float-right">
                                 <i class="si si-briefcase fa-2x text-dark-op"
-                                   style="margin-left: 5px; "> <?php echo $OfertasPublicas; ?></i>
+                                    style="margin-left: 5px; "> <?php echo $OfertasPublicas; ?></i>
                             </div>
                             <div class="float-left mt-10">
                                 <div class="font-w600 mb-5">Ofertas empleos</div>
@@ -263,7 +260,6 @@ include_once 'templates/header.php';
                                 $formatoEstado = '<span class="badge badge-success"  style="font-size: 18px; font-family: sans-serif;">Activo</span>';
 
                                 $FormatoDesactivar = '<a href="Modelos/ModelosOfertasEmpleos/DesactivarOfertaEmpleo.php?id=' . base64_encode($item['IDpostulaciones']) . '" class="btn btn-secondary" data-toggle="tooltip" title="Desactivar la oferta de empleo" data-original-title="Desactivar la oferta de empleo"  > <i class="si si-lock"></i></a>';
-
                             } else if ($item['Estado'] == "Inactiva") {
                                 $formatoEstado = '<span class="badge badge-danger"  style="font-size: 18px; font-family: sans-serif;">Inactiva</span>';
                                 $FormatoDesactivar = '<a href="Modelos/ModelosOfertasEmpleos/ActivarOfertaEmpleo.php?id=' . base64_encode($item['IDpostulaciones']) . '" class="btn btn-secondary" data-toggle="tooltip" title="Activar la oferta de empleo" data-original-title="Activar la oferta de empleo"  > <i class="si si-action-undo"></i></a>';
@@ -302,16 +298,13 @@ include_once 'templates/header.php';
           </td>
           </tr>';
                             $N++;
-
                         }
 
                         $salida .= "</tbody></table>";
-
                     } else {
 
                         $salida = "No hay  ofertas emepleos publicados";
                     }
-
                 } else {
                     echo "Problema para ejectar la consulta";
                 }
@@ -331,7 +324,7 @@ include_once 'templates/header.php';
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -366,10 +359,8 @@ include_once '../../templates/alertas.php';
 ?>
 
 <script type="text/javascript">
-
-
-    window.onload = function () {
-        $("table tbody tr").click(function () {
+    window.onload = function() {
+        $("table tbody tr").click(function() {
             // Tomar la captura la información  de la tabla
             var nombre = $(this).find("td:eq(0)").text();
             document.getElementById('Nombre').value = nombre;
@@ -378,11 +369,9 @@ include_once '../../templates/alertas.php';
     }
 
 
-    $(".btn-group button").click(function () {
+    $(".btn-group button").click(function() {
 
         var IDEliminar = $('#IDEliminar').val($(this).val());
 
     })
-
 </script>
-

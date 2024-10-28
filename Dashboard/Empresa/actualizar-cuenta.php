@@ -8,7 +8,7 @@ $FuncionesApp = new funcionesApp();
 include_once 'templates/seguridadCpanel.php';
 ?>
 <title>Candidato | Actualizar Cuenta</title>
-<?php 
+<?php
 include_once 'templates/styles.php';
 include_once 'templates/MenuRight.php';
 include_once 'templates/MenuLeft.php';
@@ -16,14 +16,13 @@ include_once 'templates/header.php';
 ?>
 
 <style type="text/css">
-  #imgbanner{
+  #imgbanner {
 
     background: url('../assets/media/photos/Incio_de_Sesion_Usuario.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px auto;
   }
-
 </style>
 
 <main id="main-container">
@@ -33,7 +32,7 @@ include_once 'templates/header.php';
       <div class="content content-top text-center overflow-hidden">
         <div class="pt-40 pb-20">
 
-          <h2 class="h4 font-w400  invisible" id="titulos"  style="color: white;" data-toggle="appear" data-class="animated fadeInUp">Actualizar la cuenta <?php echo $PrimerNombre[0] ?> ! </h2>
+          <h2 class="h4 font-w400  invisible" id="titulos" style="color: white;" data-toggle="appear" data-class="animated fadeInUp">Actualizar la cuenta <?php echo $PrimerNombre[0] ?> ! </h2>
         </div>
       </div>
     </div>
@@ -42,10 +41,10 @@ include_once 'templates/header.php';
 
 
   <div style="margin-right:2%; margin-left:2%;">
-    
+
     <br><br>
     <p class="text-center">
-    <a href="./" class="btn  btn-rounded btn-noborder btn-alt-primary mr-5 mb-5"> <i class="si si-action-undo fa-2x5"> </i> Retroceder</a>
+      <a href="./" class="btn  btn-rounded btn-noborder btn-alt-primary mr-5 mb-5"> <i class="si si-action-undo fa-2x5"> </i> Retroceder</a>
     </p>
     <!-- Pricing Tables -->
     <div class="container">
@@ -56,7 +55,7 @@ include_once 'templates/header.php';
         <div class="block-content">
 
           <form action="Modelos/ModelosPerfil/actualizar_cuenta.php" method="POST">
-            <input type="hidden" name="iduser" value="<?php echo$IDUser; ?>">  
+            <input type="hidden" name="iduser" value="<?php echo $IDUser; ?>">
             <label>Nombres</label>
             <div class="form-group row">
               <div class="col-lg-12">
@@ -91,7 +90,7 @@ include_once 'templates/header.php';
             <div class="form-group row">
               <div class="col-lg-12">
                 <div class="input-group">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email"  disabled value="<?php echo$CorreoUser ?>"> 
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" disabled value="<?php echo $CorreoUser ?>">
                   <div class="input-group-append">
                     <span class="input-group-text">
                       <i class="fa fa-envelope-o"></i>
@@ -103,15 +102,15 @@ include_once 'templates/header.php';
 
             <div class="form-group row">
               <div class="col-12">
-                <input type="submit" name="Guardar" id="Guardar" value="Actualizar nombres" class="btn btn-alt-primary"> 
+                <input type="submit" name="Guardar" id="Guardar" value="Actualizar nombres" class="btn btn-alt-primary">
               </div>
             </div>
 
           </form>
 
-          <form action="actualizar-password.php" method="POST"> 
+          <form action="actualizar-password.php" method="POST">
             <label>Nueva Contraseña</label>
-            <input type="hidden" name="iduser2" value="<?php echo$IDUser; ?>">  
+            <input type="hidden" name="iduser2" value="<?php echo $IDUser; ?>">
             <div class="form-group row">
               <div class="col-lg-12">
                 <div class="input-group">
@@ -129,7 +128,7 @@ include_once 'templates/header.php';
 
             <div class="form-group row">
               <div class="col-12">
-                <input type="submit" name="btnpassword" id="btnpassword" value="Actualizar contraseña" class="btn btn-alt-danger"> 
+                <input type="submit" name="btnpassword" id="btnpassword" value="Actualizar contraseña" class="btn btn-alt-danger">
               </div>
             </div>
           </form>
@@ -153,21 +152,17 @@ include_once 'templates/script.php';
 include_once '../../templates/alertas.php';
 ?>
 
-   <script type="text/javascript">
+<script type="text/javascript">
+  $('#MostrarPossword').on('click', function() {
 
-            $('#MostrarPossword').on('click', function() {
+    var cambio = document.getElementById("password");
+    if (cambio.type == "password") {
+      cambio.type = "text";
+      $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    } else {
+      cambio.type = "password";
+      $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+    }
 
-                var cambio = document.getElementById("password");
-                if(cambio.type == "password"){
-                    cambio.type = "text";
-                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
-                }else{
-                    cambio.type = "password";
-                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
-                }
-
-            });
-
-            
-
-        </script>
+  });
+</script>
