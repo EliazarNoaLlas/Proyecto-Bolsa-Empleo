@@ -24,3 +24,6 @@ VALUES (45, 'Amazonas'),
        (45, 'Tacna'),
        (45, 'Tumbes'),
        (45, 'Ucayali');
+
+INSERT INTO soporte_paises_departamento (IDPais, Nombre)
+VALUES (45, 'Juliaca');

@@ -188,10 +188,6 @@ while ($item=$stmt->fetch())
  	}
 
  </style>
-
-
-
-
  <div class="breadcrumbs " id="imgbanner">
  	<div class="container">
  		<div class="row">
@@ -212,9 +208,6 @@ while ($item=$stmt->fetch())
  	</div>
  </div>
 
-
-
-
  <section class="latest-blog section-space">
  	<div class="container">
 
@@ -225,10 +218,9 @@ while ($item=$stmt->fetch())
 
  				<?php
  				if ($FechaPublicacion <= $fechaActual && $Expira >= $fechaActual) {
- 					echo "";
- 				}else{
+                    echo '<div class="alert alert-warning" role="alert">La oferta de empleo esta activo. '.$Expira.'</div>';
+                }else{
  					echo '<div class="alert alert-warning" role="alert">La oferta de empleo a vencido. '.$Expira.'</div>';
-
  				}
  				?>
 
@@ -248,7 +240,7 @@ while ($item=$stmt->fetch())
  							</a>
  							<ul>
  								<?php if ($Confidencial != "Si") {?>
- 									<li>Solutec El Salvador</li> 	
+ 									<li>Departamento:</li>
  								<?php }else{ ?> 
  									<li>Empresa: Confidencial</li> 	
  								<?php } ?>

@@ -38,8 +38,5 @@
       $_SESSION['alertas'] = 'Funciona';
     }
 
-
-
-
 }
  ?>

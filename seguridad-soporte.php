@@ -15,7 +15,8 @@
     <meta name="author" content="BOLSA LABORAL Centro América">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- Meta etiquetas para la integración con Open Graph, mejorando la visualización cuando se comparte el sitio en redes sociales -->
+    <!-- Meta etiquetas para la integración con Open Graph, mejorando la visualización cuando se comparte el
+    sitio en redes sociales -->
     <meta property="og:title" content="Login - Soporte de BOLSA LABORAL CA">
     <meta property="og:site_name" content="BOLSA LABORAL">
     <meta property="og:description" content="Login - soporte BOLSA LABORAL">
@@ -118,13 +119,13 @@ if (isset($_GET['verificado'])) {
 
 // Si el parámetro 'success' está presente, se indica al usuario verificar su correo
 if (isset($_GET['success'])) {
-/*    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \'(No es un correo spam)\' para que puedas recibir las notificaciones.',type:'success' });</script>";*/
+    echo "<script>swal({title:'Verifica tu correo electrónico',text:'Recuerda dar clic en \'(No es un correo spam)\' para que puedas recibir las notificaciones.',type:'success' });</script>";
 }
 ?>
 
 <!-- Script para mostrar u ocultar la contraseña en el campo de entrada -->
 <script type="text/javascript">
-    $('#MostrarPossword').on('click', function() {
+    $('#MostrarPossword').on('click', function () {
         var cambio = document.getElementById("login-password");
         if (cambio.type == "password") {
             cambio.type = "text";
@@ -136,5 +137,4 @@ if (isset($_GET['success'])) {
     });
 </script>
 </body>
-
 </html>

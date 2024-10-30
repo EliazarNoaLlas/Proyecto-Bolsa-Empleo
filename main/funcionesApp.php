@@ -4,6 +4,19 @@
 class funcionesApp
 {
 
+    public function getCandidatoNombre($IDUser) {
+        try {
+            $conn = Conexion::conectar();
+            $sql = "SELECT Nombre FROM usuarios WHERE IDUser = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$IDUser]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result ? $result['Nombre'] : "Desconocido";
+        } catch (PDOException $e) {
+            error_log("Error al obtener nombre del candidato: " . $e->getMessage());
+            return "Desconocido";
+        }
+    }
 
     public function test_input($data)
     {

@@ -10,7 +10,11 @@ if (isset($_POST['consulta'])) {
 
 	$dato = $_POST['consulta'];
     
-    $sql = "SELECT * FROM `soporte_cargos_desempenado` WHERE `IDCategoria` = ? ORDER BY `soporte_cargos_desempenado`.`nombre` ASC ";
+    $sql = "SELECT *
+FROM `soporte_cargos_desempenado`
+WHERE `IDCategoria` = ?
+GROUP BY nombre
+ORDER BY `soporte_cargos_desempenado`.`nombre` ASC";
 	$stmt =  Conexion::conectar()->prepare($sql);
 	
 	if (!$stmt->execute(array($dato))) {
