@@ -4,6 +4,7 @@ session_start();
 
 class PDF extends FPDF
 {
+    // Encabezado
     function Header()
     {
         $this->SetFont('Arial', 'B', 12);
@@ -11,16 +12,17 @@ class PDF extends FPDF
         $this->Ln(10);
     }
 
+    // Pie de página
     function Footer()
     {
         $this->SetY(-15);
         $this->SetFont('Arial', 'I', 8);
-        $this->Cell(0, 10, 'Página ' . $this->PageNo(), 0, 0, 'C');
+        $this->Cell(0, 10, 'Pagina ' . $this->PageNo(), 0, 0, 'C');
     }
 }
 
 // Datos ficticios
-$nombreCandidato = 'Juan Pérez';
+$nombreCandidato = 'Walter Stefano';
 $totalPostulaciones = 10;
 $enProceso = 3;
 $aceptadas = 5;
@@ -28,26 +30,20 @@ $rechazadas = 2;
 
 // Detalle de postulaciones ficticias
 $postulaciones = [
-    ['Empresa' => 'Empresa A', 'Plaza' => 'Desarrollador', 'Estado' => 'Aceptada', 'Fecha' => '2024-01-15'],
-    ['Empresa' => 'Empresa B', 'Plaza' => 'Analista', 'Estado' => 'Rechazada', 'Fecha' => '2024-02-20'],
-    ['Empresa' => 'Empresa C', 'Plaza' => 'Gerente', 'Estado' => 'En Proceso', 'Fecha' => '2024-03-05'],
-    ['Empresa' => 'Empresa D', 'Plaza' => 'Desarrollador', 'Estado' => 'Aceptada', 'Fecha' => '2024-04-12'],
-    ['Empresa' => 'Empresa E', 'Plaza' => 'Diseñador', 'Estado' => 'En Proceso', 'Fecha' => '2024-05-08'],
-    ['Empresa' => 'Empresa F', 'Plaza' => 'Consultor', 'Estado' => 'Aceptada', 'Fecha' => '2024-06-18'],
-    ['Empresa' => 'Empresa G', 'Plaza' => 'Ingeniero', 'Estado' => 'Rechazada', 'Fecha' => '2024-07-22'],
-    ['Empresa' => 'Empresa H', 'Plaza' => 'Científico de Datos', 'Estado' => 'En Proceso', 'Fecha' => '2024-08-14'],
-    ['Empresa' => 'Empresa I', 'Plaza' => 'Administrador', 'Estado' => 'Aceptada', 'Fecha' => '2024-09-03'],
-    ['Empresa' => 'Empresa J', 'Plaza' => 'Especialista', 'Estado' => 'Aceptada', 'Fecha' => '2024-10-10'],
+    ['Empresa' => 'Smart Cities', 'Plaza' => 'Gerente de TI', 'Estado' => 'enviado', 'Fecha' => '2024-10-28 13:47:36'],
+    ['Empresa' => 'SmartCities', 'Plaza' => 'Desarrollador Full Stack', 'Estado' => 'Aceptado', 'Fecha' => '2024-10-21 17:03:30'],
+    ['Empresa' => 'SmartCities', 'Plaza' => 'Gerente de TI', 'Estado' => 'Aceptado', 'Fecha' => '2024-09-30 17:41:54'],
+    ['Empresa' => 'SmartCities', 'Plaza' => 'Consultor SAP', 'Estado' => 'Aceptado', 'Fecha' => '2024-09-30 17:41:37'],
 ];
 
 $pdf = new PDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial', '', 12);
 
-$pdf->Cell(0, 10, 'Información Básica del Reporte', 0, 1, 'L');
+$pdf->Cell(0, 10, 'Informacion Basica del Reporte', 0, 1, 'L');
 $pdf->Ln(5);
 $pdf->Cell(0, 10, 'Candidato: ' . $nombreCandidato, 0, 1, 'L');
-$pdf->Cell(0, 10, 'Fecha de Generación: ' . date('d-m-Y'), 0, 1, 'L');
+$pdf->Cell(0, 10, 'Fecha de Generacion: ' . date('d-m-Y'), 0, 1, 'L');
 $pdf->Ln(10);
 
 $pdf->SetFont('Arial', 'B', 12);
@@ -76,8 +72,10 @@ foreach ($postulaciones as $postulacion) {
     $pdf->Ln();
 }
 
+// Configura los encabezados para la descarga del PDF
 header('Content-Type: application/pdf');
 header('Content-Disposition: attachment; filename="Reporte_Postulaciones_' . date('d_m_Y') . '.pdf"');
 
+// Salida del archivo PDF
 $pdf->Output('I');
 ?>
