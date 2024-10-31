@@ -1,13 +1,13 @@
 <?php
 /**
- * Archivo: reportes.php
+ * Archivo: Candidato/reportes.php
  * Propósito: Generar reportes de postulaciones para los usuarios, mostrando información como empresa, plaza, y estado de
  * la postulación.
  * Autor: Walter Stefano
  * Fecha de modificación: 2024-10-29
  */
 
-include_once '../../BD/Conexion.php'; // Conexión a la base de datos
+include_once '../../BD/Conexion.php';  // Conexión a la base de datos
 include_once '../../BD/Consultas.php'; // Clase para consultas a la base de datos
 include_once '../../main/funcionesApp.php'; // Funciones adicionales de la aplicación
 include_once 'templates/head.php'; // Encabezado HTML de la página
@@ -83,22 +83,15 @@ include_once 'templates/header.php'; // Encabezado de la aplicación
 
                     <!-- Botón para generar el reporte -->
                     <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
-                        <!-- Botón de Generar Reporte -->
-                        <input type="submit" name="btnReporte" id="btnReporte" value="Generar Reporte"
-                               class="btn btn-alt-primary btn-lg btn-block btn-rounded">
+                        <!-- Contenedor de botones en fila -->
+                        <div class="d-flex">
+                            <!-- Botón de Generar Reporte -->
+                            <input type="submit" name="btnReporte" id="btnReporte" value="Generar Reporte"
+                                   class="btn btn-alt-primary btn-lg btn-rounded mr-2">
 
-                        <!-- Botón desplegable de descarga -->
-                        <div class="btn-group ml-2">
-                            <button type="button"
-                                    class="btn btn-alt-primary btn-lg btn-block btn-rounded dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Descargar
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#" onclick="exportarReporte()">PDF</a>
-                                <a class="dropdown-item" href="#" onclick="exportarReporte()">Word</a>
-                                <a class="dropdown-item" href="#" onclick="exportarReporte()">Excel</a>
-                            </div>
+                            <!-- Botón de descarga para exportar reporte -->
+                            <input type="submit" name="btnExportar" id="btnExportar" value="Exportar Reporte"
+                                   class="btn btn-alt-primary btn-lg btn-rounded">
                         </div>
                     </div>
                 </div>
@@ -218,9 +211,35 @@ include_once '../../templates/alertas.php';
             MostrarReportes("GenerarReporte", FechaInicial, FechaFinal); // Llama a la función de mostrar reporte
         }
     });
+
+    // Evento para exportar el reporte al hacer clic en el botón
+    $("#btnExportar").click(function () {
+        var FechaInicial = $('#fechaInicial').val();
+        var FechaFinal = $('#fechaFinal').val();
+
+        // Validación de las fechas seleccionadas
+        if (FechaInicial == "") {
+            swal({ title: 'Alerta', text: 'Debe seleccionar la fecha inicial', type: 'error' });
+        } else if (FechaFinal == "") {
+            swal({ title: 'Alerta', text: 'Debe seleccionar la fecha final', type: 'error' });
+        } else {
+            // Llama a la función para exportar el reporte
+            ExportarReporte(FechaInicial, FechaFinal);
+        }
+    });
+
     // Función para exportar el reporte en PDF
-    function exportarReporte() {
+    function ExportarReporte(fechaInicial, fechaFinal) {
         console.log("Exportando reporte en formato PDF");
+
+        // Validación de las fechas seleccionadas
+        if (fechaInicial === "") {
+            swal({ title: 'Alerta', text: 'Debe seleccionar la fecha inicial', type: 'error' });
+            return;
+        } else if (fechaFinal === "") {
+            swal({ title: 'Alerta', text: 'Debe seleccionar la fecha final', type: 'error' });
+            return;
+        }
 
         // Realizar una solicitud AJAX para generar y descargar el reporte
         const xhr = new XMLHttpRequest();
@@ -250,7 +269,8 @@ include_once '../../templates/alertas.php';
             }
         };
 
-        // Enviar solicitud sin datos adicionales, ya que el formato es PDF
-        xhr.send();
+        // Enviar datos con las fechas seleccionadas
+        const params = `FechaInicial=${encodeURIComponent(fechaInicial)}&FechaFinal=${encodeURIComponent(fechaFinal)}`;
+        xhr.send(params);
     }
 </script>
