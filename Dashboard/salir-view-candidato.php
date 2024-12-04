@@ -1,6 +1,5 @@
-<?php 
-   session_start();
-   session_destroy();
-   header("Location: ../login-candidato");
-
- ?>
+<?php
+session_start();
+session_destroy();
+header("Location: ../login-candidato");
+?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once '../../BD/Conexion.php';
 include_once '../../BD/Consultas.php';
@@ -16,41 +16,40 @@ $FuncionesApp = new funcionesApp();
 session_start();
 
 
- $PasswordFormato = $FuncionesApp->test_input($_POST['password']);
- $Password = password_hash($PasswordFormato, PASSWORD_DEFAULT);//Incriptamos la contraseña del usuario generado automaticamente
- $IDUsuario = $FuncionesApp->test_input($_POST['iduser2']);
+$PasswordFormato = $FuncionesApp->test_input($_POST['password']);
+$Password = password_hash($PasswordFormato, PASSWORD_DEFAULT);//Incriptamos la contraseña del usuario generado automaticamente
+$IDUsuario = $FuncionesApp->test_input($_POST['iduser2']);
 
- $sql = "UPDATE `usuarios_cuentas` SET `Password` = :Password , `Estado` = 'Seguridad' WHERE `IDUsuario` = :IDUsuario";
- $stmt =  Conexion::conectar()->prepare($sql);
+$sql = "UPDATE `usuarios_cuentas` SET `Password` = :Password , `Estado` = 'Seguridad' WHERE `IDUsuario` = :IDUsuario";
+$stmt = Conexion::conectar()->prepare($sql);
 
- $stmt->bindParam(':Password', $Password , PDO::PARAM_STR);
- $stmt->bindParam(':IDUsuario', $IDUsuario , PDO::PARAM_STR);
+$stmt->bindParam(':Password', $Password, PDO::PARAM_STR);
+$stmt->bindParam(':IDUsuario', $IDUsuario, PDO::PARAM_STR);
 
 
- if ($stmt->execute()){
+if ($stmt->execute()) {
 
- 	
 
- 	try {
-			   $mail = new PHPMailer(true); //Server settings
-			    $mail->SMTPDebug = 0;                      // Enable verbose debug output
-			    $mail->isSMTP();                                            // Send using SMTP
-			    $mail->Host       = 'mail.mundoempleosca.com';                    // Set the SMTP server to send through
-			    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-			    $mail->Username   = 'danielm@mundoempleosca.com';                     // SMTP username
-			    $mail->Password   = 'pruebas001@';                               // SMTP password
-			    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-			    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    try {
+        $mail = new PHPMailer(true); //Server settings
+        $mail->SMTPDebug = 0;                      // Enable verbose debug output
+        $mail->isSMTP();                                            // Send using SMTP
+        $mail->Host = 'mail.mundoempleosca.com';                    // Set the SMTP server to send through
+        $mail->SMTPAuth = true;                                   // Enable SMTP authentication
+        $mail->Username = 'danielm@mundoempleosca.com';                     // SMTP username
+        $mail->Password = 'pruebas001@';                               // SMTP password
+        $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-			    //Recipients
-			    $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
-			    $mail->addAddress($_SESSION['email']);     // Add a recipient
-			    
+        //Recipients
+        $mail->setFrom('danielm@mundoempleosca.com', 'Equipo de BOLSA LABORAL CA');
+        $mail->addAddress($_SESSION['email']);     // Add a recipient
 
-			    // Content
-			    $mail->isHTML(true);                                  // Set email format to HTML
-			    $mail->Subject = 'Acaba de cambiar la contraseña | BOLSA LABORAL CA';
-			    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+        // Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Acaba de cambiar la contraseña | BOLSA LABORAL CA';
+        $mail->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 			    <head>
 			    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -84,13 +83,13 @@ session_start();
 			    </tr>
 			    <tr>
 			    <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-			    <p style="margin: 0; text-align: justify;">Hola '.$_SESSION['nombre'].' te saluda el equipo de BOLSA LABORAL:  <br><br> Hemos recibido un pedido de un cambio de contraseña. Si no has iniciado este pedido, no debe confirmar este correo por lo tanto debera ir a recuperación de cuenta <a href="https://mundoempleosca.com/restablecer-password?id='.base64_encode($IDUsuario).'&email='.base64_encode($_SESSION['email']).'">haz clic aqui</a> <br><br> luego te enviaremos una contraseña generado y una vez dentro en la plataforma podras cambiarlo.</p>
+			    <p style="margin: 0; text-align: justify;">Hola ' . $_SESSION['nombre'] . ' te saluda el equipo de BOLSA LABORAL:  <br><br> Hemos recibido un pedido de un cambio de contraseña. Si no has iniciado este pedido, no debe confirmar este correo por lo tanto debera ir a recuperación de cuenta <a href="https://mundoempleosca.com/restablecer-password?id=' . base64_encode($IDUsuario) . '&email=' . base64_encode($_SESSION['email']) . '">haz clic aqui</a> <br><br> luego te enviaremos una contraseña generado y una vez dentro en la plataforma podras cambiarlo.</p>
 
 			    <br>
 			    
 			    
 			    <center>
-			    <a href="https://mundoempleosca.com/main/ModelosUsuarioCuentas/validarCambioPassword.php?id='.base64_encode($IDUsuario).'&email='.base64_encode($_SESSION['email']).'" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="display:inline-block; min-width:250px; font-family:Tahoma,Arial,sans-serif; font-size:18px; font-weight:bold; color:#0B3486; line-height:50px; text-align:center; text-decoration:none; background-color:#FCC201; border-radius:50px; padding:16px 24px; line-height:1">Confirmar</a>
+			    <a href="https://mundoempleosca.com/main/ModelosUsuarioCuentas/validarCambioPassword.php?id=' . base64_encode($IDUsuario) . '&email=' . base64_encode($_SESSION['email']) . '" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="display:inline-block; min-width:250px; font-family:Tahoma,Arial,sans-serif; font-size:18px; font-weight:bold; color:#0B3486; line-height:50px; text-align:center; text-decoration:none; background-color:#FCC201; border-radius:50px; padding:16px 24px; line-height:1">Confirmar</a>
 			    </center>
 
 			    <br><br>
@@ -161,23 +160,23 @@ session_start();
 			    </body>
 			    </html>
 			    ';
-			    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-			    
-
-			    $mail->CharSet = 'UTF-8'; // Con esto ya funcionan los acentos
-
-			    $mail->send();
-			} catch (Exception $e) {
-				echo "Hubo un error para enivar correo: {$mail->ErrorInfo}";
-			}
-
-			header('Location: index?seguridad=1');
+        //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
-		}else{
+        $mail->CharSet = 'UTF-8'; // Con esto ya funcionan los acentos
 
-			$_SESSION['alertas'] = "Fallo";
-			header('Location: ../../actualizar-cuenta');
-		}
+        $mail->send();
+    } catch (Exception $e) {
+        echo "Hubo un error para enivar correo: {$mail->ErrorInfo}";
+    }
 
-		?>
+    header('Location: index?seguridad=1');
+
+
+} else {
+
+    $_SESSION['alertas'] = "Fallo";
+    header('Location: ../../actualizar-cuenta');
+}
+
+?>
