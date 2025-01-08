@@ -65,7 +65,7 @@ include_once 'templates/header.php';
 
                     <div class="col-lg-4 col-md-4 col-12">
                         <label>Tipos de reportes</label>
-                        <select class="js-select2 form-control" id="example-select" name="idarea" style="width: 100%;"
+                        <select class="js-select2 form-control" id="tipoReporte" name="idarea" style="width: 100%;"
                                 data-placeholder="Selecciona el tipo de reporte">
                             <option></option>
                             <option value="Perfiles vistos">Perfiles vistos</option>
@@ -88,12 +88,18 @@ include_once 'templates/header.php';
                     </div>
 
 
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <br>
-                        <center>
+                    <!-- Botón de exportar reporte -->
+                    <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
+                        <!-- Contenedor de botones en fila -->
+                        <div class="d-flex">
+                            <!-- Botón de Generar Reporte -->
                             <input type="submit" name="btnReporte" id="btnReporte" value="Generar Reporte"
-                                   class="btn btn-alt-primary btn-lg btn-block btn-rounded">
-                        </center>
+                                   class="btn btn-alt-primary btn-lg btn-rounded mr-2">
+
+                            <!-- Botón de descarga para exportar reporte -->
+                            <input type="submit" name="btnExportar" id="btnExportar" value="Exportar Reporte"
+                                   class="btn btn-alt-primary btn-lg btn-rounded">
+                        </div>
                     </div>
 
                 </div>
@@ -191,11 +197,12 @@ include_once '../../templates/alertas.php';
             ]
         });
     }
+
     $("#btnReporte").click(function () {
         var table = $('#TablasReportes').DataTable();
         table.destroy();
 
-        var tipoReporte = $('#example-select option:selected');
+        var tipoReporte = $('#tipoReporte option:selected');
         var evaluarReporte = tipoReporte.val();
 
         var FechaInicial = $('#fechaInicial').val();
@@ -210,4 +217,67 @@ include_once '../../templates/alertas.php';
             $(MostrarReportes("GenerarReporte", evaluarReporte, FechaInicial, FinalFecha));
         }
     });
+
+    // Evento para exportar el reporte al hacer clic en el botón
+    $("#btnExportar").click(function () {
+        var tipoReporte = $('#tipoReporte option:selected');
+        var evaluarReporte = tipoReporte.val();
+        var fechaInicial = $('#fechaInicial').val();
+        var fechaFinal = $('#fechaFinal').val();
+
+        // Validación de campos requeridos
+        if (!evaluarReporte) {
+            swal({title: 'Alerta', text: 'Debe seleccionar un tipo de reporte', type: 'error'});
+            return;
+        }
+        if (!fechaInicial) {
+            swal({title: 'Alerta', text: 'Debe seleccionar la fecha inicial', type: 'error'});
+            return;
+        }
+        if (!fechaFinal) {
+            swal({title: 'Alerta', text: 'Debe seleccionar la fecha final', type: 'error'});
+            return;
+        }
+
+        // Llama a la función para exportar el reporte
+        ExportarReporte(evaluarReporte, fechaInicial, fechaFinal);
+    });
+
+    // Función para exportar el reporte
+    function ExportarReporte(tipoReporte, fechaInicial, fechaFinal) {
+        console.log("Exportando reporte en formato PDF...");
+
+        // Realizar una solicitud AJAX para generar y descargar el reporte
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "generarReporteEmpresa.php", true); // Cambia la ruta a tu archivo PHP
+
+        // Configuración para manejar el archivo generado como respuesta
+        xhr.responseType = "blob";
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // Crear un enlace de descarga para el archivo generado
+                const blob = xhr.response;
+                const downloadLink = document.createElement("a");
+                downloadLink.href = window.URL.createObjectURL(blob);
+
+                // Nombre del archivo descargado
+                const fileName = "Reporte_Empresa.pdf";
+                downloadLink.download = fileName;
+
+                // Agregar el enlace al DOM y simular un clic
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            } else {
+                swal({title: 'Error', text: 'Ocurrió un error al generar el reporte', type: 'error'});
+                console.error("Error al generar el reporte.");
+            }
+        };
+        console.log(tipoReporte,fechaInicial,fechaFinal)
+        // Enviar datos con las fechas seleccionadas
+        const params = `TipoReporte=${encodeURIComponent(tipoReporte)}&FechaInicial=${encodeURIComponent(fechaInicial)}&FechaFinal=${encodeURIComponent(fechaFinal)}`;
+        xhr.send(params);
+    }
 </script>
