@@ -275,7 +275,7 @@ include_once '../../templates/alertas.php';
                 console.error("Error al generar el reporte.");
             }
         };
-        console.log(tipoReporte,fechaInicial,fechaFinal)
+
         // Enviar datos con las fechas seleccionadas
         const params = `TipoReporte=${encodeURIComponent(tipoReporte)}&FechaInicial=${encodeURIComponent(fechaInicial)}&FechaFinal=${encodeURIComponent(fechaFinal)}`;
         xhr.send(params);
